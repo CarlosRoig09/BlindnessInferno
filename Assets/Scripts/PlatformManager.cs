@@ -20,6 +20,7 @@ public class PlatformManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(_plSO.PlatgormWaitTimer/_plSO.PlatformSpeed*-1);
         if (_plSO.PlatgormWaitTimer <= _counter)
         {
            var platform = Instantiate(_plSO.PlatformPrefab, _initPosition, Quaternion.identity);
