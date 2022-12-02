@@ -39,7 +39,6 @@ public class MovingPlatform : MonoBehaviour
 
     protected bool IsOutTheLimits()
     {
-        Debug.Log("I got destroyed");
         return transform.position.x <= (Camera.main.transform.position.x - (2f * Camera.main.orthographicSize * Camera.main.aspect)) / 2 - transform.localScale.x;
     }
 
