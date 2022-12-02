@@ -4,24 +4,18 @@ using UnityEngine;
 
 public class ParallaxScript : MonoBehaviour
 {
+    [SerializeField] private Vector2 moveSpeed;
+    private Vector2 offset;
+    private Material material;
 
-    private float length, startpos;
-    public GameObject cam;
-    public float parallaxEffect;
-    void Start()
+    private void Awake()
     {
-        startpos = transform.position.x;
-        length = GetComponent<SpriteRenderer>().bounds.size.x;
+        material = GetComponent<SpriteRenderer>().material;
     }
 
-    void FixedUpdate()
+    private void Update()
     {
-        float temp = (cam.transform.position.x * (1 - parallaxEffect));
-        float dist = (cam.transform.position.x * parallaxEffect);
-
-        transform.position = new Vector3(startpos + dist, transform.position.y, transform.position.z);
-
-        if (temp > startpos - length) startpos += length;
-        else if (temp < startpos - length) startpos -= length;
+        offset = moveSpeed * Time.deltaTime;
+        material.mainTextureOffset += offset;
     }
 }
