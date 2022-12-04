@@ -36,7 +36,7 @@ public class WalkingScript : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(speed);
+        //Debug.Log(speed);
         //isGrounded = footCollider.IsTouchingLayers(ground);
 
 
