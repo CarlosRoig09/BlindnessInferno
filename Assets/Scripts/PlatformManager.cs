@@ -9,12 +9,14 @@ public class PlatformManager : MonoBehaviour
     private PlatformScriptableObject _plSO;
     private float _counter;
     private ObstacleManager _obstacleManager;
+    private EnemySpawn _enemySpawn;
     // Start is called before the first frame update
     void Start()
     {
        _initPosition = new Vector3((Camera.main.transform.position.x + (2f*Camera.main.orthographicSize * Camera.main.aspect))/2 + _plSO.PlatformPrefab.transform.localScale.x, _plSO.PlatformInitialYPosition);
         _counter = _plSO.PlatgormWaitTimer;
         _obstacleManager = gameObject.GetComponent<ObstacleManager>();
+        _enemySpawn = gameObject.GetComponent<EnemySpawn>();
     }
 
     // Update is called once per frame
@@ -23,7 +25,8 @@ public class PlatformManager : MonoBehaviour
         if (_plSO.PlatgormWaitTimer <= _counter)
         {
            var platform = Instantiate(_plSO.PlatformPrefab, _initPosition, Quaternion.identity);
-            _obstacleManager.Instantiate(platform);
+           // _obstacleManager.Instantiate(platform);
+            _enemySpawn.Instantiate(platform);
             _counter = 0;
        }
         else

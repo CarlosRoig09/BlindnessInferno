@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _platformName: "\"B\xE1sic platform\""
   _platformPrefab: {fileID: 7531154320187766223, guid: f6a85623edc10f34190560f39c01ac86, type: 3}
-  _platformWaitTimer: 1.5
-  _platformSpeed: -5
+  _platformWaitTimer: 2
+  _platformSpeed: -0.5
   _platformInitialYPosition: -3

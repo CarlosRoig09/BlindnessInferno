@@ -15,13 +15,15 @@ public class WalkingScript : MonoBehaviour
     [SerializeField]
     private float _timeToMaxSpeed;
     private float _acceleration;
+    private bool _secondJump;
     //public LayerMask ground;
     //public Collider2D footCollider;
     private void Start()
     {
+        _secondJump = false;
         _maxPosition = 0;
         _initPos = transform.position.x;
-        _acceleration = (_maxSpeed - initialspeed)/_timeToMaxSpeed;
+        _acceleration = (_maxSpeed - initialspeed) / _timeToMaxSpeed;
     }
     /*private bool isGrounded;
     private float jumpWaitTimer;*/
@@ -42,24 +44,12 @@ public class WalkingScript : MonoBehaviour
 
         if (Input.GetKeyDown(jumpkey))
         {
-            /*if (isGrounded)
+            if (_secondJump||IsGrounded())
             {
+               _secondJump = IsGrounded();
                 Jump();
-            }*/
-            Jump();
-        }
-
-        /*if (isGrounded || jumpWaitTimer > 0f)
-        {
-            jumpWaitTimer = jumpWaitTime;
-        }
-        else
-        {
-            if(jumpWaitTimer > 0f)
-            {
-                jumpWaitTimer -= Time.deltaTime;
             }
-        }*/
+        }
 
         //Debug.Log(transform.position);
     }
@@ -68,4 +58,21 @@ public class WalkingScript : MonoBehaviour
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpVelocity * Time.fixedDeltaTime);
     }
+
+    public LayerMask groundLayer;
+
+    bool IsGrounded()
+    {
+        if (Physics2D.Raycast(transform.position, Vector2.down, 0.65f, groundLayer.value))
+        {
+           return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+
 }
+

@@ -19,8 +19,8 @@ public class Shooting : MonoBehaviour
     }
     void Update()
     {
-        lookDirection = Camera.main.WorldToScreenPoint(Input.mousePosition);
-        lookAngle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
+         lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        lookAngle = Mathf.Atan2(lookDirection.y, Mathf.Abs(lookDirection.x)) * Mathf.Rad2Deg;
 
         firePoint.rotation = Quaternion.Euler(0, 0, lookAngle);
 
@@ -28,7 +28,7 @@ public class Shooting : MonoBehaviour
         {
             GameObject projectileClone = Instantiate(projectile);
             projectileClone.transform.position = firePoint.position;
-            projectileClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
+             projectileClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
 
             projectileClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * projectileSpeed;
             _count = 0;
