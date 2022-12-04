@@ -4,32 +4,41 @@ using UnityEngine;
 
 public class WalkingScript : MonoBehaviour
 {
-    public float speed = 0.5f, jumpVelocity, jumpWaitTime;
+    public float initialspeed = 0.5f, jumpVelocity, jumpWaitTime;
+    public float speed;
     public Rigidbody2D rb;
     public KeyCode jumpkey;
-    private float _counter;
     [SerializeField]
-    private float _timeSpeedUp;
+    private float _maxSpeed;
+    private float _maxPosition;
+    private float _initPos;
+    [SerializeField]
+    private float _timeToMaxSpeed;
+    private float _acceleration;
     //public LayerMask ground;
     //public Collider2D footCollider;
     private void Start()
     {
-        _counter = 0;
+        _maxPosition = 0;
+        _initPos = transform.position.x;
+        _acceleration = (_maxSpeed - initialspeed)/_timeToMaxSpeed;
     }
     /*private bool isGrounded;
     private float jumpWaitTimer;*/
+    private void FixedUpdate()
+    {
+        if (transform.position.x < _maxPosition)
+        {
+            speed = Mathf.Sqrt(2 * _acceleration * (transform.position.x - _initPos) + Mathf.Pow(initialspeed, 2));
+            rb.velocity = new Vector2(speed * Time.fixedDeltaTime, rb.velocity.y);
+        }
+        else rb.velocity = new Vector2(0, rb.velocity.y);
+    }
     void Update()
     {
+        Debug.Log(speed);
         //isGrounded = footCollider.IsTouchingLayers(ground);
-        if (transform.position.x < 0)
-            speed += 0.1f * Time.deltaTime;
-        
-        else
-        {
-            speed = 1;
-        }
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
-        
+
 
         if (Input.GetKeyDown(jumpkey))
         {
@@ -58,5 +67,5 @@ public class WalkingScript : MonoBehaviour
     void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpVelocity * Time.fixedDeltaTime);
-    } 
+    }
 }
