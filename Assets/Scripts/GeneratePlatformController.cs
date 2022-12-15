@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformManager : MonoBehaviour
+public class GeneratePlatformController : MonoBehaviour
 {
     private Vector3 _initPosition;
     [SerializeField]
@@ -13,7 +13,6 @@ public class PlatformManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       _initPosition = new Vector3((Camera.main.transform.position.x + (2f*Camera.main.orthographicSize * Camera.main.aspect))/2 + _plSO.PlatformPrefab.transform.localScale.x, _plSO.PlatformInitialYPosition);
         _counter = _plSO.PlatgormWaitTimer;
         _obstacleManager = gameObject.GetComponent<ObstacleManager>();
         _enemySpawn = gameObject.GetComponent<EnemySpawn>();
@@ -24,9 +23,11 @@ public class PlatformManager : MonoBehaviour
     {
         if (_plSO.PlatgormWaitTimer <= _counter)
         {
-           var platform = Instantiate(_plSO.PlatformPrefab, _initPosition, Quaternion.identity);
+           Vector3 cameraBound = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+            _initPosition = new Vector3(cameraBound.x+Camera.main.transform.position.x, _plSO.PlatformInitialYPosition);
+            var platform = Instantiate(_plSO.PlatformPrefab, _initPosition, Quaternion.identity);
            // _obstacleManager.Instantiate(platform);
-            _enemySpawn.Instantiate(platform);
+           // _enemySpawn.Instantiate(platform);
             _counter = 0;
        }
         else

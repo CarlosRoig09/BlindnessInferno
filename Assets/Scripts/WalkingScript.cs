@@ -5,12 +5,15 @@ using UnityEngine;
 public class WalkingScript : MonoBehaviour
 {
     public float initialspeed = 0.5f, jumpVelocity, jumpWaitTime;
-    public float speed;
+    [SerializeField]
+    private PlayerData _playerData;
+    //public float speed;
     public Rigidbody2D rb;
     public KeyCode jumpkey;
     [SerializeField]
     private float _maxSpeed;
-    private float _maxPosition;
+    [SerializeField]
+    private Transform _maxPosition;
     private float _initPos;
     [SerializeField]
     private float _timeToMaxSpeed;
@@ -21,7 +24,6 @@ public class WalkingScript : MonoBehaviour
     private void Start()
     {
         _secondJump = false;
-        _maxPosition = 0;
         _initPos = transform.position.x;
         _acceleration = (_maxSpeed - initialspeed) / _timeToMaxSpeed;
     }
@@ -29,12 +31,13 @@ public class WalkingScript : MonoBehaviour
     private float jumpWaitTimer;*/
     private void FixedUpdate()
     {
-        if (transform.position.x < _maxPosition)
+        if (transform.position.x < _maxPosition.position.x)
         {
-            speed = Mathf.Sqrt(2 * _acceleration * (transform.position.x - _initPos) + Mathf.Pow(initialspeed, 2));
-            rb.velocity = new Vector2(speed * Time.fixedDeltaTime, rb.velocity.y);
+            _playerData.speed = Mathf.Sqrt(2 * _acceleration * (transform.position.x - _initPos) + Mathf.Pow(initialspeed, 2));
+            rb.velocity = new Vector2(_playerData.speed * Time.fixedDeltaTime + Camera.main.GetComponent<MoveCamara>()._rb.velocity.x, rb.velocity.y);
         }
-        else rb.velocity = new Vector2(0, rb.velocity.y);
+        else rb.velocity = new Vector2(Camera.main.GetComponent<MoveCamara>()._speed * Time.fixedDeltaTime, rb.velocity.y);
+
     }
     void Update()
     {

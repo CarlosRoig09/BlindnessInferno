@@ -17,8 +17,8 @@ public class MovingPlatform : MonoBehaviour
     // Update is called once per frame
     protected virtual void Update()
     {
-        _speed = _walkingScript.speed*0.1f+2f;
-        Movement();
+        /*_speed = _walkingScript.speed*0.1f+2f;
+        Movement();*/
     }
 
     protected void Movement()
