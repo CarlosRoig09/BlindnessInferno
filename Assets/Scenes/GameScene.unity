@@ -907,7 +907,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c51e973ea0cfed44e9a9c73f2ce257ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _plSO: {fileID: 0}
 --- !u!1 &1561123706 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1393504800970360176, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
@@ -1017,6 +1016,7 @@ MonoBehaviour:
   firePoint: {fileID: 1110211462}
   projectileSpeed: 20
   _countdown: 0.5
+  _bulletSize: 1
 --- !u!95 &1561123716
 Animator:
   serializedVersion: 4

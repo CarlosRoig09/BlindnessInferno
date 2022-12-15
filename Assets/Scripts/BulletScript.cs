@@ -36,7 +36,7 @@ public class BulletScript : MonoBehaviour
         }
     }
 
-    public void IncrementProjectileSize()
+    /*public void IncrementProjectileSize()
     {
         transform.localScale = new Vector3(1, 1, 1);
         BulletSizeStatus = true;
@@ -46,5 +46,5 @@ public class BulletScript : MonoBehaviour
     {
         transform.localScale = new Vector3(0.324f, 0.397f, 1);
         BulletSizeStatus = false;
-    }
+    }*/
 }
