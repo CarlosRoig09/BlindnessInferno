@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DestroyObjects : MonoBehaviour
@@ -8,7 +6,7 @@ public class DestroyObjects : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("PlayerDeath");
+            collision.gameObject.GetComponent<ControlDeath>().Life = Life.Death;
         }
         else
             Destroy(collision.gameObject);
