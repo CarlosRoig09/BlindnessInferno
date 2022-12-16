@@ -1,14 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
-public class ProjectileSizeScript : MonoBehaviour
+public class BonusBlock : MonoBehaviour
 {
-    /*private BulletScript _bulletScript;
-    private GameObject _bullet;
-    private Shooting _shootingScript;
-    private GameObject _player;*/
+
     private BonusTimer projectileSizeBonusTime;
     private GameObject _bonus;
 
@@ -30,7 +26,6 @@ public class ProjectileSizeScript : MonoBehaviour
             OnCollectAction(0);
         }
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("CHoque");
@@ -42,6 +37,7 @@ public class ProjectileSizeScript : MonoBehaviour
             projectileSizeBonusTime.TimerOn = true;
             Debug.Log("estoy aqui");
             OnCollectAction(1);
+            //SetActive
 
             /*if (projectileSizeBonusTime.TimeLeft == 0)
             {

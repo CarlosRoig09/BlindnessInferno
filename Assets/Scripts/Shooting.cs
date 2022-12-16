@@ -16,8 +16,6 @@ public class Shooting : MonoBehaviour
     Vector2 lookDirection;
     float lookAngle;
 
-    //public event ChangeSize OnContact;
-    //public event Contact OnContact;
     private void Start()
     {
         _count = _countdown;
