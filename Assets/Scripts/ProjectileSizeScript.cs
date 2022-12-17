@@ -19,6 +19,10 @@ public class ProjectileSizeScript : MonoBehaviour
     {
         _bonus = GameObject.Find("BonusTimer");
         projectileSizeBonusTime = _bonus.GetComponent<BonusTimer>();
+
+        projectileSizeBonusTime.TimerOn = true;
+        Debug.Log("estoy aqui");
+        OnCollectAction(1);
     }
 
     void Update()
@@ -31,22 +35,17 @@ public class ProjectileSizeScript : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    /*private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("CHoque");
         if (collision.gameObject.CompareTag("Player"))
         {
             //DestroyObject();
             /*_bonus = GameObject.Find("BonusTimer");
-            projectileSizeBonusTime = _bonus.GetComponent<BonusTimer>();*/
+            projectileSizeBonusTime = _bonus.GetComponent<BonusTimer>();
             projectileSizeBonusTime.TimerOn = true;
             Debug.Log("estoy aqui");
             OnCollectAction(1);
-
-            /*if (projectileSizeBonusTime.TimeLeft == 0)
-            {
-                OnCollectAction(0);
-            }*/
         }
-    }
+    }*/
 }

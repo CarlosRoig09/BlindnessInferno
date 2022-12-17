@@ -53,5 +53,9 @@ public class Shooting : MonoBehaviour
     {
         Debug.Log("balas mas grandes");
         _bulletSize += i;
+        if (_bulletSize == 0)
+        {
+            _bulletSize = 0.324f;
+        }
     }
 }

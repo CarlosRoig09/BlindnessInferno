@@ -5,13 +5,15 @@ using UnityEngine;
 public class BonusBlock : MonoBehaviour
 {
 
-    private BonusTimer projectileSizeBonusTime;
+    /*private BonusTimer projectileSizeBonusTime;
     private GameObject _bonus;
 
     public delegate void CollectAction(int i);
-    public static event CollectAction OnCollectAction;
+    public static event CollectAction OnCollectAction;*/
 
-    void Start()
+    public GameObject Bonus;
+
+    /*void Start()
     {
         _bonus = GameObject.Find("BonusTimer");
         projectileSizeBonusTime = _bonus.GetComponent<BonusTimer>();
@@ -25,18 +27,18 @@ public class BonusBlock : MonoBehaviour
             Debug.Log("HOLA 2");
             OnCollectAction(0);
         }
-    }
+    }*/
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("CHoque");
         if (collision.gameObject.CompareTag("Player"))
         {
-            //DestroyObject();
-            /*_bonus = GameObject.Find("BonusTimer");
-            projectileSizeBonusTime = _bonus.GetComponent<BonusTimer>();*/
-            projectileSizeBonusTime.TimerOn = true;
+            /*projectileSizeBonusTime.TimerOn = true;
             Debug.Log("estoy aqui");
-            OnCollectAction(1);
+            OnCollectAction(1);*/
+            GameObject bonusObtained = Instantiate(Bonus);
+            bonusObtained.transform.position = new Vector3 (0,0,0);
+            Destroy(gameObject);
             //SetActive
 
             /*if (projectileSizeBonusTime.TimeLeft == 0)
