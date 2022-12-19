@@ -25,7 +25,7 @@ public class PlatformManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       num = Random.Range(0, 3);
+       num = Random.Range(0, 4);
  
         if (_plSO[num].PlatgormWaitTimer <= _counter)
         {
