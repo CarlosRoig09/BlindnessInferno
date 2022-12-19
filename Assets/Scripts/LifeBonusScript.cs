@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LifeBonusScript : MovingPlatform
+public class LifeBonusScript : MonoBehaviour
 {
     private ControlDeath _controlDeathScript;
     private GameObject _player;
@@ -17,7 +17,7 @@ public class LifeBonusScript : MovingPlatform
             {
                 _controlDeathScript.AddLife();
             }
-            DestroyObject();
+            Destroy(gameObject);
         }
             
     }

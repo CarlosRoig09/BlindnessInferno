@@ -10,7 +10,8 @@ public class ControlDeath : MonoBehaviour
     private float playerHeight;
     private float playerWeight;
     private Life _life;
-    public int PlayerLife;
+    public float MaxPlayerLife;
+    public float PlayerLife;
     public Life Life
     {
         get => _life;

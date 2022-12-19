@@ -31,21 +31,8 @@ public class ProjectileSizeScript : MonoBehaviour
         if (projectileSizeBonusTime.TimeLeft == 0)
         {
             Debug.Log("HOLA 2");
-            OnCollectAction(0);
+            OnCollectAction(-1);
+            Destroy(gameObject);
         }
     }
-
-    /*private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log("CHoque");
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            //DestroyObject();
-            /*_bonus = GameObject.Find("BonusTimer");
-            projectileSizeBonusTime = _bonus.GetComponent<BonusTimer>();
-            projectileSizeBonusTime.TimerOn = true;
-            Debug.Log("estoy aqui");
-            OnCollectAction(1);
-        }
-    }*/
 }
