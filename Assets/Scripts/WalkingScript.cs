@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WalkingScript : MonoBehaviour
@@ -12,6 +10,7 @@ public class WalkingScript : MonoBehaviour
     public KeyCode jumpkey;
     [SerializeField]
     private float _maxSpeed;
+    private float _speedAtCenterPos;
     [SerializeField]
     private Transform _maxPosition;
     private float _initPos;
@@ -19,6 +18,7 @@ public class WalkingScript : MonoBehaviour
     private float _timeToMaxSpeed;
     private float _acceleration;
     private bool _secondJump;
+    public LayerMask groundLayer;
     //public LayerMask ground;
     //public Collider2D footCollider;
     private void Start()
@@ -34,59 +34,73 @@ public class WalkingScript : MonoBehaviour
         if (transform.position.x < _maxPosition.position.x)
         {
             _playerData.speed = Mathf.Sqrt(2 * _acceleration * (transform.position.x - _initPos) + Mathf.Pow(initialspeed, 2));
+            _initPos = transform.position.x;
             rb.velocity = new Vector2(_playerData.speed * Time.fixedDeltaTime + Camera.main.GetComponent<MoveCamara>()._rb.velocity.x, rb.velocity.y);
-        }
-        else rb.velocity = new Vector2(Camera.main.GetComponent<MoveCamara>()._speed * Time.fixedDeltaTime, rb.velocity.y);
-
-    }
-    void Update()
-    {
-        //isGrounded = footCollider.IsTouchingLayers(ground);
-        if (transform.position.x < 0 )
-        {
-            if(transform.position.x == -7.25)
-            {
-                speed = 1;
-            }else if (transform.position.x == -5.49)
-            {
-                speed = 2;
-            }else if (transform.position.x < -4.76)
-            {
-                speed = 3;
-            }
-            else if (transform.position.x < -7.25)
-            {
-                speed = 0.5f;
-            }
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
-        }
-
-        if (Input.GetKeyDown(jumpkey))
-        {
-            /*if (isGrounded)
-            {
-                Jump();
-            }*/
-            Jump();
-        }
-
-        /*if (isGrounded || jumpWaitTimer > 0f)
-        {
-            jumpWaitTimer = jumpWaitTime;
+            _speedAtCenterPos = rb.velocity.x;
         }
         else
         {
-            if(jumpWaitTimer > 0f)
-            {
-                jumpWaitTimer -= Time.deltaTime;
-            }
-        }*/
-
-        Debug.Log(transform.position);
+            /*  if (_speedAtCenterPos > Camera.main.GetComponent<MoveCamara>()._rb.velocity.x)
+                  _speedAtCenterPos -= 0.25f;
+              else _speedAtCenterPos = Camera.main.GetComponent<MoveCamara>()._rb.velocity.x;*/
+            rb.velocity = new Vector2(Camera.main.GetComponent<MoveCamara>()._rb.velocity.x, rb.velocity.y);
+        }
+        Debug.Log("Velocity: " + rb.velocity.x);
     }
-
-    void Jump()
+    void Update()
     {
-        rb.velocity = new Vector2(rb.velocity.x, jumpVelocity * Time.fixedDeltaTime);
-    } 
+        //Debug.Log(speed);
+        //isGrounded = footCollider.IsTouchingLayers(ground);
+
+
+        if (Input.GetKeyDown(jumpkey))
+        {
+            if (_secondJump || IsGrounded())
+            {
+                _secondJump = IsGrounded();
+                Jump();
+            }
+        }
+        var platform = Physics2D.Raycast(transform.position, Vector2.down, 0.65f, groundLayer.value);
+        if (platform.collider != null)
+        {
+            if (platform.collider.gameObject.CompareTag("Fallable") && Input.GetKeyUp(KeyCode.DownArrow))
+                FallPlatform(platform.collider.gameObject);
+            if (platform.collider.gameObject.CompareTag("Fall"))
+                FallingPlatform(platform.collider.gameObject);
+            //Debug.Log(transform.position);
+        }
+
+        void Jump()
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpVelocity * Time.fixedDeltaTime);
+        }
+
+        void FallPlatform(GameObject gameObject)
+        {
+            if (gameObject.TryGetComponent<FallablePlatform>(out FallablePlatform f))
+                f.PlatformHability();
+        }
+
+        void FallingPlatform(GameObject gameObject)
+        {
+            if (gameObject.TryGetComponent<FallingPlatform>(out FallingPlatform f))
+                f.Falling();
+        }
+
+        bool IsGrounded()
+        {
+            if (Physics2D.Raycast(transform.position, Vector2.down, 0.65f, groundLayer.value))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+    }
 }
+

@@ -19,19 +19,17 @@ public class GeneratePlatformController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (_plSO.PlatgormWaitTimer <= _counter)
+        if (_plSO.PlatgormWaitTimer/Camera.main.GetComponent<MoveCamara>()._rb.velocity.x <= _counter)
         {
-           Vector3 cameraBound = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-            _initPosition = new Vector3(cameraBound.x+Camera.main.transform.position.x, _plSO.PlatformInitialYPosition);
+            _initPosition = new Vector3(transform.position.x, _plSO.PlatformInitialYPosition);
             var platform = Instantiate(_plSO.PlatformPrefab, _initPosition, Quaternion.identity);
-           // _obstacleManager.Instantiate(platform);
-           // _enemySpawn.Instantiate(platform);
+            // _obstacleManager.Instantiate(platform);
+            // _enemySpawn.Instantiate(platform);
             _counter = 0;
-       }
+        }
         else
             _counter += Time.deltaTime;
-
     }
 }

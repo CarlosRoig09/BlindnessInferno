@@ -17,7 +17,7 @@ public class MoveCamara : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        _speed = _playerData.speed;
+        _speed = _playerData.speed*1.5f;
         Movement();
     }
 
