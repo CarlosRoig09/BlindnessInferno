@@ -601,11 +601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bda66144dc606f541ad1a89ac2617d4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _plSO:
-  - {fileID: 11400000, guid: 5b688ceb41dbf764f92e9c61fd254a75, type: 2}
-  - {fileID: 11400000, guid: 24bb2d85a0344e04da609ec4e06bc54a, type: 2}
-  - {fileID: 11400000, guid: f4c97dfb7b2e749429bed26992014648, type: 2}
-  - {fileID: 11400000, guid: 6b03c30b688c8d945a4bd1769691406a, type: 2}
+  _plSO: {fileID: 0}
 --- !u!4 &884668090
 Transform:
   m_ObjectHideFlags: 0

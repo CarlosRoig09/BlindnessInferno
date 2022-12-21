@@ -9,4 +9,6 @@ public class PlayerData : ScriptableObject
         get => _playerDistance;
         set => _playerDistance = value;
     }
+    public float speed;
+
 }
