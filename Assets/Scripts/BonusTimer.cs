@@ -24,11 +24,9 @@ public class BonusTimer : MonoBehaviour
             {
                 TimeLeft -= Time.deltaTime;
                 updateTimer(TimeLeft);
-                Debug.Log("Time Left: " + TimeLeft);
             }
             else
             {
-                Debug.Log("Time is UP!");
                 TimeLeft = 0;
                 TimerOn = false;
                 //projectileSizeScript.OnCollect = 0;

@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _platformName: '"Shake Plataform"'
   _platformPrefab: {fileID: 452762278059564996, guid: 9368352132e7fb441b781772bffc1639, type: 3}
-  _platformWaitTimer: 3
-  _platformSpeed: -0.5
+  _platformWaitTimer: 10
   _platformInitialYPosition: -2.5

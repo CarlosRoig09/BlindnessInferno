@@ -7,7 +7,11 @@ public class MoveCamara : MonoBehaviour
     [SerializeField]
     private PlayerData _playerData;
     public Rigidbody2D _rb;
-    public float _speed;
+    private float _speed;
+    public float Speed
+    {
+        get => _speed;
+    }
     // Start is called before the first frame update
     void Start()
     {

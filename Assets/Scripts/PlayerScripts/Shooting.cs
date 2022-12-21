@@ -51,7 +51,6 @@ public class Shooting : MonoBehaviour
 
     public void ChangeBulletSize(int i)
     {
-        Debug.Log("balas mas grandes");
         _bulletSize += i;
         if (_bulletSize == 0)
         {

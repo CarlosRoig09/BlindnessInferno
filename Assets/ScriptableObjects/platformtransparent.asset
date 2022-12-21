@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _platformName: '"Plataform Transparent"'
   _platformPrefab: {fileID: 4636046216849768529, guid: 26fe66aebfa4a8044a00745372eb28cf, type: 3}
-  _platformWaitTimer: 2
-  _platformSpeed: -0.5
+  _platformWaitTimer: 10
   _platformInitialYPosition: -3

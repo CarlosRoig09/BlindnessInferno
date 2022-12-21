@@ -15,6 +15,7 @@ public class ControlDeath : MonoBehaviour
     public Life Life
     {
         get => _life;
+        set => _life = value;
     }
     void Start()
     {
@@ -35,13 +36,12 @@ public class ControlDeath : MonoBehaviour
             _life = Life.Death;
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
             //PlayerLife--;
             SubstractLife();
-            Debug.Log("Life: " + PlayerLife);
             if (PlayerLife == 0)
             {
                 _life = Life.Death;
