@@ -51,7 +51,7 @@ public class FlyingEnemy : MonoBehaviour
 
     void LinearMovement(float speed, FlyingEnemyMovement flyingEnemyMovement)
     {
-        _rb.velocity = new Vector3(_rb.velocity.x, speed*Time.fixedDeltaTime);
+        _rb.velocity = new Vector3(_rb.velocity.x, speed*Time.deltaTime);
         if (_timeChangeDirection <= _countTimeCD)
         {
             _countTimeBA -= 1;
@@ -66,7 +66,7 @@ public class FlyingEnemy : MonoBehaviour
             _countTimeCD = 0;
         }
 
-        else _countTimeCD += Time.fixedDeltaTime;
+        else _countTimeCD += Time.deltaTime;
     }
 
     void Attack()
