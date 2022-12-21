@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f2b7b1b93a1db540b1ed5f077f9da24, type: 3}
+  m_Name: blokePrueva
+  m_EditorClassIdentifier: 
+  _platformName: '"BlokePrueva"'
+  _platformPrefab: {fileID: 6659960403604844580, guid: 8173a80df82ba5f408d0cff927caf08c, type: 3}
+  _platformWaitTimer: 2
+  _platformSpeed: -0.5
+  _platformInitialYPosition: -3
