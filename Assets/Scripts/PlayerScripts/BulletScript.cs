@@ -7,6 +7,7 @@ public class BulletScript : MonoBehaviour
     private Vector2 screenBounds;
     private float bulletHeight;
     private float bulletWeight;
+    public bool BulletSizeStatus;
 
 
     void Start()
@@ -14,6 +15,7 @@ public class BulletScript : MonoBehaviour
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         bulletHeight = transform.GetComponent<SpriteRenderer>().bounds.size.y / 2;
         bulletWeight = transform.GetComponent<SpriteRenderer>().bounds.size.x / 2;
+        BulletSizeStatus = false;
     }
     void Update()
     {
@@ -33,4 +35,16 @@ public class BulletScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    /*public void IncrementProjectileSize()
+    {
+        transform.localScale = new Vector3(1, 1, 1);
+        BulletSizeStatus = true;
+    }
+
+    public void DecrementProjectileSize()
+    {
+        transform.localScale = new Vector3(0.324f, 0.397f, 1);
+        BulletSizeStatus = false;
+    }*/
 }

@@ -10,6 +10,8 @@ public class ControlDeath : MonoBehaviour
     private float playerHeight;
     private float playerWeight;
     private Life _life;
+    public float MaxPlayerLife;
+    public float PlayerLife;
     public Life Life
     {
         get => _life;
@@ -29,13 +31,31 @@ public class ControlDeath : MonoBehaviour
     {
         //Si la posicion de y es mas peke q la del escenario y la altura del jugador o si la posicion de x es mas peke o igual a lo mismo pero en x.
         if (transform.position.y <= ((screenBounds.y * -1) - playerHeight) || transform.position.x <= ((screenBounds.x * -1) - playerWeight))
-            {
+        {
             _life = Life.Death;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
-            _life = Life.Death;
+        {
+            //PlayerLife--;
+            SubstractLife();
+            Debug.Log("Life: " + PlayerLife);
+            if (PlayerLife == 0)
+            {
+                _life = Life.Death;
+            }
+        }
+    }
+
+    public void SubstractLife()
+    {
+        PlayerLife--;
+    }
+
+    public void AddLife()
+    {
+        PlayerLife++;
     }
 }
