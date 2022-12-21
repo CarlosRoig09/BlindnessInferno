@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LifeBonusScript : MonoBehaviour
+public class LifeBonusScript : MovingPlatform
 {
     private ControlDeath _controlDeathScript;
     private GameObject _player;
