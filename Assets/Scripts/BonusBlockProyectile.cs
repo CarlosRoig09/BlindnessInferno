@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BonusBlock : MonoBehaviour
+public class BonusBlockProyectile : MovingPlatform
 {
 
     /*private BonusTimer projectileSizeBonusTime;
