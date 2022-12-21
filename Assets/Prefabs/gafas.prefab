@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &9176446701418556082
+--- !u!1 &8706181407779684775
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9176446701418556092}
-  - component: {fileID: 9176446701418556083}
-  - component: {fileID: 8904155589413203720}
-  - component: {fileID: -8659365886601253143}
-  - component: {fileID: 4025382028944730487}
+  - component: {fileID: 8706181407779684795}
+  - component: {fileID: 8706181407779684794}
+  - component: {fileID: 8706181407779684793}
+  - component: {fileID: 8706181407779684792}
   m_Layer: 0
-  m_Name: Proyectile
-  m_TagString: Bullet
+  m_Name: gafas
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9176446701418556092
+--- !u!4 &8706181407779684795
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9176446701418556082}
+  m_GameObject: {fileID: 8706181407779684775}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.3096, y: 3.6505, z: 0}
-  m_LocalScale: {x: 0.324, y: 0.397, z: 1}
+  m_LocalPosition: {x: -1.59, y: -2.31, z: 0}
+  m_LocalScale: {x: 0.19800034, y: 0.28182507, z: 0.1654}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &9176446701418556083
+--- !u!212 &8706181407779684794
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9176446701418556082}
+  m_GameObject: {fileID: 8706181407779684775}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -76,45 +75,24 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 3625043607559282579, guid: 19fb86013d8c24d6cb8410c0aadf30fa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e4f9168c4a16a3244b32ea7ca365f3c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 0.5}
+  m_Size: {x: 5, y: 2.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &8904155589413203720
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!60 &8706181407779684793
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9176446701418556082}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &-8659365886601253143
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9176446701418556082}
+  m_GameObject: {fileID: 8706181407779684775}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -125,25 +103,39 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.5}
-    newSize: {x: 1, y: 0.5}
+    oldSize: {x: 5, y: 2.8}
+    newSize: {x: 5, y: 2.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.5}
-  m_EdgeRadius: 0
---- !u!114 &4025382028944730487
+  m_Points:
+    m_Paths:
+    - - {x: 2.4099998, y: 0.08}
+      - {x: 2.4099998, y: 0.39}
+      - {x: -2.1399999, y: 0.39}
+      - {x: -2.4099998, y: 0.25}
+      - {x: -2.4099998, y: 0.08}
+      - {x: -2.3899999, y: 0.06}
+      - {x: -2.1, y: 0.06}
+      - {x: -2.08, y: 0.08}
+      - {x: -1.24, y: 0.049999997}
+      - {x: -0.84999996, y: -0.38}
+      - {x: 0.71999997, y: -0.38}
+      - {x: 1.02, y: -0.32}
+      - {x: 2.1, y: -0.26}
+      - {x: 2.35, y: -0.14}
+--- !u!114 &8706181407779684792
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9176446701418556082}
+  m_GameObject: {fileID: 8706181407779684775}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a833a404402e2c841a04e4b14f338ae7, type: 3}
+  m_Script: {fileID: 11500000, guid: 56e7caedc25a03a4584f96011bc20a1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletSizeStatus: 0
+  _plSO: {fileID: 0}
+  name: Glasses

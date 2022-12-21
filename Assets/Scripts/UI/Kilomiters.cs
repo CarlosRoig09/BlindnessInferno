@@ -8,8 +8,11 @@ public class Kilomiters : MonoBehaviour
     private Text distanciaText;
     private float _playerSpeed;
     private float distancia;
-    [SerializeField]
-    private PlayerData _playerData;
+    public float Distancia
+    {
+        get=>distancia;
+        set=>distancia = value;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +23,8 @@ public class Kilomiters : MonoBehaviour
     void Update()
     {
         //Calculo la distancia usando el punto de salida y sumandole la posicion del personaje.
-        distancia += _playerData.speed * Time.deltaTime;
+        Distancia += _playerSpeed * Time.deltaTime;
         //Meter resultado en texto:
-        distanciaText.text = "Distancia: " + distancia.ToString("F2") + " Mts.";
+        distanciaText.text = "Distancia: " + Distancia.ToString("F2") + " Mts.";
     }
 }
