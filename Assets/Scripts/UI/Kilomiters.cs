@@ -6,12 +6,12 @@ public class Kilomiters : MonoBehaviour
 {
     //Meter un texto pa mostrar distancia
     private Text distanciaText;
-    private float _playerSpeed;
+    public PlayerData playerData;
     private float distancia;
+    private float _realDistance;
     public float Distancia
     {
-        get=>distancia;
-        set=>distancia = value;
+        get=>_realDistance;
     }
     // Start is called before the first frame update
     void Start()
@@ -23,8 +23,9 @@ public class Kilomiters : MonoBehaviour
     void Update()
     {
         //Calculo la distancia usando el punto de salida y sumandole la posicion del personaje.
-        Distancia += _playerSpeed * Time.deltaTime;
+        distancia += playerData.speed * Time.deltaTime;
+        _realDistance = distancia / 10;
         //Meter resultado en texto:
-        distanciaText.text = "Distancia: " + Distancia.ToString("F2") + " Mts.";
+        distanciaText.text = "Distancia: " + _realDistance.ToString("F2") + " Mts.";
     }
 }

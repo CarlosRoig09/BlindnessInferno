@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Bullet
   - Enemy
+  - Fall
+  - Fallable
   layers:
   - Default
   - TransparentFX

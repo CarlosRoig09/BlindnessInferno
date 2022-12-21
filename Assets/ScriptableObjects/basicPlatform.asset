@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: basicPlatform
   m_EditorClassIdentifier: 
   _platformName: "\"B\xE1sic platform\""
-  _platformPrefab: {fileID: 5379563564969153193, guid: c6ab44ef518464d4eaf66feed49787b5, type: 3}
-  _platformWaitTimer: 12
+  _platformPrefab: {fileID: 451467891833474372, guid: 660723b87a7e1b743886245d208bee74, type: 3}
+  _platformWaitTimer: 10
   _platformInitialYPosition: -3

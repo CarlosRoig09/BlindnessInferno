@@ -7,7 +7,6 @@ public enum FlyingEnemyMovement
 }
 public class FlyingEnemy : MonoBehaviour
 {
-    [SerializeField]
     private Transform _playerTransform;
     private Vector3 _targetPosition;
     private Vector3 _attackDirection;
@@ -29,6 +28,8 @@ public class FlyingEnemy : MonoBehaviour
         _countTimeBA = _timeBeforeAttack;
         _countTimeCD = 0;
         _rb = gameObject.GetComponent<Rigidbody2D>();
+        _playerTransform = GameObject.Find("Character").GetComponent<Transform>();
+        transform.position = new Vector3(transform.position.x, transform.position.y + 1f);
         _fEM = FlyingEnemyMovement.Up;
     }
 

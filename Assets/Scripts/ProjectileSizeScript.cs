@@ -21,16 +21,13 @@ public class ProjectileSizeScript : MonoBehaviour
         projectileSizeBonusTime = _bonus.GetComponent<BonusTimer>();
 
         projectileSizeBonusTime.TimerOn = true;
-        Debug.Log("estoy aqui");
         OnCollectAction(1);
     }
 
     void Update()
     {
-        Debug.Log("HOLA 1");
         if (projectileSizeBonusTime.TimeLeft == 0)
         {
-            Debug.Log("HOLA 2");
             OnCollectAction(-1);
             Destroy(gameObject);
         }

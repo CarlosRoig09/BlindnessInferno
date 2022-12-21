@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: BasicEnemySO
   m_EditorClassIdentifier: 
   speed: 20
-  jumpSpeed: 100
+  jumpSpeed: 50
   changeDirectionTimer: 1.5
-  WaitjumpTime: 5
-  jumTimeDuration: 2
-  floatTime: 2
+  WaitjumpTime: 3
+  jumTimeDuration: 1.5
+  floatTime: 1

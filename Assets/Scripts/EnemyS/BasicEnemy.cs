@@ -28,7 +28,6 @@ public class BasicEnemy : MonoBehaviour
     // Update is called once per frame
     protected virtual void  Update()
     {
-        Debug.Log(eM);
         switch (eM)
         {
             case EnemyMovement.Right:
@@ -48,7 +47,6 @@ public class BasicEnemy : MonoBehaviour
     void Jump()
     {
         _rb.velocity = new Vector3(_rb.velocity.x, _bESO.jumpSpeed*Time.fixedDeltaTime);
-        Debug.Log(_rb.velocity);
         if (_bESO.jumTimeDuration <= _jumpDurationCounter)
         {
             _jumpDurationCounter = 0;
@@ -60,7 +58,6 @@ public class BasicEnemy : MonoBehaviour
     {
         if (Physics2D.Raycast(transform.position, Vector2.down, 0.65f, groundLayer.value))
         {
-            Debug.Log("Ground");
             _rb.velocity = new Vector3(speed * Time.fixedDeltaTime, _rb.velocity.y);
             if (_bESO.changeDirectionTimer <= _movementCounter)
             {

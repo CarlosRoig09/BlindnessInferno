@@ -10,7 +10,6 @@ public class WalkingScript : MonoBehaviour
     public KeyCode jumpkey;
     [SerializeField]
     private float _maxSpeed;
-    private float _speedAtCenterPos;
     [SerializeField]
     private Transform _maxPosition;
     private float _initPos;
@@ -19,6 +18,8 @@ public class WalkingScript : MonoBehaviour
     private float _acceleration;
     private bool _secondJump;
     public LayerMask groundLayer;
+    [SerializeField]
+    private Rigidbody2D _cameraRB2D;
     //public LayerMask ground;
     //public Collider2D footCollider;
     private void Start()
@@ -35,17 +36,15 @@ public class WalkingScript : MonoBehaviour
         {
             _playerData.speed = Mathf.Sqrt(2 * _acceleration * (transform.position.x - _initPos) + Mathf.Pow(initialspeed, 2));
             _initPos = transform.position.x;
-            rb.velocity = new Vector2(_playerData.speed * Time.fixedDeltaTime + Camera.main.GetComponent<MoveCamara>()._rb.velocity.x, rb.velocity.y);
-            _speedAtCenterPos = rb.velocity.x;
+            rb.velocity = new Vector2(_playerData.speed * Time.fixedDeltaTime + _cameraRB2D.velocity.x, rb.velocity.y);
         }
         else
         {
             /*  if (_speedAtCenterPos > Camera.main.GetComponent<MoveCamara>()._rb.velocity.x)
                   _speedAtCenterPos -= 0.25f;
               else _speedAtCenterPos = Camera.main.GetComponent<MoveCamara>()._rb.velocity.x;*/
-            rb.velocity = new Vector2(Camera.main.GetComponent<MoveCamara>()._rb.velocity.x, rb.velocity.y);
+            rb.velocity = new Vector2(_cameraRB2D.velocity.x, rb.velocity.y);
         }
-        Debug.Log("Velocity: " + rb.velocity.x);
     }
     void Update()
     {

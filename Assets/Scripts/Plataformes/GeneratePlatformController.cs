@@ -6,30 +6,40 @@ public class GeneratePlatformController : MonoBehaviour
 {
     private Vector3 _initPosition;
     [SerializeField]
-    private PlatformScriptableObject _plSO;
+    private PlatformScriptableObject[] _plSO;
     private float _counter;
-    private ObstacleManager _obstacleManager;
-    private EnemySpawn _enemySpawn;
+    private int _num;
+    [SerializeField]
+    private Rigidbody2D _cameraRB;
+    [SerializeField]
+    private AlPamPamYAlPiumPium _enemySpawn;
     // Start is called before the first frame update
     void Start()
     {
-        _counter = _plSO.PlatgormWaitTimer;
-        _obstacleManager = gameObject.GetComponent<ObstacleManager>();
-        _enemySpawn = gameObject.GetComponent<EnemySpawn>();
+        _num = Random.Range(0, _plSO.Length);
+        _counter = _plSO[_num].PlatgormWaitTimer;
+        _enemySpawn = gameObject.GetComponent<AlPamPamYAlPiumPium>();
     }
 
     // Update is called once per frame
     private void Update()
     {
-        if (_plSO.PlatgormWaitTimer/Camera.main.GetComponent<MoveCamara>()._rb.velocity.x <= _counter)
+        _enemySpawn = gameObject.GetComponent<AlPamPamYAlPiumPium>();
+        if (_plSO[_num].PlatgormWaitTimer / _cameraRB.velocity.x <= _counter)
         {
-            _initPosition = new Vector3(transform.position.x, _plSO.PlatformInitialYPosition);
-            var platform = Instantiate(_plSO.PlatformPrefab, _initPosition, Quaternion.identity);
-            // _obstacleManager.Instantiate(platform);
-            // _enemySpawn.Instantiate(platform);
-            _counter = 0;
+            GeneratePlatform();
         }
         else
             _counter += Time.deltaTime;
+    }
+
+    private void GeneratePlatform()
+    {
+        _initPosition = new Vector3(transform.position.x, _plSO[_num].PlatformInitialYPosition);
+        var platform = Instantiate(_plSO[_num].PlatformPrefab, _initPosition, Quaternion.identity);
+        _counter = 0;
+        if (platform != null&&_enemySpawn!=null)
+            _enemySpawn.InstantObstacle(platform);
+        _num = Random.Range(0, _plSO.Length - 1);
     }
 }

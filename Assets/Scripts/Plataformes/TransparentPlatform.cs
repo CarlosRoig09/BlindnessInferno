@@ -6,7 +6,7 @@ public class TransparentPlatform : PlatformControler
 {
 
 
-    protected override void PlatformHability()
+    public override void PlatformHability()
     {
         for (float alpha = 1; alpha > -0.1; alpha -= 0.1f)
         {
