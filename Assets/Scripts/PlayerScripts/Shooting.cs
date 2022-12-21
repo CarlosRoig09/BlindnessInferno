@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Shooting : MonoBehaviour
 {
@@ -10,9 +11,11 @@ public class Shooting : MonoBehaviour
     [SerializeField]
     private float _countdown;
     private float _count;
+    public float _bulletSize = 1;
 
     Vector2 lookDirection;
     float lookAngle;
+
     private void Start()
     {
         _count = _countdown;
@@ -28,11 +31,31 @@ public class Shooting : MonoBehaviour
         {
             GameObject projectileClone = Instantiate(projectile);
             projectileClone.transform.position = firePoint.position;
-             projectileClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
-
+            projectileClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
+            projectileClone.transform.localScale = new Vector3(projectile.transform.localScale.x *_bulletSize, projectile.transform.localScale.y * _bulletSize, 1);
             projectileClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * projectileSpeed;
             _count = 0;
         }
         _count += Time.deltaTime;
+    }
+
+    private void OnEnable()
+    {
+        ProjectileSizeScript.OnCollectAction += ChangeBulletSize;
+    }
+
+    private void OnDisable()
+    {
+        ProjectileSizeScript.OnCollectAction -= ChangeBulletSize;
+    }
+
+    public void ChangeBulletSize(int i)
+    {
+        Debug.Log("balas mas grandes");
+        _bulletSize += i;
+        if (_bulletSize == 0)
+        {
+            _bulletSize = 0.324f;
+        }
     }
 }
