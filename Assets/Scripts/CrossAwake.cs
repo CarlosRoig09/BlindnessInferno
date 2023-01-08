@@ -6,40 +6,33 @@ public class CrossAwake : MonoBehaviour
 {
     private float x;
     private float z;
-    private bool rotateX;
+    private float posDifference;
     private float rotationSpeed;
+
+    private GameObject _character;
 
     void Start()
     {
         x = 0.0f;
         z = -90.0f;
-        rotateX = true;
         rotationSpeed = 50.0f;
+        _character = GameObject.Find("Character");
     }
 
     void FixedUpdate()
     {
-        if (rotateX == true)
-        {
-            x += Time.deltaTime * rotationSpeed;
+        posDifference = transform.localPosition.x - _character.transform.localPosition.x;
 
-            if (x > 0.0f)
-            {
-                x = 0.0f;
-                rotateX = false;
-            }
-        }
-        else
+        if (posDifference < 6)
         {
             z += Time.deltaTime * rotationSpeed;
 
             if (z > 0.0f)
             {
                 z = 0.0f;
-                rotateX = true;
             }
-        }
 
-        transform.localRotation = Quaternion.Euler(x, 0, z);
+            transform.localRotation = Quaternion.Euler(x, 0, z);
+        }
     }
 }
