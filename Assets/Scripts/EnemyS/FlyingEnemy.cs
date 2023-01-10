@@ -73,8 +73,8 @@ public class FlyingEnemy : MonoBehaviour
     void Attack()
     {
         if (transform.position.x > _targetPosition.x)
-            _rb.velocity = _attackSpeed * Time.deltaTime * _attackDirection.normalized;
+            _rb.velocity = _attackSpeed * Time.fixedDeltaTime * _attackDirection.normalized;
         else
-            _rb.velocity = _attackSpeed * Time.deltaTime * new Vector3(_attackDirection.normalized.x, _attackDirection.normalized.y*-0.2f);
+            _rb.velocity = _attackSpeed * Time.fixedDeltaTime * new Vector3(_attackDirection.normalized.x, _attackDirection.normalized.y*-0.2f);
     }
 }
