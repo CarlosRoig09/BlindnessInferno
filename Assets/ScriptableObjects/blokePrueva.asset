@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _platformName: '"BlokePrueva"'
   _platformPrefab: {fileID: 6659960403604844580, guid: 8173a80df82ba5f408d0cff927caf08c, type: 3}
-  _platformWaitTimer: 2
-  _platformSpeed: -0.5
+  _platformWaitTimer: 10
   _platformInitialYPosition: -3

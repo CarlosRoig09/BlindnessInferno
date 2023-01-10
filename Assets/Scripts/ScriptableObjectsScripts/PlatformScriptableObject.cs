@@ -21,12 +21,7 @@ public class PlatformScriptableObject : ScriptableObject
     {
         get => _platformWaitTimer;
     }
-    public float PlatformSpeed
-    {
-        get => _platformSpeed;
-    }
-    [SerializeField]
-    private float _platformSpeed;
+
     public float PlatformInitialYPosition
     {
         get => _platformInitialYPosition;

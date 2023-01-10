@@ -29,7 +29,7 @@ public class BulletScript : MonoBehaviour
     {
         if (collision.gameObject.name != "Character")
         {
-            if (collision.gameObject.tag == "Enemy")
+            if (collision.gameObject.CompareTag("Enemy"))
                 Destroy(collision.gameObject);
             //Destroy(collision.gameObject);
             Destroy(gameObject);

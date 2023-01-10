@@ -9,6 +9,7 @@ public class BlindColorTest : MonoBehaviour
 
     private float _distance;
     private float _distanciaMax;
+    private float _count;
     public float DistanciaMax
     {
         get=>_distanciaMax;
@@ -20,6 +21,7 @@ public class BlindColorTest : MonoBehaviour
         _colorBlind = Camera.main.GetComponent<Colorblind>();
         _distance = GameObject.Find("Kilomiters").GetComponent<Kilomiters>().Distancia;
         _colorBlind.Type = 1;
+        _count = 0;
     }
 
     // Update is called once per frame
@@ -34,25 +36,22 @@ public class BlindColorTest : MonoBehaviour
         }
         else
         {
-            if (_distance >= 0f && _distance < 300f)
+            if (_count >= 0f && _count < 300f)
             {
                 _colorBlind.Type = 1;
             }
-            else if (_distance >= 300f && _distance < 600f)
+            else if (_count >= 300f && _count < 600f)
             {
                 _colorBlind.Type = 2;
 
             }
-            else if (_distance >= 600f)
+            else if (_count >= 600f && _count < 900f)
             {
                 _colorBlind.Type = 3;
-
             }
+            else _count = 0;
         }
-
-
-        Debug.Log("color "+_colorBlind.Type);
-        Debug.Log("distancia maxima "+_distanciaMax);
-
+        _count += 10*Time.deltaTime;
+        Debug.Log(_count);
     }
 }

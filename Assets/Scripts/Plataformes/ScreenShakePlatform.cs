@@ -8,7 +8,7 @@ public class ScreenShakePlatform : PlatformControler
     private float _duracion;
     private float _fuerza;
 
-    protected override void PlatformHability()
+    public override void PlatformHability()
     {
      
         _shake.StartShake(_duracion, _fuerza);
