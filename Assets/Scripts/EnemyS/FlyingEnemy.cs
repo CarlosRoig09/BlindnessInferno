@@ -40,9 +40,11 @@ public class FlyingEnemy : MonoBehaviour
         {
             case FlyingEnemyMovement.Up:
                 LinearMovement(_flyingSpeed, FlyingEnemyMovement.Down);
+                DetectPlayer();
                 break;
             case FlyingEnemyMovement.Down:
                 LinearMovement(_flyingSpeed * -1, FlyingEnemyMovement.Up);
+                DetectPlayer();
                 break;
             case FlyingEnemyMovement.Attack:
                 Attack();
@@ -57,17 +59,20 @@ public class FlyingEnemy : MonoBehaviour
         {
             _countTimeBA -= 1;
             _fEM = flyingEnemyMovement;
-            if (_countTimeBA <= 0)
-            {
-                _rb.velocity = new Vector3(0, 0);
-                _fEM = FlyingEnemyMovement.Attack;
-                _targetPosition = _playerTransform.position;
-                _attackDirection = _playerTransform.position - transform.position;
-            }
             _countTimeCD = 0;
-        }
-
+       }
         else _countTimeCD += Time.deltaTime;
+    }
+
+    void DetectPlayer()
+    {
+        if (Physics2D.Raycast(transform.position, _targetPosition, 0.000001f, 7))
+        {
+            _rb.velocity = new Vector3(0, 0);
+            _fEM = FlyingEnemyMovement.Attack;
+            _targetPosition = _playerTransform.position;
+            _attackDirection = _playerTransform.position - transform.position;
+        }
     }
 
     void Attack()
