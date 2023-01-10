@@ -122,10 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10e05bdb30bbd049b93141f20786e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _flyingSpeed: 50
-  _attackSpeed: 300
-  _timeBeforeAttack: 5
-  _timeChangeDirection: 0.5
+  _flyEnemySO: {fileID: 11400000, guid: 5ab1c4ee0f519da4296577f0d524126a, type: 2}
 --- !u!60 &7439423489853147541
 PolygonCollider2D:
   m_ObjectHideFlags: 0

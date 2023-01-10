@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 214816988b1af234c9923847c8055af6, type: 3}
   m_Name: BasicEnemySO
   m_EditorClassIdentifier: 
+  RateAperance: 70
   speed: 20
   jumpSpeed: 50
   changeDirectionTimer: 1.5
