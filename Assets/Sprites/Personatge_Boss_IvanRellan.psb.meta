@@ -1,0 +1,805 @@
+fileFormatVersion: 2
+guid: c7d9392649f68064595226763bc08f9d
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Libro
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 455
+      y: 2391
+      width: 258
+      height: 126
+    spriteID: d172ccfdee5998c418b1fb9b9dfc59e2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 455, y: 2391}
+    spritePosition: {x: 1517, y: 788}
+  - name: decorations-wrapper-layer
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1957
+      y: 4
+      width: 0
+      height: 0
+    spriteID: 1a5360abc0b6c3d4f903566a42add1fa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1957, y: 4}
+    spritePosition: {x: 0, y: 2048}
+  - name: decorations-wrapper-layer
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1965
+      y: 4
+      width: 0
+      height: 0
+    spriteID: f51ef1e27093a644ab8b9a531d191e5f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1965, y: 4}
+    spritePosition: {x: 0, y: 2048}
+  - name: Cabell Frontal
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1620
+      y: 4
+      width: 182
+      height: 116
+    spriteID: 2ba518a62ca595343b92326beb23b3cd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1620, y: 4}
+    spritePosition: {x: 957, y: 1876}
+  - name: Cap
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 457
+      y: 3833
+      width: 174
+      height: 212
+    spriteID: 84760037a8ac969418e59b2226b9ef25
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 457, y: 3833}
+    spritePosition: {x: 960, y: 1777}
+  - name: "Bra\xE7 Dret Superior"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 743
+      y: 1364
+      width: 712
+      height: 320
+    spriteID: 514e5e2b212e13d488dd10925ae61700
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 743, y: 1364}
+    spritePosition: {x: 1145, y: 1512}
+  - name: "Bra\xE7 Izquierdo Superior"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 743
+      y: 1692
+      width: 713
+      height: 317
+    spriteID: fabae0923703bef48b64e218fb721992
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 743, y: 1692}
+    spritePosition: {x: 241, y: 1512}
+  - name: Cama Esquerra
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 743
+      y: 2017
+      width: 440
+      height: 176
+    spriteID: 8effba4e835137d49a2a1a21bc822ef6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 743, y: 2017}
+    spritePosition: {x: 810, y: 828}
+  - name: Cama Dreta
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3833
+      width: 445
+      height: 188
+    spriteID: 3f156c5c96bc1b7439a32ac024cad4fd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 3833}
+    spritePosition: {x: 852, y: 826}
+  - name: Tronc
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 566
+      width: 481
+      height: 806
+    spriteID: 5c292706e4995f34c8482a0688ee9125
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 566}
+    spritePosition: {x: 812, y: 966}
+  - name: "Bra\xE7 Izquierdo Inferior"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1949
+      width: 443
+      height: 620
+    spriteID: 66022e8d210245846bbca7ac1b934a99
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 1949}
+    spritePosition: {x: 534, y: 1041}
+  - name: "Bra\xE7 Izquierdo Inferior"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3205
+      width: 433
+      height: 620
+    spriteID: a1dca9c638fd7c34c8a2802853e8b86d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 3205}
+    spritePosition: {x: 1133, y: 1035}
+  - name: "Bra\xE7 Izquierdo Inferior"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 743
+      y: 736
+      width: 433
+      height: 620
+    spriteID: 8850f210161438b4b9f3cc6c66ecfe85
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 743, y: 736}
+    spritePosition: {x: 1133, y: 1035}
+  - name: "Bra\xE7 Izquierdo Inferior"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2577
+      width: 443
+      height: 620
+    spriteID: f9005284500f5d04389d7302e3b4173f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 2577}
+    spritePosition: {x: 534, y: 1041}
+  - name: Coll
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1810
+      y: 4
+      width: 139
+      height: 79
+    spriteID: cf9c2b73e75400b4599560270392b731
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1810, y: 4}
+    spritePosition: {x: 977, y: 1719}
+  - name: Cabell Traser
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 455
+      y: 1949
+      width: 213
+      height: 434
+    spriteID: e549ca873a9e2874a84f87ec1241fffc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 455, y: 1949}
+    spritePosition: {x: 941, y: 1540}
+  - name: Ala Dreta Superior
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 743
+      y: 370
+      width: 823
+      height: 358
+    spriteID: 8a2c06600ca94d748929044c215bca2e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 743, y: 370}
+    spritePosition: {x: 1041, y: 1658}
+  - name: Ala Esquerra Superior
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 743
+      y: 4
+      width: 869
+      height: 358
+    spriteID: 592c20ac1f6c68d4a96c4d29ccf6c32e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 743, y: 4}
+    spritePosition: {x: 182, y: 1660}
+  - name: Ala Esquerra Inferior
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 731
+      height: 554
+    spriteID: d32d61fc41a02f94cab23097a9cea6eb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 335, y: 1153}
+  - name: Ala Dreta Inferior
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1380
+      width: 671
+      height: 561
+    spriteID: 86d318d13984c504596641910d9ed116
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 1380}
+    spritePosition: {x: 1039, y: 1139}
+  - name: Capa de pintura 3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1973
+      y: 4
+      width: 0
+      height: 0
+    spriteID: 14609907ff895764bafad55903d78c5a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1973, y: 4}
+    spritePosition: {x: 0, y: 2048}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Libro
+    spriteName: Libro
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d172ccfdee5998c418b1fb9b9dfc59e2
+    layerID: 0
+    mosaicPosition: {x: 455, y: 2391}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: decorations-wrapper-layer
+    spriteName: decorations-wrapper-layer
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1a5360abc0b6c3d4f903566a42add1fa
+    layerID: -352616163
+    mosaicPosition: {x: 1957, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: decorations-wrapper-layer
+    spriteName: decorations-wrapper-layer
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f51ef1e27093a644ab8b9a531d191e5f
+    layerID: -767854053
+    mosaicPosition: {x: 1965, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Cabell Frontal
+    spriteName: Cabell Frontal
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2ba518a62ca595343b92326beb23b3cd
+    layerID: -1707146239
+    mosaicPosition: {x: 1620, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Cap
+    spriteName: Cap
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 84760037a8ac969418e59b2226b9ef25
+    layerID: -118338486
+    mosaicPosition: {x: 457, y: 3833}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "Bra\xE7 Dret Superior"
+    spriteName: "Bra\xE7 Dret Superior"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 514e5e2b212e13d488dd10925ae61700
+    layerID: 43263520
+    mosaicPosition: {x: 743, y: 1364}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "Bra\xE7 Izquierdo Superior"
+    spriteName: "Bra\xE7 Izquierdo Superior"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: fabae0923703bef48b64e218fb721992
+    layerID: 572935885
+    mosaicPosition: {x: 743, y: 1692}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Cama Esquerra
+    spriteName: Cama Esquerra
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8effba4e835137d49a2a1a21bc822ef6
+    layerID: -528721796
+    mosaicPosition: {x: 743, y: 2017}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Cama Dreta
+    spriteName: Cama Dreta
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3f156c5c96bc1b7439a32ac024cad4fd
+    layerID: -1685748122
+    mosaicPosition: {x: 4, y: 3833}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tronc
+    spriteName: Tronc
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5c292706e4995f34c8482a0688ee9125
+    layerID: 411632634
+    mosaicPosition: {x: 4, y: 566}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "Bra\xE7 Izquierdo Inferior"
+    spriteName: "Bra\xE7 Izquierdo Inferior"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 66022e8d210245846bbca7ac1b934a99
+    layerID: 639829118
+    mosaicPosition: {x: 4, y: 1949}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "Bra\xE7 Izquierdo Inferior"
+    spriteName: "Bra\xE7 Izquierdo Inferior"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a1dca9c638fd7c34c8a2802853e8b86d
+    layerID: -931773886
+    mosaicPosition: {x: 4, y: 3205}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "Bra\xE7 Izquierdo Inferior"
+    spriteName: "Bra\xE7 Izquierdo Inferior"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8850f210161438b4b9f3cc6c66ecfe85
+    layerID: -1335058413
+    mosaicPosition: {x: 743, y: 736}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "Bra\xE7 Izquierdo Inferior"
+    spriteName: "Bra\xE7 Izquierdo Inferior"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f9005284500f5d04389d7302e3b4173f
+    layerID: 231025528
+    mosaicPosition: {x: 4, y: 2577}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Coll
+    spriteName: Coll
+    isGroup: 0
+    parentIndex: -1
+    spriteID: cf9c2b73e75400b4599560270392b731
+    layerID: 391979368
+    mosaicPosition: {x: 1810, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Cabell Traser
+    spriteName: Cabell Traser
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e549ca873a9e2874a84f87ec1241fffc
+    layerID: 2091899628
+    mosaicPosition: {x: 455, y: 1949}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Ala Dreta Superior
+    spriteName: Ala Dreta Superior
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8a2c06600ca94d748929044c215bca2e
+    layerID: -780129425
+    mosaicPosition: {x: 743, y: 370}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Ala Esquerra Superior
+    spriteName: Ala Esquerra Superior
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 592c20ac1f6c68d4a96c4d29ccf6c32e
+    layerID: -79581545
+    mosaicPosition: {x: 743, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Ala Esquerra Inferior
+    spriteName: Ala Esquerra Inferior
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d32d61fc41a02f94cab23097a9cea6eb
+    layerID: -12258116
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Ala Dreta Inferior
+    spriteName: Ala Dreta Inferior
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 86d318d13984c504596641910d9ed116
+    layerID: -2009038286
+    mosaicPosition: {x: 4, y: 1380}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Capa de pintura 3
+    spriteName: Capa de pintura 3
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 14609907ff895764bafad55903d78c5a
+    layerID: -1426428336
+    mosaicPosition: {x: 1973, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

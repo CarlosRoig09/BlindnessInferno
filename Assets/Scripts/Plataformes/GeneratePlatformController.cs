@@ -16,7 +16,7 @@ public class GeneratePlatformController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _num = Random.Range(0, _plSO.Length);
+        _num = RandomMethods.ReturnARandomObject(_plSO, 0);
         _counter = _plSO[_num].PlatgormWaitTimer;
         _enemySpawn = gameObject.GetComponent<AlPamPamYAlPiumPium>();
     }
@@ -35,11 +35,12 @@ public class GeneratePlatformController : MonoBehaviour
 
     private void GeneratePlatform()
     {
+        _num = RandomMethods.ReturnARandomObject(_plSO, 0);
         _initPosition = new Vector3(transform.position.x, _plSO[_num].PlatformInitialYPosition);
         var platform = Instantiate(_plSO[_num].PlatformPrefab, _initPosition, Quaternion.identity);
         _counter = 0;
-        if (platform != null&&_enemySpawn!=null)
-            _enemySpawn.InstantObstacle(platform);
-        _num = Random.Range(0, _plSO.Length - 1);
+        Debug.Log(platform.name);
+        //if (platform != null&&_enemySpawn!=null)
+            //_enemySpawn.InstantObstacle(platform);
     }
 }

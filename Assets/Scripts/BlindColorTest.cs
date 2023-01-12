@@ -52,6 +52,5 @@ public class BlindColorTest : MonoBehaviour
             else _count = 0;
         }
         _count += 10*Time.deltaTime;
-        Debug.Log(_count);
     }
 }
