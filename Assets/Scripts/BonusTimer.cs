@@ -15,6 +15,7 @@ public class BonusTimer : MonoBehaviour
             {
                 TimeLeft -= Time.deltaTime;
                 updateTimer(TimeLeft);
+                Debug.Log("BONUS TIME: " + TimeLeft);
             }
             else
             {

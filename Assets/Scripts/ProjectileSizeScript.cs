@@ -16,8 +16,15 @@ public class ProjectileSizeScript : MonoBehaviour
         _bonus = GameObject.Find("BonusTimer");
         projectileSizeBonusTime = _bonus.GetComponent<BonusTimer>();
 
+        if (projectileSizeBonusTime.TimerOn == true)
+        {
+            projectileSizeBonusTime.TimeLeft += 5;
+        }
+
         projectileSizeBonusTime.TimerOn = true;
         OnCollectAction(1);
+
+        
     }
 
     void Update()
