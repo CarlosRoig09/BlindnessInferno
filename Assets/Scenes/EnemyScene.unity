@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 177154693287426384, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
       propertyPath: _maxSpeed
-      value: 300
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 177154693287426384, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
       propertyPath: _cameraRB2D
@@ -148,11 +148,23 @@ PrefabInstance:
       objectReference: {fileID: 1173127431}
     - target: {fileID: 177154693287426384, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
       propertyPath: initialspeed
-      value: 100
+      value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 177154693287426384, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
+      propertyPath: _timeToMaxSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 177154693287426384, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
+      propertyPath: firstGodPosition
+      value: 
+      objectReference: {fileID: 1971249025}
     - target: {fileID: 177154693287426391, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
       propertyPath: m_Name
       value: Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 177154693287426391, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 177154693287426476, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
       propertyPath: m_RootOrder
@@ -204,7 +216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 177154693287426479, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 177154693287426479, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
       propertyPath: PlayerLife
@@ -240,7 +252,7 @@ GameObject:
   - component: {fileID: 365089405}
   - component: {fileID: 365089406}
   - component: {fileID: 365089408}
-  - component: {fileID: 365089407}
+  - component: {fileID: 365089409}
   m_Layer: 0
   m_Name: Arm
   m_TagString: EnemyBossHitPoint
@@ -301,9 +313,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1353000665
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.5278747, g: 0.6504986, b: 0.8301887, a: 1}
   m_FlipX: 0
@@ -331,27 +343,6 @@ CircleCollider2D:
   m_Offset: {x: -0.00000023841858, y: 0.00000011920929}
   serializedVersion: 2
   m_Radius: 0.50000006
---- !u!50 &365089407
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 365089403}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &365089408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,6 +360,28 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  _cameraRB2D: {fileID: 830198637}
+--- !u!50 &365089409
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365089403}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &517710583
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,7 +463,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -543,8 +556,8 @@ GameObject:
   - component: {fileID: 545878839}
   - component: {fileID: 545878840}
   - component: {fileID: 545878841}
-  - component: {fileID: 545878842}
   - component: {fileID: 545878843}
+  - component: {fileID: 545878844}
   m_Layer: 0
   m_Name: Arm2
   m_TagString: EnemyBossHitPoint
@@ -605,9 +618,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1353000665
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.3168743, g: 0.595306, b: 0.8113208, a: 1}
   m_FlipX: 0
@@ -635,27 +648,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.00000023841858}
   serializedVersion: 2
   m_Radius: 0.50000006
---- !u!50 &545878842
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545878838}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &545878843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -673,6 +665,28 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  _cameraRB2D: {fileID: 830198637}
+--- !u!50 &545878844
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545878838}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &830198636
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,6 +1137,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1106818461}
   - component: {fileID: 1106818463}
+  - component: {fileID: 1106818465}
+  - component: {fileID: 1106818464}
   m_Layer: 0
   m_Name: Arms
   m_TagString: Untagged
@@ -1159,7 +1175,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cae94f80b37c28446949e88f8a08b846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
+  _speed: 2500
+--- !u!114 &1106818464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106818460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eb61a0e64deba4b923270c109092f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerData: {fileID: 11400000, guid: 507664301ab2b36459cb8d9f25917c48, type: 2}
+  _rb: {fileID: 0}
+--- !u!50 &1106818465
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106818460}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1154970558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1385,9 +1436,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650753920}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: -0.86, z: -0.07326294}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10, y: -0.86, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

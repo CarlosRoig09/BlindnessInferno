@@ -19,13 +19,15 @@ public class WalkingScript : MonoBehaviour
     private bool _secondJump;
     public LayerMask groundLayer;
     [SerializeField]
+    private Transform firstGodPosition;
+    [SerializeField]
     private Rigidbody2D _cameraRB2D;
     //public LayerMask ground;
     //public Collider2D footCollider;
     private void Start()
     {
         _secondJump = false;
-        _initPos = transform.position.x;
+        _initPos = firstGodPosition.position.x;
         _acceleration = (_maxSpeed - initialspeed) / _timeToMaxSpeed;
     }
     /*private bool isGrounded;

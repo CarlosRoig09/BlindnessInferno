@@ -13,7 +13,7 @@ public class MoveCamara : MonoBehaviour
         get => _speed;
     }
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         _rb = gameObject.GetComponent<Rigidbody2D>();
     }
