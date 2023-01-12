@@ -9,6 +9,8 @@ public class Shooting : MonoBehaviour
     public Transform firePoint;
     public float projectileSpeed = 50;
     [SerializeField]
+    private float proyectileDamage;
+    [SerializeField]
     private float _countdown;
     private float _count;
     public float _bulletSize = 1;

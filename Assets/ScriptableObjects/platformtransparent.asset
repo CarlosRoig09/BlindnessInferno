@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f2b7b1b93a1db540b1ed5f077f9da24, type: 3}
   m_Name: platformtransparent
   m_EditorClassIdentifier: 
+  RateAperance: 50
   _platformName: '"Plataform Transparent"'
   _platformPrefab: {fileID: 4636046216849768529, guid: 26fe66aebfa4a8044a00745372eb28cf, type: 3}
   _platformWaitTimer: 10
