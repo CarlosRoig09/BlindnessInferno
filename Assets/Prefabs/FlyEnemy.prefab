@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8015743291888870425}
   - component: {fileID: 8015743291888870421}
   - component: {fileID: 8015743291888870427}
-  - component: {fileID: 5478966387716670383}
+  - component: {fileID: 7439423489853147541}
   m_Layer: 0
   m_Name: FlyEnemy
   m_TagString: Enemy
@@ -122,11 +122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10e05bdb30bbd049b93141f20786e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _flyingSpeed: 200
-  _attackSpeed: 2000
-  _timeBeforeAttack: 1.5
-  _timeChangeDirection: 0.5
---- !u!60 &5478966387716670383
+  _flyEnemySO: {fileID: 11400000, guid: 5ab1c4ee0f519da4296577f0d524126a, type: 2}
+--- !u!60 &7439423489853147541
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,12 +149,10 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -0.5, y: 0.5}
-      - {x: -0.50000036, y: 0.49753594}
-      - {x: -0.48065984, y: 0.4910323}
-      - {x: -1.5185848, y: -0.016259255}
+      - {x: -1.5054414, y: -0.045425314}
       - {x: -0.5, y: -0.5}
       - {x: 0.5, y: -0.5}
-      - {x: 1.5314775, y: -0.022763062}
+      - {x: 1.499311, y: -0.039240364}
       - {x: 0.5, y: 0.5}
 --- !u!1 &8015743293497323767
 GameObject:

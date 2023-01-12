@@ -8,6 +8,11 @@ public class BulletScript : MonoBehaviour
     private float bulletHeight;
     private float bulletWeight;
     public bool BulletSizeStatus;
+    private float proyectileDamage;
+    public float ProyectileDamage
+    {
+        set { proyectileDamage = value; }
+    }
 
 
     void Start()
@@ -31,6 +36,10 @@ public class BulletScript : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Enemy"))
                 Destroy(collision.gameObject);
+            if (collision.gameObject.CompareTag("EnemyBossHitPoint"))
+            {
+                gameObject.GetComponentInParent<ControlBossFaces>().GetDamaged(proyectileDamage);
+            }
             //Destroy(collision.gameObject);
             Destroy(gameObject);
         }

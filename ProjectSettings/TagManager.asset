@@ -9,6 +9,8 @@ TagManager:
   - Fall
   - Fallable
   - AguaBendita
+  - EnemyBossHitPoint
+  - EnemyBoss
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - Water
   - UI
   - Platform
-  - 
+  - Player
   - 
   - 
   - 
