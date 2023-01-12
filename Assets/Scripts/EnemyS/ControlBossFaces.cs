@@ -27,6 +27,7 @@ public class ControlBossFaces : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(_currentFase);
         switch (_currentFase)
         {
             case BossFase.StartBossFase1:
@@ -39,13 +40,13 @@ public class ControlBossFaces : MonoBehaviour
                 LifeForFace(BossEnemySO.LifeFirstFace);
                 break;
             case BossFase.BossFase2:
-                ComproveIfFaseEnd(BossFase.BossFase2, _currentLife);
+                ComproveIfFaseEnd(BossFase.BossFase3, _currentLife);
                 break;
             case BossFase.StartBossFase3:
                 LifeForFace(BossEnemySO.LifeFirstFace);
                 break;
             case BossFase.BossFase3:
-                ComproveIfFaseEnd(BossFase.BossFase2, _currentLife);
+                ComproveIfFaseEnd(BossFase.Death, _currentLife);
                 break;
             case BossFase.Death:
                 Destroy(gameObject);
@@ -61,5 +62,9 @@ public class ControlBossFaces : MonoBehaviour
     void LifeForFace(float newLife)
     {
         _currentLife = newLife;
+    }
+    public void GetDamaged(float damage)
+    {
+        _currentLife -= damage;
     }
 }

@@ -18,7 +18,6 @@ public class MoveAroundThePlayerByMousePController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         RotationZ(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.parent.transform.position);
     }
 

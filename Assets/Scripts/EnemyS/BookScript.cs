@@ -37,7 +37,6 @@ public class BookScript : MonoBehaviour
     void LinearMovement(float speed, EnemyMovement enemyMovement)
     {
         _rb.velocity = new Vector3(_rb.velocity.x, speed * Time.fixedDeltaTime);
-        Debug.Log(_rb.velocity.x);
         if (_timeChangeDirection <= _countTimeCD)
         {
             _eM = enemyMovement;
