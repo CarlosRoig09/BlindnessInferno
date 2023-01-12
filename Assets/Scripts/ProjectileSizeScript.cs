@@ -5,10 +5,6 @@ using UnityEngine;
 
 public class ProjectileSizeScript : MonoBehaviour
 {
-    /*private BulletScript _bulletScript;
-    private GameObject _bullet;
-    private Shooting _shootingScript;
-    private GameObject _player;*/
     private BonusTimer projectileSizeBonusTime;
     private GameObject _bonus;
 
@@ -30,6 +26,7 @@ public class ProjectileSizeScript : MonoBehaviour
         {
             OnCollectAction(-1);
             Destroy(gameObject);
+            projectileSizeBonusTime.TimeLeft = 5;
         }
     }
 }

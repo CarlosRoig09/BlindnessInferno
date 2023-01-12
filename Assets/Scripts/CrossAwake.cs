@@ -7,9 +7,11 @@ public class CrossAwake : MonoBehaviour
     private float x;
     private float z;
     private float posDifference;
+    public float awakenDistance;
     private float rotationSpeed;
 
     private GameObject _character;
+    
 
     void Start()
     {
@@ -23,7 +25,7 @@ public class CrossAwake : MonoBehaviour
     {
         posDifference = transform.localPosition.x - _character.transform.localPosition.x;
 
-        if (posDifference < 6)
+        if (posDifference < awakenDistance)
         {
             z += Time.deltaTime * rotationSpeed;
 
