@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3658e6553db5b2c4b940d153c0a42b70, type: 3}
   m_Name: BossEnemySO
   m_EditorClassIdentifier: 
-  LifeFirstFace: 10
-  LifeSecondFace: 10
-  LifeThirtFace: 10
+  LifeFirstFace: 1
+  LifeSecondFace: 1
+  LifeThirtFace: 1

@@ -198,6 +198,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 177154693287426478, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
+      propertyPath: proyectileDamage
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 177154693287426479, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -357,7 +361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeChangeDirection: 3
-  _speed: 10
+  _speed: 20
 --- !u!50 &517710586
 Rigidbody2D:
   serializedVersion: 4
@@ -389,7 +393,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
