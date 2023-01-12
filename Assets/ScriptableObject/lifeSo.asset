@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17f8a2f4c97e09f448ecde3dff2d11a7, type: 3}
-  m_Name: FlyEnemySO
+  m_Script: {fileID: 11500000, guid: a2ca7e6dccc771f45a41ce54e3f680f4, type: 3}
+  m_Name: lifeSo
   m_EditorClassIdentifier: 
-  RateAperance: 50
-  Prefab: {fileID: 8015743291888870430, guid: f923c13ea06dfe542accd35b753e5bbb, type: 3}
-  FlyingSpeed: 50
-  AttackSpeed: 100
-  TimeChaangeDirection: 0.5
+  RateAperance: 30
+  Prefab: {fileID: 8735426491085853404, guid: c966f09ee9a7c4f40ac6e45fe8e38f61, type: 3}

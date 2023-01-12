@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Fall
   - Fallable
+  - EnemyBossHitPoint
+  - EnemyBoss
   layers:
   - Default
   - TransparentFX

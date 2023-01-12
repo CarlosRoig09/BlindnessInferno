@@ -40,8 +40,7 @@ public class GeneratePlatformController : MonoBehaviour
         var platform = Instantiate(_plSO[_num].PlatformPrefab, _initPosition, Quaternion.identity);
         _counter = 0;
         Debug.Log(platform.name);
-        if (platform != null&&_enemySpawn!=null)
-            _enemySpawn.InstantObstacle(platform);
-        _num = Random.Range(0, _plSO.Length - 1);
+        //if (platform != null&&_enemySpawn!=null)
+            //_enemySpawn.InstantObstacle(platform);
     }
 }
