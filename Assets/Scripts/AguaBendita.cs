@@ -6,6 +6,8 @@ public class AguaBendita : MonoBehaviour
 {
     private ControlDeath _controlDeath;
     private GameObject _character;
+    //private GameObject BubleParticleSystem;
+    
 
     void Start()
     {
@@ -23,7 +25,14 @@ public class AguaBendita : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             //Debug.Log("Agua Bendita tocada!!");
-            _controlDeath.life = Life.Death;
+            //_controlDeath.life = Life.Death;
+            //var emission = ParticleSystem.emission;
+            //emission.rate = 70.0f;
+
+            ParticleSystem ps = GameObject.Find("BubleParticleSystem").GetComponent<ParticleSystem>();
+            //ps.Play();
+            ps.ParticleSystem.emission.rate = 70.0f;
+
         }
     }
 }
