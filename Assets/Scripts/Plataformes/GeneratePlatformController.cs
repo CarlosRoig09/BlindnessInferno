@@ -23,7 +23,7 @@ public class GeneratePlatformController : MonoBehaviour
 
     // Update is called once per frame
     private void Update()
-    {
+     {
         _enemySpawn = gameObject.GetComponent<AlPamPamYAlPiumPium>();
         if (_plSO[_num].PlatgormWaitTimer / _cameraRB.velocity.x <= _counter)
         {

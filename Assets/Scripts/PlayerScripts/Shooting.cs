@@ -36,6 +36,7 @@ public class Shooting : MonoBehaviour
             projectileClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
             projectileClone.transform.localScale = new Vector3(projectile.transform.localScale.x *_bulletSize, projectile.transform.localScale.y * _bulletSize, 1);
             projectileClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * projectileSpeed;
+            projectileClone.GetComponent<BulletScript>().ProyectileDamage = proyectileDamage;
             _count = 0;
         }
         _count += Time.deltaTime;
