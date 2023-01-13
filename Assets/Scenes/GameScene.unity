@@ -636,11 +636,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bda66144dc606f541ad1a89ac2617d4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _plSO:
+  _plSONivel1:
   - {fileID: 11400000, guid: e1e6da0c222d9cd4eaeda3fc3c1d8ad3, type: 2}
   - {fileID: 11400000, guid: 56debfa1bcebbb147a911c6823fec83f, type: 2}
   - {fileID: 11400000, guid: 0c24341c7afb11c42988571852f776b5, type: 2}
-  - {fileID: 11400000, guid: 6b03c30b688c8d945a4bd1769691406a, type: 2}
+  - {fileID: 0}
   _cameraRB: {fileID: 2007331085}
   _enemySpawn: {fileID: 884668095}
 --- !u!4 &884668090
