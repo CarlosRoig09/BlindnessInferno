@@ -9,9 +9,9 @@ public class CrossAwake : MonoBehaviour
     private float posDifference;
     public float awakenDistance;
     private float rotationSpeed;
-
     private GameObject _character;
-    
+    //public GameObject Lightning;
+
 
     void Start()
     {
@@ -33,6 +33,10 @@ public class CrossAwake : MonoBehaviour
             {
                 z = 0.0f;
             }
+
+            /*GameObject lightningSpawned = Instantiate(Lightning);
+            //lightningSpawned.transform.position = new Vector3(0, 0, 0);
+            lightningSpawned.transform.position.x = transform.localPosition.x;*/
 
             transform.localRotation = Quaternion.Euler(x, 0, z);
         }

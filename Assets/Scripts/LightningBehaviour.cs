@@ -14,7 +14,6 @@ public class LightningBehaviour : PlatformControler
         _shake.StartShake(_duracion, _fuerza);
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         _shake = GameObject.Find("Main Camera").GetComponent<ShakeBehaviour>();
@@ -26,7 +25,7 @@ public class LightningBehaviour : PlatformControler
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Fallable"))
         {
             PlatformHability();
         }
