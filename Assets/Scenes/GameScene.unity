@@ -623,7 +623,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &884668089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,6 +640,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e1e6da0c222d9cd4eaeda3fc3c1d8ad3, type: 2}
   - {fileID: 11400000, guid: 56debfa1bcebbb147a911c6823fec83f, type: 2}
   - {fileID: 11400000, guid: 0c24341c7afb11c42988571852f776b5, type: 2}
+  - {fileID: 11400000, guid: 6b03c30b688c8d945a4bd1769691406a, type: 2}
+  _plSONivel2:
+  - {fileID: 11400000, guid: d6381e2f32e29ad4d9696a9afc4be2eb, type: 2}
+  - {fileID: 11400000, guid: f4a3ab29d036db842bd4a0e3f1078e40, type: 2}
+  - {fileID: 11400000, guid: 5e3d50768680c994f8546fbb5c027090, type: 2}
+  - {fileID: 11400000, guid: 843353c5294e7384ab7cc36a503b43ad, type: 2}
+  _plSOTransition:
   - {fileID: 0}
   _cameraRB: {fileID: 2007331085}
   _enemySpawn: {fileID: 884668095}
@@ -994,7 +1001,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 91556297017175042, guid: 3687f2b4cdb69ac478588d56094ff0c2, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 91556297017175042, guid: 3687f2b4cdb69ac478588d56094ff0c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1124,7 +1131,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 451467891833474369, guid: 660723b87a7e1b743886245d208bee74, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 451467891833474369, guid: 660723b87a7e1b743886245d208bee74, type: 3}
       propertyPath: m_LocalScale.x

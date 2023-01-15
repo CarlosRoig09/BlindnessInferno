@@ -23,6 +23,11 @@ public class GeneratePlatformController : MonoBehaviour
 
     [SerializeField]
     private PlatformScriptableObject[] _plSONivel1;
+    [SerializeField]
+    private PlatformScriptableObject[] _plSONivel2;
+
+    [SerializeField]
+    private PlatformScriptableObject[] _plSOTransition;
 
     private float _counter;
     private int _num;
@@ -32,11 +37,16 @@ public class GeneratePlatformController : MonoBehaviour
     private AlPamPamYAlPiumPium _enemySpawn;
 
     private Nivel _nivel;
+    public Nivel Nivel
+    {
+        get => _nivel;
+        set=> _nivel = value;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        _nivel = Nivel.Nivel1;
+        
         _plSO = _plSONivel1;
         _num = RandomMethods.ReturnARandomObject(_plSO, 0);
         _counter = _plSO[_num].PlatgormWaitTimer;
@@ -63,8 +73,10 @@ public class GeneratePlatformController : MonoBehaviour
                 _plSO = _plSONivel1;
                 break;
             case Nivel.TransNivel1:
+                _plSO = _plSOTransition;
                 break;
             case Nivel.Nivel2:
+                _plSO = _plSONivel2;
                 break;
             case Nivel.TransNivel2:
                 break;
