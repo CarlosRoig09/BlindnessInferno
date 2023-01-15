@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 907039103, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
+      propertyPath: m_Name
+      value: Trident
+      objectReference: {fileID: 0}
     - target: {fileID: 177154693287426384, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
       propertyPath: _cameraRB2D
       value: 
@@ -190,7 +194,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5545762967217992689, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
 --- !u!1 &365089403
 GameObject:
@@ -347,6 +352,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f3385ce9fbe84459ed8e4a9b2042ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &376309493 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5821930015610542462, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
+  m_PrefabInstance: {fileID: 219735796}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &517710583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1473,6 +1483,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1966966479 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 907039103, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
+  m_PrefabInstance: {fileID: 219735796}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1966966482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966966479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98fbb97ae78fa346abc619587d05dc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 9176446701418556082, guid: 87b24235f9cb023499d1957273d6fed7, type: 3}
+  firePoint: {fileID: 376309493}
+  projectileSpeed: 20
+  proyectileDamage: 5
+  _countdown: 0.5
+  _bulletSize: 1
 --- !u!1 &1971249022
 GameObject:
   m_ObjectHideFlags: 0

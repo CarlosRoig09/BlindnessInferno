@@ -20,7 +20,6 @@ public class SupriseBox : MonoBehaviour
     public void FreeBats()
     {
         Instantiate(_bats,transform.position,Quaternion.identity);
-        Destroy();
     }
 
     public void Destroy()

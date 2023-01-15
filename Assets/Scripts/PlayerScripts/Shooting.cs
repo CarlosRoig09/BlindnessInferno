@@ -14,6 +14,7 @@ public class Shooting : MonoBehaviour
     private float _countdown;
     private float _count;
     public float _bulletSize = 1;
+    private Animator _anim;
 
     Vector2 lookDirection;
     float lookAngle;
@@ -21,6 +22,7 @@ public class Shooting : MonoBehaviour
     private void Start()
     {
         _count = _countdown;
+        _anim = gameObject.GetComponent<Animator>();
     }
     void Update()
     {
@@ -31,15 +33,25 @@ public class Shooting : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0)&&_count>=_countdown)
         {
-            GameObject projectileClone = Instantiate(projectile);
-            projectileClone.transform.position = firePoint.position;
-            projectileClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
-            projectileClone.transform.localScale = new Vector3(projectile.transform.localScale.x *_bulletSize, projectile.transform.localScale.y * _bulletSize, 1);
-            projectileClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * projectileSpeed;
-            projectileClone.GetComponent<BulletScript>().ProyectileDamage = proyectileDamage;
-            _count = 0;
+            _anim.SetBool("Attack", true);
         }
         _count += Time.deltaTime;
+    }
+
+    public void EndAttack()
+    {
+        _anim.SetBool("Attack", false);
+    }
+
+    public void SpawnProyectile()
+    {
+        GameObject projectileClone = Instantiate(projectile);
+        projectileClone.transform.position = firePoint.position;
+        projectileClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
+        projectileClone.transform.localScale = new Vector3(projectile.transform.localScale.x * _bulletSize, projectile.transform.localScale.y * _bulletSize, 1);
+        projectileClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * projectileSpeed;
+        projectileClone.GetComponent<BulletScript>().ProyectileDamage = proyectileDamage;
+        _count = 0;
     }
 
     private void OnEnable()

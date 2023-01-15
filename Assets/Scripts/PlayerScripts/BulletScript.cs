@@ -32,7 +32,7 @@ public class BulletScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name != "Character")
+        if (collision.gameObject.name != "Character" && collision.gameObject.layer!=6)
         {
             if (collision.gameObject.CompareTag("Enemy"))
                 Destroy(collision.gameObject);
