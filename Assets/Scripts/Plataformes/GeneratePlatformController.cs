@@ -4,18 +4,6 @@ using UnityEngine;
 
 
 
-public enum Nivel
-{
-    Nivel1,
-    TransNivel1,
-    Nivel2,
-    TransNivel2,
-    Nivel3,
-    TransNivel3,
-    NivelBoss,
-    TransNivelBoss
-}
-
 public class GeneratePlatformController : MonoBehaviour
 {
     private Vector3 _initPosition;
@@ -36,12 +24,8 @@ public class GeneratePlatformController : MonoBehaviour
     [SerializeField]
     private AlPamPamYAlPiumPium _enemySpawn;
 
-    private Nivel _nivel;
-    public Nivel Nivel
-    {
-        get => _nivel;
-        set=> _nivel = value;
-    }
+    private Niveles _nivel;
+ 
 
     // Start is called before the first frame update
     void Start()
@@ -67,28 +51,35 @@ public class GeneratePlatformController : MonoBehaviour
 
     private void GeneratePlatform()
     {
+        _nivel = GameObject.Find("Main Camera").GetComponent<BlindColorTest>().Nivel;
         switch (_nivel)
         {
-            case Nivel.Nivel1:
+            case Niveles.Nivel1:
                 _plSO = _plSONivel1;
                 break;
-            case Nivel.TransNivel1:
+            case Niveles.TransNivel1:
                 _plSO = _plSOTransition;
                 break;
-            case Nivel.Nivel2:
+            case Niveles.Nivel2:
                 _plSO = _plSONivel2;
                 break;
-            case Nivel.TransNivel2:
+            case Niveles.TransNivel2:
+                _plSO = _plSOTransition;
                 break;
-            case Nivel.Nivel3:
+            case Niveles.Nivel3:
                 break;
-            case Nivel.TransNivel3:
+            case Niveles.TransNivel3:
+                _plSO = _plSOTransition;
                 break;
-            case Nivel.NivelBoss:
+            case Niveles.NivelBoss:
                 break;
-            case Nivel.TransNivelBoss:
+            case Niveles.TransNivelBoss:
                 break;
+
+
         }
+        Debug.Log(_nivel);
+
         _num = RandomMethods.ReturnARandomObject(_plSO, 0);
         _initPosition = new Vector3(transform.position.x, _plSO[_num].PlatformInitialYPosition);
         var platform = Instantiate(_plSO[_num].PlatformPrefab, _initPosition, Quaternion.identity);

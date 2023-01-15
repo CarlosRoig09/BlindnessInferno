@@ -3,10 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using Wilberforce;
 
+
+public enum Niveles
+{
+    Nivel1,
+    TransNivel1,
+    Nivel2,
+    TransNivel2,
+    Nivel3,
+    TransNivel3,
+    NivelBoss,
+    TransNivelBoss
+}
 public class BlindColorTest : MonoBehaviour
 {
     private Colorblind _colorBlind;
-    private Nivel _nivel;
+    private Niveles _nivel;
+    public Niveles Nivel
+    {
+        get => _nivel;
+        set => _nivel = value;
+    }
     private float _distance;
     private float _distanciaMax;
     private float _count;
@@ -20,7 +37,6 @@ public class BlindColorTest : MonoBehaviour
     {
         _colorBlind = Camera.main.GetComponent<Colorblind>();
         _distance = GameObject.Find("Kilomiters").GetComponent<Kilomiters>().Distancia;
-        _nivel = GameObject.Find("GeneratorManager").GetComponent<GeneratePlatformController>().Nivel;
         _colorBlind.Type = 1;
         _count = 0;
     }
@@ -37,30 +53,30 @@ public class BlindColorTest : MonoBehaviour
         }
         else
         {
-            if (_count >= 0f && _count < 1000f)
+            if (_count >= 0f && _count < 500f)
             {
-                _nivel = Nivel.Nivel1;
+                Nivel = Niveles.Nivel1;
                 _colorBlind.Type = 1;
             }
-            else if (_count >= 1000f && _count < 1100f)
+            else if (_count >= 500f && _count < 650f)
             {
-                _nivel = Nivel.TransNivel1;
-                if (_count >= 1050f)
+                Nivel = Niveles.TransNivel1;
+                if (_count >= 550f)
                 {
                     _colorBlind.Type = 2;
 
                 }
                
             }
-            else if (_count >= 1050f && _count < 2000f)
+            else if (_count >= 650f && _count < 2000f)
             {
-                _nivel = Nivel.Nivel2;
+                Nivel = Niveles.Nivel2;
                 _colorBlind.Type = 2;
 
             }
             else if (_count >= 2000f && _count < 3000f)
             {
-                _nivel = Nivel.Nivel3;
+                Nivel = Niveles.Nivel3;
                 _colorBlind.Type = 3;
             }
             else _count = 0;
@@ -68,12 +84,6 @@ public class BlindColorTest : MonoBehaviour
         _count += 10*Time.deltaTime;
     }
 
-    private IEnumerator ChangeTransitiocolor(float duration)
-    {
-        _colorBlind.Type = 1;
-        yield return new WaitForSeconds(duration);
-        _colorBlind.Type = 2;
-
-    }
+ 
 
 }
