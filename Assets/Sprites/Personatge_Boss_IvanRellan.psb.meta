@@ -90,7 +90,6 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 0, y: 0}
-    spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
   - name: Libro
@@ -113,8 +112,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 455, y: 2391}
-    spritePosition: {x: 1517, y: 788}
+    uvTransform: {x: -1062, y: 1603}
   - name: decorations-wrapper-layer
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -135,8 +133,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1957, y: 4}
-    spritePosition: {x: 0, y: 2048}
+    uvTransform: {x: -91, y: -2044}
   - name: decorations-wrapper-layer
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -157,8 +154,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1965, y: 4}
-    spritePosition: {x: 0, y: 2048}
+    uvTransform: {x: -83, y: -2044}
   - name: Cabell Frontal
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -179,8 +175,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1620, y: 4}
-    spritePosition: {x: 957, y: 1876}
+    uvTransform: {x: 663, y: -1872}
   - name: Cap
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -201,8 +196,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 457, y: 3833}
-    spritePosition: {x: 960, y: 1777}
+    uvTransform: {x: -503, y: 2056}
   - name: "Bra\xE7 Dret Superior"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -223,8 +217,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 743, y: 1364}
-    spritePosition: {x: 1145, y: 1512}
+    uvTransform: {x: -402, y: -148}
   - name: "Bra\xE7 Izquierdo Superior"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -245,8 +238,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 743, y: 1692}
-    spritePosition: {x: 241, y: 1512}
+    uvTransform: {x: 502, y: 180}
   - name: Cama Esquerra
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -267,8 +259,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 743, y: 2017}
-    spritePosition: {x: 810, y: 828}
+    uvTransform: {x: -67, y: 1189}
   - name: Cama Dreta
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -289,8 +280,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 3833}
-    spritePosition: {x: 852, y: 826}
+    uvTransform: {x: -848, y: 3007}
   - name: Tronc
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -311,8 +301,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 566}
-    spritePosition: {x: 812, y: 966}
+    uvTransform: {x: -808, y: -400}
   - name: "Bra\xE7 Izquierdo Inferior"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -333,8 +322,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 1949}
-    spritePosition: {x: 534, y: 1041}
+    uvTransform: {x: -530, y: 908}
   - name: "Bra\xE7 Izquierdo Inferior"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -355,8 +343,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 3205}
-    spritePosition: {x: 1133, y: 1035}
+    uvTransform: {x: -1129, y: 2170}
   - name: "Bra\xE7 Izquierdo Inferior"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -377,8 +364,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 743, y: 736}
-    spritePosition: {x: 1133, y: 1035}
+    uvTransform: {x: -390, y: -299}
   - name: "Bra\xE7 Izquierdo Inferior"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -399,8 +385,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 2577}
-    spritePosition: {x: 534, y: 1041}
+    uvTransform: {x: -530, y: 1536}
   - name: Coll
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -421,8 +406,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1810, y: 4}
-    spritePosition: {x: 977, y: 1719}
+    uvTransform: {x: 833, y: -1715}
   - name: Cabell Traser
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -443,8 +427,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 455, y: 1949}
-    spritePosition: {x: 941, y: 1540}
+    uvTransform: {x: -486, y: 409}
   - name: Ala Dreta Superior
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -465,8 +448,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 743, y: 370}
-    spritePosition: {x: 1041, y: 1658}
+    uvTransform: {x: -298, y: -1288}
   - name: Ala Esquerra Superior
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -487,8 +469,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 743, y: 4}
-    spritePosition: {x: 182, y: 1660}
+    uvTransform: {x: 561, y: -1656}
   - name: Ala Esquerra Inferior
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -509,8 +490,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 335, y: 1153}
+    uvTransform: {x: -331, y: -1149}
   - name: Ala Dreta Inferior
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -531,8 +511,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 1380}
-    spritePosition: {x: 1039, y: 1139}
+    uvTransform: {x: -1035, y: 241}
   - name: Capa de pintura 3
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -553,8 +532,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1973, y: 4}
-    spritePosition: {x: 0, y: 2048}
+    uvTransform: {x: -75, y: -2044}
   characterData:
     bones: []
     parts: []

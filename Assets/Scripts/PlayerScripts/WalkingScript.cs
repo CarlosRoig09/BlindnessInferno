@@ -66,7 +66,10 @@ public class WalkingScript : MonoBehaviour
             if (platform.collider.gameObject.CompareTag("Fallable") && Input.GetKeyUp(KeyCode.DownArrow))
                 FallPlatform(platform.collider.gameObject);
             if (platform.collider.gameObject.CompareTag("Fall"))
+            {
                 FallingPlatform(platform.collider.gameObject);
+            }
+               
             //Debug.Log(transform.position);
         }
 
@@ -86,6 +89,8 @@ public class WalkingScript : MonoBehaviour
             if (gameObject.TryGetComponent<FallingPlatform>(out FallingPlatform f))
                 f.Falling();
         }
+
+       
 
         bool IsGrounded()
         {
