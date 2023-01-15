@@ -7,6 +7,17 @@ public class MoveCamara : MonoBehaviour
     [SerializeField]
     private PlayerData _playerData;
     public Rigidbody2D _rb;
+    [SerializeField]
+    private float _speedMultiplicator;
+    public float SpeedMultiplicator
+    {
+        get => _speedMultiplicator;
+        set => _speedMultiplicator = value;
+    }
+  /*  public float SpeedMultiplicator
+    {
+
+    }*/
     private float _speed;
     public float Speed
     {
@@ -21,7 +32,7 @@ public class MoveCamara : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        _speed = _playerData.speed*1.5f;
+        _speed = _playerData.speed*_speedMultiplicator;
         Movement();
     }
 

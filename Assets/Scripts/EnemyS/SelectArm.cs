@@ -16,17 +16,26 @@ public class SelectArm : MonoBehaviour
     private int _armCount;
     [SerializeField]
     private float _speed;
-    /* private void OnEnable()
+     private void OnEnable()
      {
-         _parentCBF.OnEndFace += Death;
-     }
+        _parentCBF = transform.parent.GetComponent<ControlBossFaces>();
+        _parentCBF.OnEndFace += Death;
+        Debug.Log("Subscribed");
+    }
 
      private void OnDisable()
      {
-         _parentCBF.OnEndFace -= Death;
-     }*/
+        _parentCBF.OnEndFace -= Death;
+        Debug.Log("DeSubscribed");
+    }
+
+    private void Death()
+    {
+        Destroy(gameObject);
+    }
 
     // Start is called before the first frame update
+
     void Start()
     {
         _parentCBF = transform.parent.GetComponent<ControlBossFaces>();

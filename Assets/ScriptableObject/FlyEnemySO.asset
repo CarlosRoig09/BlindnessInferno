@@ -15,5 +15,5 @@ MonoBehaviour:
   RateAperance: 50
   Prefab: {fileID: 8015743291888870430, guid: f923c13ea06dfe542accd35b753e5bbb, type: 3}
   FlyingSpeed: 50
-  AttackSpeed: 100
+  AttackSpeed: 300
   TimeChaangeDirection: 0.5

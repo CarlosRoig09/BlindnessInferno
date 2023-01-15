@@ -37,9 +37,9 @@ public class BulletScript : MonoBehaviour
             if (collision.gameObject.CompareTag("Enemy"))
                 Destroy(collision.gameObject);
             if (collision.gameObject.CompareTag("EnemyBossHitPoint"))
-            {
-                collision.gameObject.GetComponentInParent<ControlBossFaces>().GetDamaged(proyectileDamage);
-            }
+             collision.gameObject.GetComponentInParent<ControlBossFaces>().GetDamaged(proyectileDamage);
+            if (collision.gameObject.CompareTag("Box"))
+                collision.gameObject.GetComponent<SupriseBox>().BreakAnimation();
             //Destroy(collision.gameObject);
             Destroy(gameObject);
         }

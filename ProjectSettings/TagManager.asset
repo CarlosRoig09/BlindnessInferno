@@ -10,6 +10,7 @@ TagManager:
   - Fallable
   - EnemyBossHitPoint
   - EnemyBoss
+  - Box
   layers:
   - Default
   - TransparentFX

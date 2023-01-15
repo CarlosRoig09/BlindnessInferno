@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ArmAttack : MonoBehaviour
@@ -12,6 +11,7 @@ public class ArmAttack : MonoBehaviour
     public ArmPosition _aP;
     private float _speed;
     private Vector3 direction;
+    private ControlBossFaces _parentCBF;
     [SerializeField]
     private LayerMask groundLayer;
     private Vector3 _initialPosition;
@@ -21,13 +21,12 @@ public class ArmAttack : MonoBehaviour
     void Start()
     {
         cll2D = gameObject.GetComponent<Collider2D>();
-        cll2D.enabled = false;
+        //cll2D.enabled = false;
         _aP = ArmPosition.Stay;
     }
 
     private void Update()
     {
-        Debug.Log(_aP);
         if (_aP == ArmPosition.Attack)
         {
             if (transform.position.x > _playerTransform.position.x + 5)
@@ -83,6 +82,12 @@ public class ArmAttack : MonoBehaviour
     {
         _rb = gameObject.GetComponent<Rigidbody2D>();
         _rb.velocity = new Vector3(_cameraRB2D.velocity.x, 0);
+
+    }
+
+    private void OnDisable()
+    {
+
     }
 
     private IEnumerator WaitTime(float time)

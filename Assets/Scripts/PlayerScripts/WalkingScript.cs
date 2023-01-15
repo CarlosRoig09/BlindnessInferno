@@ -9,12 +9,9 @@ public class WalkingScript : MonoBehaviour
     public Rigidbody2D rb;
     public KeyCode jumpkey;
     [SerializeField]
-    private float _maxSpeed;
-    [SerializeField]
     private Transform _maxPosition;
     private float _initPos;
     [SerializeField]
-    private float _timeToMaxSpeed;
     private float _acceleration;
     private bool _secondJump;
     public LayerMask groundLayer;
@@ -28,7 +25,6 @@ public class WalkingScript : MonoBehaviour
     {
         _secondJump = false;
         _initPos = firstGodPosition.position.x;
-        _acceleration = (_maxSpeed - initialspeed) / _timeToMaxSpeed;
     }
     /*private bool isGrounded;
     private float jumpWaitTimer;*/
@@ -41,12 +37,7 @@ public class WalkingScript : MonoBehaviour
             rb.velocity = new Vector2(_playerData.speed * Time.fixedDeltaTime + _cameraRB2D.velocity.x, rb.velocity.y);
         }
         else
-        {
-            /*  if (_speedAtCenterPos > Camera.main.GetComponent<MoveCamara>()._rb.velocity.x)
-                  _speedAtCenterPos -= 0.25f;
-              else _speedAtCenterPos = Camera.main.GetComponent<MoveCamara>()._rb.velocity.x;*/
-            rb.velocity = new Vector2(_cameraRB2D.velocity.x, rb.velocity.y);
-        }
+          rb.velocity = new Vector2(_cameraRB2D.velocity.x, rb.velocity.y);
     }
     void Update()
     {
