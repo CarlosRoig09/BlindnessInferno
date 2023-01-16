@@ -7,6 +7,7 @@ public class LightningBehaviour : PlatformControler
     private ShakeBehaviour _shake;
     private float _duracion;
     private float _fuerza;
+    private GameObject _whiteScreen;
 
     public override void PlatformHability()
     {
@@ -16,6 +17,8 @@ public class LightningBehaviour : PlatformControler
 
     void Start()
     {
+        _whiteScreen = GameObject.Find("WhiteScreen");
+        _whiteScreen.SetActive(false);
         _shake = GameObject.Find("Main Camera").GetComponent<ShakeBehaviour>();
         _duracion = gameObject.GetComponent<SpriteRenderer>().bounds.size.x / 8;
         _fuerza = 0.2f;
@@ -28,6 +31,7 @@ public class LightningBehaviour : PlatformControler
         if (collision.gameObject.CompareTag("Fallable"))
         {
             PlatformHability();
+            _whiteScreen.SetActive(true);
         }
     }
 

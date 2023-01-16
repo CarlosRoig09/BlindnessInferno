@@ -32,6 +32,7 @@ public class ParallaxScript : MonoBehaviour
         y = transform.localPosition.y;
 
         //-3.19008f
+        //0.8899164f
         if (_sky.transform.localPosition.y < -2.5f)
         {
             MovingUpParallax = false;
