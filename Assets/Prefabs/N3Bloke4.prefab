@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6659960403604844580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.0487, y: -2.6466, z: 0}
+  m_LocalPosition: {x: 11.779, y: -2.6466, z: 0}
   m_LocalScale: {x: 4.398339, y: 0.4067448, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -38,7 +38,7 @@ Transform:
   - {fileID: 3024911454474726421}
   - {fileID: 4009644154258930040}
   - {fileID: 5258227541643523009}
-  - {fileID: 8075090942425022614}
+  - {fileID: 3663036032306085788}
   - {fileID: 2109291217087277841}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -638,11 +638,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: AguaBendita
       objectReference: {fileID: 0}
+    - target: {fileID: 5807560007864708011, guid: 267a87167d734cb49b052256f73633e5, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 267a87167d734cb49b052256f73633e5, type: 3}
---- !u!4 &8075090942425022614 stripped
+--- !u!4 &3663036032306085788 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1323304842079425697, guid: 267a87167d734cb49b052256f73633e5, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5807560007864708011, guid: 267a87167d734cb49b052256f73633e5, type: 3}
   m_PrefabInstance: {fileID: 7083369275138053175}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7156968023816355512
