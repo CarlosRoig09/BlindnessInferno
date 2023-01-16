@@ -194,6 +194,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6238592296322688466, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 672391415}
     m_RemovedComponents:
     - {fileID: 5545762967217992689, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
@@ -320,6 +324,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _cameraRB2D: {fileID: 830198637}
+  Life: 1
 --- !u!50 &365089409
 Rigidbody2D:
   serializedVersion: 4
@@ -332,7 +337,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 20
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -353,11 +358,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f3385ce9fbe84459ed8e4a9b2042ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &376309493 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5821930015610542462, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
-  m_PrefabInstance: {fileID: 219735796}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &517710583
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,6 +645,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _cameraRB2D: {fileID: 830198637}
+  Life: 1
 --- !u!50 &545878844
 Rigidbody2D:
   serializedVersion: 4
@@ -657,7 +658,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 20
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -678,6 +679,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f3385ce9fbe84459ed8e4a9b2042ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &672391415 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 780106552344526622, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
+  m_PrefabInstance: {fileID: 219735796}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &830198636
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,12 +957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _randomRate:
-  - {fileID: 11400000, guid: 910e222c895b62d4f808ef6c92746e38, type: 2}
-  - {fileID: 11400000, guid: 6e12bdfbcb459404f9ec357ba92db8ec, type: 2}
-  - {fileID: 11400000, guid: 9614e03a4438f974bac1dbf1ce078a7f, type: 2}
-  - {fileID: 11400000, guid: 65cd0e7a322d1ee42800cfd28c136d2a, type: 2}
-  - {fileID: 11400000, guid: af2597de576d82640bd8b33f48282a30, type: 2}
-  - {fileID: 11400000, guid: 5ab1c4ee0f519da4296577f0d524126a, type: 2}
+  - {fileID: 11400000, guid: bb385ff7a6b22f046b73423243f6ff7f, type: 2}
   _items:
   - {fileID: 8706181407779684775, guid: b02581d7bfa1ab04b93bf76b07090ec1, type: 3}
   - {fileID: 4495740819615325428, guid: 91da03635fe47134d92bd0719666df3d, type: 3}
@@ -1096,7 +1097,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerData: {fileID: 11400000, guid: 507664301ab2b36459cb8d9f25917c48, type: 2}
   _rb: {fileID: 0}
-  _speedMultiplicator: 0
+  _speedMultiplicator: 6
 --- !u!50 &1106818465
 Rigidbody2D:
   serializedVersion: 4
@@ -1486,29 +1487,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1966966479 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 907039103, guid: 44eca972628bd7e4abd49d793474a4ac, type: 3}
-  m_PrefabInstance: {fileID: 219735796}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1966966482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966966479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e98fbb97ae78fa346abc619587d05dc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 9176446701418556082, guid: 87b24235f9cb023499d1957273d6fed7, type: 3}
-  firePoint: {fileID: 376309493}
-  projectileSpeed: 20
-  proyectileDamage: 5
-  _countdown: 0.5
-  _bulletSize: 1
 --- !u!1 &1971249022
 GameObject:
   m_ObjectHideFlags: 0
@@ -1657,7 +1635,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.44369507, y: -11.515439}
+  m_Offset: {x: -5.053941, y: -11.969478}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1668,7 +1646,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 22.558327, y: 3.4349842}
+  m_Size: {x: 31.778818, y: 2.526907}
   m_EdgeRadius: 0
 --- !u!61 &2065607926
 BoxCollider2D:
@@ -1833,17 +1811,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: box
       objectReference: {fileID: 0}
-    - target: {fileID: 933415381194816366, guid: 06790df666383d24d8a36ecdd7cfd2bf, type: 3}
-      propertyPath: m_TagString
-      value: Box
-      objectReference: {fileID: 0}
-    - target: {fileID: 933415381782721725, guid: 06790df666383d24d8a36ecdd7cfd2bf, type: 3}
-      propertyPath: _boss
-      value: 
-      objectReference: {fileID: 934910748}
-    - target: {fileID: 7530750660110248527, guid: 06790df666383d24d8a36ecdd7cfd2bf, type: 3}
-      propertyPath: _bats
-      value: 
-      objectReference: {fileID: 2378462668004801154, guid: 043c92850039f0146bfe9ab53802859e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06790df666383d24d8a36ecdd7cfd2bf, type: 3}

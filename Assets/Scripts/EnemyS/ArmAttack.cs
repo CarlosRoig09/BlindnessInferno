@@ -9,7 +9,6 @@ public class ArmAttack : MonoBehaviour, IEnemyWeapon
     private Transform _playerTransform;
     public ArmPosition _aP;
     private float _speed;
-    private Vector3 direction;
     private ControlBossFaces _parentCBF;
     [SerializeField]
     private Transform _firstGodPosition;
@@ -18,7 +17,6 @@ public class ArmAttack : MonoBehaviour, IEnemyWeapon
     private Vector3 _initialPosition;
     [SerializeField]
     private Rigidbody2D _cameraRB2D;
-    private ControlBossFaces _parentCBF;
     public float Life;
     // Start is called before the first frame update
     void Start()
@@ -93,11 +91,6 @@ public class ArmAttack : MonoBehaviour, IEnemyWeapon
     {
         _rb = gameObject.GetComponent<Rigidbody2D>();
         _rb.velocity = new Vector3(_cameraRB2D.velocity.x, 0);
-
-    }
-
-    private void OnDisable()
-    {
 
     }
 

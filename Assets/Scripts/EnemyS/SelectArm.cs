@@ -18,32 +18,12 @@ public class SelectArm : MonoBehaviour
     private float _countBetweenArms;
     [SerializeField]
     private float _speed;
-     private void OnEnable()
-     {
-        _parentCBF = transform.parent.GetComponent<ControlBossFaces>();
-        _parentCBF.OnEndFace += Death;
-        Debug.Log("Subscribed");
-    }
-
-     private void OnDisable()
-     {
-        _parentCBF.OnEndFace -= Death;
-        Debug.Log("DeSubscribed");
-    }
-
-    private void Death()
-    {
-        Destroy(gameObject);
-    }
-
-    [SerializeField]
-    private ControlBossFaces _controlBossFaces;
+    private bool _starFase = false;
     private ControlBossFaces _parentCBF;
     // Start is called before the first frame update
 
     void Start()
     {
-        Arms = new List<GameObject> { transform.GetChild(0).gameObject, transform.GetChild(1).gameObject };
         _armCount = 0;
         _count = 0;
     }
@@ -51,7 +31,7 @@ public class SelectArm : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enabled)
+        if (enabled&&_starFase)
         {
             if (Arms[_armCount].GetComponent<ArmAttack>().Life < 0)
             {
@@ -92,14 +72,21 @@ public class SelectArm : MonoBehaviour
 
     private void OnEnable()
     {
+        Arms = new List<GameObject> { transform.GetChild(0).gameObject, transform.GetChild(1).gameObject };
         _parentCBF = transform.parent.GetComponent<ControlBossFaces>();
         _parentCBF.OnEndFace += Death;
-        Arms[0].GetComponent<ArmAttack>().Life = _controlBossFaces.CurrentLife / 2;
-        Arms[1].GetComponent<ArmAttack>().Life = _controlBossFaces.CurrentLife / 2;
+        Debug.Log(_parentCBF);
+        Debug.Log(Arms[1].name);
+        foreach (var arm in Arms)
+        {
+            arm.GetComponent<ArmAttack>().Life = _parentCBF.CurrentLife / 2;
+            arm.GetComponent<Collider2D>().enabled = false;
+        }
     }
 
     private void OnDisable()
     {
+        _starFase = true;
         _parentCBF.OnEndFace -= Death;
     }
 }

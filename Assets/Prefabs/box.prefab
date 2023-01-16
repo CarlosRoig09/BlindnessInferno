@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7530750660110248527}
   m_Layer: 0
   m_Name: box
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,4 +167,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0727bfbb68c5581418896cb91504bd0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bats: {fileID: 0}
+  _bats: {fileID: 2378462668004801154, guid: 043c92850039f0146bfe9ab53802859e, type: 3}
