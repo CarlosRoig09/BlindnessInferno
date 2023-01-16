@@ -15,6 +15,10 @@ public enum BossFase
 public class ControlBossFaces : MonoBehaviour
 {
     private float _currentLife;
+    public float CurrentLife
+    {
+        get => _currentLife;
+    }
     private BossFase _currentFase;
     private Collider2D _collider;
     [SerializeField]

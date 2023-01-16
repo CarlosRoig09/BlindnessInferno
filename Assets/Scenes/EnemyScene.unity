@@ -315,6 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerTransform: {fileID: 2087407498}
   _aP: 0
+  _firstGodPosition: {fileID: 1650753923}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -331,7 +332,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 20
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -550,7 +551,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 545878838}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.997746, y: 3.043705, z: -0.0066599543}
+  m_LocalPosition: {x: 17.997746, y: 2.994291, z: -0.0066599543}
   m_LocalScale: {x: 2.3620956, y: 2.3620956, z: 2.3620956}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -639,6 +640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerTransform: {fileID: 2087407498}
   _aP: 0
+  _firstGodPosition: {fileID: 1650753923}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -655,7 +657,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 20
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -1078,7 +1080,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cae94f80b37c28446949e88f8a08b846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 2500
+  _countBetweenArms: 2
+  _speed: 100
 --- !u!114 &1106818464
 MonoBehaviour:
   m_ObjectHideFlags: 0

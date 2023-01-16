@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BookScript : MonoBehaviour
+public class BookScript : MonoBehaviour, IEnemyWeapon
 {
     private Rigidbody2D _rb;
     [SerializeField]
@@ -52,5 +52,10 @@ public class BookScript : MonoBehaviour
     private void OnDisable()
     {
         _parentCBF.OnEndFace -= Death;
+    }
+
+    public void DamageBoss(float damage)
+    {
+        _parentCBF.GetDamaged(damage);
     }
 }

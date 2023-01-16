@@ -1,59 +1,71 @@
 using System.Collections;
 using UnityEngine;
 
-public class ArmAttack : MonoBehaviour
+public class ArmAttack : MonoBehaviour, IEnemyWeapon
 {
     private Rigidbody2D _rb;
     private Collider2D cll2D;
     [SerializeField]
     private Transform _playerTransform;
-    private Rigidbody2D _fatherRB2D;
     public ArmPosition _aP;
     private float _speed;
     private Vector3 direction;
     private ControlBossFaces _parentCBF;
     [SerializeField]
+    private Transform _firstGodPosition;
+    [SerializeField]
     private LayerMask groundLayer;
     private Vector3 _initialPosition;
     [SerializeField]
     private Rigidbody2D _cameraRB2D;
+    private ControlBossFaces _parentCBF;
+    public float Life;
     // Start is called before the first frame update
     void Start()
     {
         cll2D = gameObject.GetComponent<Collider2D>();
         //cll2D.enabled = false;
         _aP = ArmPosition.Stay;
+        _parentCBF = transform.parent.GetComponent<ControlBossFaces>();
     }
 
     private void Update()
     {
         if (_aP == ArmPosition.Attack)
         {
-            if (transform.position.x > _playerTransform.position.x + 5)
+            if (_firstGodPosition.position.x - transform.position.x < 7.5f)
             {
-                _rb.gravityScale = 20;
+                _rb.velocity = new  Vector3(_cameraRB2D.velocity.x, 0);
+                cll2D.enabled = true;
+                _rb.gravityScale = 30;
             }
 
-            if (Physics2D.Raycast(transform.position, Vector2.down, 0.65f, groundLayer.value))
+            if (Physics2D.Raycast(transform.position, Vector2.down, 0.65f, groundLayer.value)||transform.position.y<=-7.59f)
             {
-                _rb.velocity = new Vector3(_speed * Time.deltaTime, 0);
+                _rb.velocity = new Vector3(0, 0);
                 _rb.gravityScale = 0;
-                StartCoroutine(WaitTime(0.5f));
+                StartCoroutine(WaitTime(1));
                 Debug.Log("touch ground");
             }
         }
 
         if (_aP == ArmPosition.Elevate)
         {
+            if (_speed < 0)
+                _speed *= -1;
             Elevate(_speed);
             if (transform.localPosition.y >= _initialPosition.y)
             {
-                _rb.velocity = new Vector3(_speed*Time.deltaTime, 0);
-                if (transform.localPosition.x <= _initialPosition.x)
+                cll2D.enabled = false;
+                var proximityToInitialPos = _initialPosition.x - transform.localPosition.x;
+                Move(new Vector3(proximityToInitialPos, 0).normalized.x*_speed);
+                if (proximityToInitialPos < 0)
+                    proximityToInitialPos *= -1;
+                if (proximityToInitialPos<=0.5f)
                 {
                     Debug.Log("He vuelto");
                     _rb.velocity = new Vector3(_cameraRB2D.velocity.x, 0);
-                    _aP = ArmPosition.Stay;
+                    _aP = ArmPosition.AttackEnd;
                 }
             }
         }
@@ -62,20 +74,19 @@ public class ArmAttack : MonoBehaviour
     public void Attack(float speed)
     {
         _initialPosition = transform.localPosition;
-        direction = new Vector3(_playerTransform.position.x - transform.position.x, transform.position.y);
-        Move(speed*direction.normalized.x);
+        Move(speed);
         _speed = speed;
         _aP = ArmPosition.Attack;
     }
 
     private void Move(float speed)
     {
-        _rb.velocity = new Vector3(_cameraRB2D.velocity.x + speed*Time.deltaTime, _rb.velocity.y);
+        _rb.velocity = new Vector3(speed*Time.fixedDeltaTime + _cameraRB2D.velocity.x, 0);
     }
 
     private void Elevate(float speed)
     {
-        _rb.velocity = new Vector3(_cameraRB2D.velocity.x, speed*Time.deltaTime);
+        _rb.velocity = new Vector3(_cameraRB2D.velocity.x, speed*Time.fixedDeltaTime);
     }
 
     private void OnEnable()
@@ -94,5 +105,12 @@ public class ArmAttack : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         _aP = ArmPosition.Elevate;
+    }
+
+    public void DamageBoss(float damage)
+    {
+        Life=- damage;
+        if (damage <= 0)
+            _parentCBF.GetDamaged(_parentCBF.CurrentLife/2);
     }
 }
