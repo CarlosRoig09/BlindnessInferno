@@ -61,7 +61,7 @@ public class BlindColorTest : MonoBehaviour
             else if (_count >= 500f && _count < 650f)
             {
                 Nivel = Niveles.TransNivel1;
-                if (_count >= 550f)
+                if (_count >= 600f)
                 {
                     _colorBlind.Type = 2;
 
