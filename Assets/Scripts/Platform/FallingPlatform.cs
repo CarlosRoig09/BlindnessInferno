@@ -21,5 +21,7 @@ public class FallingPlatform : MonoBehaviour
     {
         if (collision.gameObject.layer == 6)
             _cd2D.enabled = false;
+      
+       
     }
 }
