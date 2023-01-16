@@ -648,6 +648,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 843353c5294e7384ab7cc36a503b43ad, type: 2}
   _plSOTransition:
   - {fileID: 11400000, guid: e4ec935877d26e24cb3728b71ba1961c, type: 2}
+  _plSOLastTransition:
+  - {fileID: 11400000, guid: 866a7ed9161898f43b5a3ea5f90de011, type: 2}
   _cameraRB: {fileID: 2007331085}
   _enemySpawn: {fileID: 884668095}
 --- !u!4 &884668090
