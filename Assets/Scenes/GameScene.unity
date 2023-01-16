@@ -450,11 +450,23 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1644101666312125928, guid: cea5f35e07965684e812dbca2351a038, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 39ba97c27e94250468fea9a3f5ba2db3, type: 3}
+    - target: {fileID: 1644101666312125928, guid: cea5f35e07965684e812dbca2351a038, type: 3}
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1644101666312125929, guid: cea5f35e07965684e812dbca2351a038, type: 3}
       propertyPath: MovingUpParallax
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644101666312125934, guid: cea5f35e07965684e812dbca2351a038, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644101666706898676, guid: cea5f35e07965684e812dbca2351a038, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1644101666706898678, guid: cea5f35e07965684e812dbca2351a038, type: 3}
@@ -543,7 +555,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1644101667124820517, guid: cea5f35e07965684e812dbca2351a038, type: 3}
       propertyPath: MovingUpParallax
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644101667124820538, guid: cea5f35e07965684e812dbca2351a038, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7742022
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644101667124820538, guid: cea5f35e07965684e812dbca2351a038, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.66
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cea5f35e07965684e812dbca2351a038, type: 3}

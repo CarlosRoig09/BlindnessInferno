@@ -9,10 +9,15 @@ public class ParallaxScript : MonoBehaviour
     private Material material;
     private float x, y;
     public bool MovingUpParallax;
+    private GameObject _sky;
 
     private void Awake()
     {
         material = GetComponent<SpriteRenderer>().material;
+    }
+    private void Start()
+    {
+        _sky = GameObject.Find("Sky3");
     }
 
     private void Update()
@@ -23,10 +28,17 @@ public class ParallaxScript : MonoBehaviour
 
     void FixedUpdate()
     {
+        x = transform.localPosition.x;
+        y = transform.localPosition.y;
+
+        //-3.19008f
+        if (_sky.transform.localPosition.y < -2.5f)
+        {
+            MovingUpParallax = false;
+        }
+
         if (MovingUpParallax)
         {
-            x = transform.localPosition.x;
-            y = transform.localPosition.y;
             transform.localPosition = new Vector3(x, y - 0.01f, 0);
         }
     }
