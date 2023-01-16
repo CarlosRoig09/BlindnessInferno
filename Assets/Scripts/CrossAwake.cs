@@ -7,9 +7,13 @@ public class CrossAwake : MonoBehaviour
     private float x;
     private float z;
     private float posDifference;
+    public float awakenDistance;
+    public float lightningDistance;
     private float rotationSpeed;
-
     private GameObject _character;
+    public GameObject Lightning;
+    private int _lightningCount = 0;
+
 
     void Start()
     {
@@ -23,7 +27,14 @@ public class CrossAwake : MonoBehaviour
     {
         posDifference = transform.localPosition.x - _character.transform.localPosition.x;
 
-        if (posDifference < 6)
+        if (posDifference < lightningDistance && _lightningCount == 0)
+        {
+            _lightningCount++;
+            GameObject lightningSpawned = Instantiate(Lightning);
+            lightningSpawned.transform.position = new Vector3(transform.localPosition.x, 1.25f, 0);
+        }
+
+        if (posDifference < awakenDistance)
         {
             z += Time.deltaTime * rotationSpeed;
 
