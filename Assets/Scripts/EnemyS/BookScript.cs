@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class BookScript : MonoBehaviour
+public class BookScript : MonoBehaviour, IEnemyWeapon
 {
     private Rigidbody2D _rb;
     [SerializeField]
@@ -10,6 +8,7 @@ public class BookScript : MonoBehaviour
     private float _countTimeCD;
     [SerializeField]
     private float _speed;
+    private ControlBossFaces _parentCBF;
     private EnemyMovement _eM;
     // Start is called before the first frame update
     void Start()
@@ -18,6 +17,8 @@ public class BookScript : MonoBehaviour
         _countTimeCD = 0;
         _rb = gameObject.GetComponent<Rigidbody2D>();
         Physics2D.IgnoreLayerCollision(6, 6);
+        _parentCBF = transform.parent.GetComponent<ControlBossFaces>();
+        _parentCBF.OnEndFace += Death;
     }
 
     // Update is called once per frame
@@ -43,5 +44,18 @@ public class BookScript : MonoBehaviour
             _countTimeCD = 0;
         }
         else _countTimeCD += Time.deltaTime;
+    }
+   private void Death()
+    {
+        Destroy(gameObject);
+    }
+    private void OnDisable()
+    {
+        _parentCBF.OnEndFace -= Death;
+    }
+
+    public void DamageBoss(float damage)
+    {
+        _parentCBF.GetDamaged(damage);
     }
 }
