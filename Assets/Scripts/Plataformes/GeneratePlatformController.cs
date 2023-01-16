@@ -23,7 +23,7 @@ public class GeneratePlatformController : MonoBehaviour
 
     // Update is called once per frame
     private void Update()
-    {
+     {
         _enemySpawn = gameObject.GetComponent<AlPamPamYAlPiumPium>();
         if (_plSO[_num].PlatgormWaitTimer / _cameraRB.velocity.x <= _counter)
         {
@@ -39,8 +39,7 @@ public class GeneratePlatformController : MonoBehaviour
         _initPosition = new Vector3(transform.position.x, _plSO[_num].PlatformInitialYPosition);
         var platform = Instantiate(_plSO[_num].PlatformPrefab, _initPosition, Quaternion.identity);
         _counter = 0;
-        Debug.Log(platform.name);
-        //if (platform != null&&_enemySpawn!=null)
-            //_enemySpawn.InstantObstacle(platform);
+        if (platform != null&&_enemySpawn!=null)
+            _enemySpawn.InstantObstacle(platform);
     }
 }
