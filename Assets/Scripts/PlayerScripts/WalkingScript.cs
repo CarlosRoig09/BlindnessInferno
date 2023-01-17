@@ -19,10 +19,12 @@ public class WalkingScript : MonoBehaviour
     private Transform firstGodPosition;
     [SerializeField]
     private Rigidbody2D _cameraRB2D;
+    private Animator _anim;
     //public LayerMask ground;
     //public Collider2D footCollider;
     private void Start()
     {
+        _anim = gameObject.GetComponent<Animator>();
         _secondJump = false;
         _initPos = firstGodPosition.position.x;
     }
@@ -41,6 +43,7 @@ public class WalkingScript : MonoBehaviour
     }
     void Update()
     {
+        _anim.SetFloat("Jump", rb.velocity.y);
         //Debug.Log(speed);
         //isGrounded = footCollider.IsTouchingLayers(ground);
 
@@ -62,9 +65,10 @@ public class WalkingScript : MonoBehaviour
             {
                 FallingPlatform(platform.collider.gameObject);
             }
-               
+
             //Debug.Log(transform.position);
         }
+    }
 
         void Jump()
         {
@@ -83,8 +87,6 @@ public class WalkingScript : MonoBehaviour
                 f.Falling();
         }
 
-       
-
         bool IsGrounded()
         {
             if (Physics2D.Raycast(transform.position, Vector2.down, 0.65f, groundLayer.value))
@@ -96,8 +98,6 @@ public class WalkingScript : MonoBehaviour
                 return false;
             }
         }
+ }
 
-
-    }
-}
 
