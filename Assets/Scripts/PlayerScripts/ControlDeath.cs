@@ -9,17 +9,17 @@ public class ControlDeath : MonoBehaviour
     private Vector2 screenBounds;
     private float playerHeight;
     private float playerWeight;
-    private Life _life;
+    public Life life;
     public float MaxPlayerLife;
     public float PlayerLife;
     public Life Life
     {
-        get => _life;
-        set => _life = value;
+        get => life;
+        set => life = value;
     }
     void Start()
     {
-        _life = Life.Alive;
+        life = Life.Alive;
         //Mido la camara
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         //Mido la altura del personaje
@@ -33,18 +33,18 @@ public class ControlDeath : MonoBehaviour
         //Si la posicion de y es mas peke q la del escenario y la altura del jugador o si la posicion de x es mas peke o igual a lo mismo pero en x.
         if (transform.position.y <= ((screenBounds.y * -1) - playerHeight) || transform.position.x <= ((screenBounds.x * -1) - playerWeight))
         {
-            _life = Life.Death;
+            life = Life.Death;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy")||collision.gameObject.CompareTag("EnemyBossHitPoint"))
         {
             //PlayerLife--;
             SubstractLife();
             if (PlayerLife == 0)
             {
-                _life = Life.Death;
+                life = Life.Death;
             }
         }
     }

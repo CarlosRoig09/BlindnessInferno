@@ -21,7 +21,7 @@ public class GlassesItem : Items
     {
         _colorBlind.Type = 0;
         _distance = GameObject.Find("Kilomiters").GetComponent<Kilomiters>().Distancia;
-        _distanciaMax.DistanciaMax=_distance+30f;
+        _distanciaMax.DistanciaMax=_distance+50f;
     }
 
   

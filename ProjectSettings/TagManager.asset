@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Fall
   - Fallable
+  - AguaBendita
   - EnemyBossHitPoint
   - EnemyBoss
   - Box

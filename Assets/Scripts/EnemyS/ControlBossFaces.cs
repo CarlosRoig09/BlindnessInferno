@@ -15,6 +15,10 @@ public enum BossFase
 public class ControlBossFaces : MonoBehaviour
 {
     private float _currentLife;
+    public float CurrentLife
+    {
+        get => _currentLife;
+    }
     private BossFase _currentFase;
     private Collider2D _collider;
     [SerializeField]
@@ -54,7 +58,7 @@ public class ControlBossFaces : MonoBehaviour
                 _collider.enabled = false;
                 MoveBoss(_centerCamera.position);
                     _Arms.SetActive(true);
-                LifeForFace(BossEnemySO.LifeFirstFace, BossFase.BossFase2);
+                LifeForFace(BossEnemySO.LifeSecondFace, BossFase.BossFase2);
                 break;
             case BossFase.BossFase2:
                 ComproveIfFaseEnd(BossFase.StartBossFase3, _currentLife);
@@ -63,7 +67,7 @@ public class ControlBossFaces : MonoBehaviour
                 _collider.enabled = true;
                 MoveBoss(_leftCamera.position);
                 transform.localScale = new Vector3(5.095526f, 5.095526f);
-                LifeForFace(BossEnemySO.LifeFirstFace, BossFase.BossFase3);
+                LifeForFace(BossEnemySO.LifeThirtFace, BossFase.BossFase3);
                 break;
             case BossFase.BossFase3:
                 ComproveIfFaseEnd(BossFase.Death, _currentLife);

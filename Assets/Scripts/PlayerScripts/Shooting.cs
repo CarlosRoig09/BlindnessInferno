@@ -66,10 +66,25 @@ public class Shooting : MonoBehaviour
 
     public void ChangeBulletSize(int i)
     {
-        _bulletSize += i;
-        if (_bulletSize == 0)
+        if (_bulletSize <= 2)
         {
-            _bulletSize = 0.324f;
+            if (_bulletSize == 2 && i == -1)
+            {
+                _bulletSize += i;
+            }else if (_bulletSize == 1 && i == 1)
+            {
+                _bulletSize += i;
+            }
+        }
+
+        Debug.Log("BULLET SIZE: " + _bulletSize);
+
+        if (_bulletSize == 2)
+        {
+            //Debug.Log("MORE DAMAGE");
+        }else if (_bulletSize == 1)
+        {
+            //Debug.Log("LESS DAMAGE");
         }
     }
 }

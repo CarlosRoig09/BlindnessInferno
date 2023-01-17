@@ -32,14 +32,14 @@ public class BulletScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name != "Character" && collision.gameObject.layer!=6)
+        if (collision.gameObject.name != "Character")
         {
             if (collision.gameObject.CompareTag("Enemy"))
                 Destroy(collision.gameObject);
             if (collision.gameObject.CompareTag("EnemyBossHitPoint"))
-             collision.gameObject.GetComponentInParent<ControlBossFaces>().GetDamaged(proyectileDamage);
-            if (collision.gameObject.CompareTag("Box"))
-                collision.gameObject.GetComponent<SupriseBox>().BreakAnimation();
+            {
+                gameObject.GetComponentInParent<ControlBossFaces>().GetDamaged(proyectileDamage);
+            }
             //Destroy(collision.gameObject);
             Destroy(gameObject);
         }
