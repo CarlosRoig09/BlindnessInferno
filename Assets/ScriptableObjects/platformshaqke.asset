@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f2b7b1b93a1db540b1ed5f077f9da24, type: 3}
   m_Name: platformshaqke
   m_EditorClassIdentifier: 
+  RateAperance: 50
   _platformName: '"Shake Plataform"'
   _platformPrefab: {fileID: 452762278059564996, guid: 9368352132e7fb441b781772bffc1639, type: 3}
   _platformWaitTimer: 10

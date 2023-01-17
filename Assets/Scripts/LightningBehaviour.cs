@@ -7,6 +7,7 @@ public class LightningBehaviour : PlatformControler
     private ShakeBehaviour _shake;
     private float _duracion;
     private float _fuerza;
+    private GameObject _whiteScreen;
 
     public override void PlatformHability()
     {
@@ -14,9 +15,10 @@ public class LightningBehaviour : PlatformControler
         _shake.StartShake(_duracion, _fuerza);
     }
 
-    // Start is called before the first frame update
     void Start()
     {
+        _whiteScreen = GameObject.Find("WhiteScreen");
+        _whiteScreen.SetActive(false);
         _shake = GameObject.Find("Main Camera").GetComponent<ShakeBehaviour>();
         _duracion = gameObject.GetComponent<SpriteRenderer>().bounds.size.x / 8;
         _fuerza = 0.2f;
@@ -26,9 +28,10 @@ public class LightningBehaviour : PlatformControler
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Fallable"))
         {
             PlatformHability();
+            _whiteScreen.SetActive(true);
         }
     }
 

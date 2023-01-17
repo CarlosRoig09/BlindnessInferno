@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f2b7b1b93a1db540b1ed5f077f9da24, type: 3}
-  m_Name: blokePrueva
+  m_Name: N2Bloke4SO
   m_EditorClassIdentifier: 
+  RateAperance: 50
+  Prefab: {fileID: 0}
   _platformName: '"BlokePrueva"'
-  _platformPrefab: {fileID: 6659960403604844580, guid: 8173a80df82ba5f408d0cff927caf08c, type: 3}
-  _platformWaitTimer: 10
+  _platformPrefab: {fileID: 6659960403604844580, guid: 2873548a126d8894c8368a489ee09d50, type: 3}
+  _platformWaitTimer: 33
   _platformInitialYPosition: -3

@@ -20,8 +20,6 @@ public class ScreenShakePlatform : PlatformControler
         _shake = GameObject.Find("Main Camera").GetComponent<ShakeBehaviour>();
         _duracion = gameObject.GetComponent<SpriteRenderer>().bounds.size.x/8;
         _fuerza = 0.2f;
-
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

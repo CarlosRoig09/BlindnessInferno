@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6041a488f8ffbfe40b3f9544f9fccb8b, type: 3}
   m_Name: AtackEnemySO
   m_EditorClassIdentifier: 
+  RateAperance: 60
+  Prefab: {fileID: 3818814388738135450, guid: 33b7156e5b4683544a5097ba2d3bf6ac, type: 3}
   speed: 20
   jumpSpeed: 100
   changeDirectionTimer: 1.5

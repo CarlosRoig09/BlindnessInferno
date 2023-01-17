@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "BasicEnemySO", menuName = "BasicEnemySO")]
-public class BasicEnemySO : ScriptableObject
+public class BasicEnemySO : RandomSO
 {
     public float speed;
     public float jumpSpeed;
