@@ -173,6 +173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea17d320e0e47aa4a9c66f20df2fbb47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  awakenDistance: 0
-  lightningDistance: 0
-  Lightning: {fileID: 0}
+  awakenDistance: 10
+  lightningDistance: 13
+  Lightning: {fileID: 4994730118261067, guid: c64fa90bd8dc4ac4e8ed7f29692b8e4c, type: 3}
