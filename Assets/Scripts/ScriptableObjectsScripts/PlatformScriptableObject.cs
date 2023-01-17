@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "platforms", menuName = "platformList")]
-public class PlatformScriptableObject : ScriptableObject
+public class PlatformScriptableObject : RandomSO
 {
     
     [SerializeField]

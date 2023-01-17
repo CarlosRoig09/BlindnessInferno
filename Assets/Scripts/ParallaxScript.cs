@@ -22,7 +22,7 @@ public class ParallaxScript : MonoBehaviour
 
     private void Update()
     {
-        offset = moveSpeed * Time.deltaTime;
+        offset = moveSpeed * Time.deltaTime /** gameObject.GetComponentInParent<MoveCamara>().Speed/200*/;
         material.mainTextureOffset += offset;
     }
 
