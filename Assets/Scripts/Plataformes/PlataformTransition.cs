@@ -34,7 +34,7 @@ public class PlataformTransition : PlatformControler
             _rbebe.constraints = RigidbodyConstraints2D.FreezePositionX;
             _rbebe.constraints = RigidbodyConstraints2D.FreezeRotation;
             _rbebe.velocity = new Vector2(_rbebe.velocity.x,  _speed* _rbebe.velocity.y);
-            Debug.Log(_rbebe.name);
+           // Debug.Log(_rbebe.name);
         }
       
     }

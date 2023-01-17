@@ -46,7 +46,7 @@ public class GeneratePlatformController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-      //  if (_plSO == _plSOLastTransition || _plSO == _plSOTransition) _num = 0;
+        if (_plSO == _plSOLastTransition || _plSO == _plSOTransition) _num = 0;
         _enemySpawn = gameObject.GetComponent<AlPamPamYAlPiumPium>();
         if (_plSO[_num].PlatgormWaitTimer / _cameraRB.velocity.x <= _counter)
         {
@@ -80,6 +80,7 @@ public class GeneratePlatformController : MonoBehaviour
                 _plSO = _plSOTransition;
                 break;
             case Niveles.NivelBoss:
+                _plSO = _plSONivel3;
                 break;
             case Niveles.TransNivelBoss:
                 _plSO = _plSOLastTransition;

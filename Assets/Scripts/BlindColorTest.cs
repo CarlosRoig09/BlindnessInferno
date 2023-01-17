@@ -53,31 +53,66 @@ public class BlindColorTest : MonoBehaviour
         }
         else
         {
-            if (_count >= 0f && _count < 500f)
+            if (_count >= 0f && _count < 100f)
             {
                 Nivel = Niveles.Nivel1;
                 _colorBlind.Type = 1;
             }
-            else if (_count >= 500f && _count < 600f)
+            else if (_count >= 100f && _count < 200f)
             {
                 Nivel = Niveles.TransNivel1;
-                if (_count >= 550f)
+                if (_count >= 150f)
                 {
                     _colorBlind.Type = 2;
 
                 }
                
             }
-            else if (_count >= 650f && _count < 2000f)
+            else if (_count >= 200f && _count < 300f)
             {
                 Nivel = Niveles.Nivel2;
                 _colorBlind.Type = 2;
 
             }
-            else if (_count >= 2000f && _count < 3000f)
+            else if (_count >= 300f && _count < 400f)
+            {
+                Nivel = Niveles.TransNivel2;
+                if (_count >= 350f)
+                {
+                    _colorBlind.Type = 3;
+
+                }
+
+            }
+            else if (_count >= 400f && _count < 500f)
             {
                 Nivel = Niveles.Nivel3;
                 _colorBlind.Type = 3;
+            }
+            else if (_count >= 500f && _count < 600f)
+            {
+                Nivel = Niveles.TransNivel3;
+                if (_count >= 550f)
+                {
+                    _colorBlind.Type = 3;
+
+                }
+
+            }
+            else if (_count >= 600f && _count < 700f)
+            {
+                Nivel = Niveles.Nivel3;
+                _colorBlind.Type = 3;
+            }
+            else if (_count >= 700f && _count < 800f)
+            {
+                Nivel = Niveles.TransNivelBoss;
+                if (_count >= 750f)
+                {
+                    _colorBlind.Type = 1;
+
+                }
+
             }
             else _count = 0;
         }
