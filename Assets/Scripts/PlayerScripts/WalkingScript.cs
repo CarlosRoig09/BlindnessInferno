@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class WalkingScript : MonoBehaviour
@@ -20,6 +21,12 @@ public class WalkingScript : MonoBehaviour
     [SerializeField]
     private Rigidbody2D _cameraRB2D;
     private Animator _anim;
+    private bool _stopMomentum;
+    public bool StopMomentum
+    {
+        get { return _stopMomentum; }
+        set { _stopMomentum = value;}
+    }
     //public LayerMask ground;
     //public Collider2D footCollider;
     private void Start()
@@ -27,19 +34,25 @@ public class WalkingScript : MonoBehaviour
         _anim = gameObject.GetComponent<Animator>();
         _secondJump = false;
         _initPos = firstGodPosition.position.x;
+        _stopMomentum = false;
     }
     /*private bool isGrounded;
     private float jumpWaitTimer;*/
     private void FixedUpdate()
     {
-        if (transform.position.x < _maxPosition.position.x)
+        Debug.Log(_stopMomentum);
+        if (!_stopMomentum)
         {
-            _playerData.speed = Mathf.Sqrt(2 * _acceleration * (transform.position.x - _initPos) + Mathf.Pow(initialspeed, 2));
-            _initPos = transform.position.x;
-            rb.velocity = new Vector2(_playerData.speed * Time.fixedDeltaTime + _cameraRB2D.velocity.x, rb.velocity.y);
+            if (transform.position.x < _maxPosition.position.x)
+            {
+                _playerData.speed = Mathf.Sqrt(2 * _acceleration * (transform.position.x - _initPos) + Mathf.Pow(initialspeed, 2));
+                _initPos = transform.position.x;
+                rb.velocity = new Vector2(_playerData.speed * Time.fixedDeltaTime + _cameraRB2D.velocity.x, rb.velocity.y);
+            }
+            else
+                rb.velocity = new Vector2(_cameraRB2D.velocity.x, rb.velocity.y);
         }
-        else
-          rb.velocity = new Vector2(_cameraRB2D.velocity.x, rb.velocity.y);
+        else StartCoroutine(StartMomentum(0.2f));
     }
     void Update()
     {
@@ -98,6 +111,13 @@ public class WalkingScript : MonoBehaviour
                 return false;
             }
         }
+
+    private IEnumerator StartMomentum(float Time)
+    {
+        rb.velocity = new Vector3(0, 0);
+        yield return new WaitForSeconds(Time);
+        _stopMomentum = false;
+    }
  }
 
 
