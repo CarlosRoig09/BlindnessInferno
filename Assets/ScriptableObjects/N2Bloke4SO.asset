@@ -15,6 +15,6 @@ MonoBehaviour:
   RateAperance: 50
   Prefab: {fileID: 0}
   _platformName: '"BlokePrueva"'
-  _platformPrefab: {fileID: 6659960403604844580, guid: 2873548a126d8894c8368a489ee09d50, type: 3}
-  _platformWaitTimer: 53
-  _platformInitialYPosition: -2
+  _platformPrefab: {fileID: 5379563564969153193, guid: 0f945dd1d4ebe2c489a3e70dea7c94da, type: 3}
+  _platformWaitTimer: 52
+  _platformInitialYPosition: -3

@@ -578,6 +578,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f4a3ab29d036db842bd4a0e3f1078e40, type: 2}
   - {fileID: 11400000, guid: 5e3d50768680c994f8546fbb5c027090, type: 2}
   - {fileID: 11400000, guid: 843353c5294e7384ab7cc36a503b43ad, type: 2}
+  _plSONivel3:
+  - {fileID: 11400000, guid: e6b6b4096227d854c84274d1812e80de, type: 2}
+  - {fileID: 11400000, guid: 8cabc8521886f7b40b1dcaed9dc703ca, type: 2}
+  - {fileID: 11400000, guid: e937a610d40762042a4f9583aed81aae, type: 2}
+  - {fileID: 11400000, guid: 83b37bad302f15443bd29e6d53f894a9, type: 2}
+  - {fileID: 11400000, guid: d6381e2f32e29ad4d9696a9afc4be2eb, type: 2}
+  - {fileID: 11400000, guid: f4a3ab29d036db842bd4a0e3f1078e40, type: 2}
+  - {fileID: 11400000, guid: 5e3d50768680c994f8546fbb5c027090, type: 2}
+  - {fileID: 11400000, guid: 843353c5294e7384ab7cc36a503b43ad, type: 2}
   _plSOTransition:
   - {fileID: 11400000, guid: e4ec935877d26e24cb3728b71ba1961c, type: 2}
   _plSOLastTransition:

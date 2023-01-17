@@ -16,5 +16,5 @@ MonoBehaviour:
   Prefab: {fileID: 0}
   _platformName: Falling
   _platformPrefab: {fileID: 5379563564969153193, guid: c6ab44ef518464d4eaf66feed49787b5, type: 3}
-  _platformWaitTimer: 10
+  _platformWaitTimer: 52
   _platformInitialYPosition: -2
