@@ -20,5 +20,6 @@ MonoBehaviour:
   WaitjumpTime: 5
   jumTimeDuration: 2
   floatTime: 2
+  score: 10
   proyectile: {fileID: 7595718342168432613, guid: 763d487b89dcacc48b84ebd7325435fe, type: 3}
   proyectileTimer: 1.5

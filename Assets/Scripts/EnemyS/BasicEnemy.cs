@@ -16,6 +16,7 @@ public class BasicEnemy : MonoBehaviour
     private float _jumpDurationCounter;
     private float _movementCounter;
     public LayerMask groundLayer;
+
     // Start is called before the first frame update
    protected virtual void Start()
     {
@@ -24,6 +25,7 @@ public class BasicEnemy : MonoBehaviour
         _jumpCounter = _bESO.WaitjumpTime;
         _movementCounter = 0;
         _jumpDurationCounter = 0;
+     
     }
     // Update is called once per frame
     protected virtual void  Update()

@@ -6,12 +6,13 @@ public class AttackEnemy : BasicEnemy
 {
     private float _countProyectile;
     private AtackEnemySO atackEnemySO;
-
+    
     protected override void Start()
     {
         base.Start();
         atackEnemySO = (AtackEnemySO)_bESO;
         _countProyectile = 0;
+      
     }
     // Update is called once per frame
     protected override void Update()

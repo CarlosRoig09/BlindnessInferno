@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17f8a2f4c97e09f448ecde3dff2d11a7, type: 3}
-  m_Name: FlyEnemySO
+  m_Script: {fileID: 11500000, guid: 6dad8ec7e6d890c4485a969875a48ef9, type: 3}
+  m_Name: SpecialEnemySO
   m_EditorClassIdentifier: 
-  RateAperance: 50
-  Prefab: {fileID: 8015743291888870430, guid: f923c13ea06dfe542accd35b753e5bbb, type: 3}
-  FlyingSpeed: 50
-  AttackSpeed: 300
-  TimeChaangeDirection: 0.5
-  score: 15
+  score: 50
+  Prefab: {fileID: 6938938800452417176, guid: ffe747053f42d4249b3d6e56c07800d5, type: 3}

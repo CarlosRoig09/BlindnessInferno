@@ -10,10 +10,17 @@ public class GameManager : Singelton<GameManager>
     }
    // private Escenas _scene;
     private ControlDeath _player;
+    private int _score;
+    public int Score
+    {
+        get => _score;
+        set => _score = value;
+    }
     // Start is called before the first frame update
     void Start()
     {
         _player = GameObject.Find("Character").GetComponent<ControlDeath>();
+        _score = 0;
     }
 
     // Update is called once per frame
