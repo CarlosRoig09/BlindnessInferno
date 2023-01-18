@@ -33,36 +33,41 @@ public class SelectArm : MonoBehaviour
     {
         if (enabled&&_starFase)
         {
-            if (Arms[_armCount].GetComponent<ArmAttack>().Life < 0)
+            if (Arms.Count > 0)
             {
-                switch (Arms[_armCount].GetComponent<ArmAttack>()._aP)
+                if (Arms[_armCount].GetComponent<ArmAttack>().Life > 0)
                 {
-                    case ArmPosition.Stay:
-                        Debug.Log("attack");
-                        Arms[_armCount].GetComponent<ArmAttack>().Attack(_speed);
-                        if (_armCount == 1)
-                            Arms[_armCount].GetComponent<ArmAttack>().Attack(_speed * -1);
-                        break;
-                    case ArmPosition.AttackEnd:
-                        if (_countBetweenArms <= _count)
-                        {
-                            _armCount += 1;
-                            if (_armCount >= Arms.Count)
-                                _armCount = 0;
-                            Arms[_armCount].GetComponent<ArmAttack>()._aP = ArmPosition.Stay;
-                            _count = 0;
-                        }
-                        else
-                            _count += Time.deltaTime;
-                        break;
+                    switch (Arms[_armCount].GetComponent<ArmAttack>()._aP)
+                    {
+                        case ArmPosition.Stay:
+                            Debug.Log("attack");
+                            Arms[_armCount].GetComponent<ArmAttack>().Attack(_speed);
+                            if (_armCount == 1)
+                                Arms[_armCount].GetComponent<ArmAttack>().Attack(_speed * -1);
+                            break;
+                        case ArmPosition.AttackEnd:
+                            if (_countBetweenArms <= _count)
+                            {
+                                _armCount += 1;
+                                if (_armCount >= Arms.Count)
+                                    _armCount = 0;
+                                Arms[_armCount].GetComponent<ArmAttack>()._aP = ArmPosition.Stay;
+                                _count = 0;
+                            }
+                            else
+                                _count += Time.deltaTime;
+                            break;
+                    }
+                }
+                else
+                {
+                    Destroy(Arms[_armCount]);
+                    Arms.Remove(Arms[_armCount]);
+                    _armCount = 0;
                 }
             }
             else
-            {
-                Arms.Remove(Arms[_armCount]);
-                Destroy(Arms[_armCount]);
-                _armCount = 0;
-            }
+                Death();
         }
     }
     void Death()
@@ -75,8 +80,6 @@ public class SelectArm : MonoBehaviour
         Arms = new List<GameObject> { transform.GetChild(0).gameObject, transform.GetChild(1).gameObject };
         _parentCBF = transform.parent.GetComponent<ControlBossFaces>();
         _parentCBF.OnEndFace += Death;
-        Debug.Log(_parentCBF);
-        Debug.Log(Arms[1].name);
         foreach (var arm in Arms)
         {
             arm.GetComponent<ArmAttack>().Life = _parentCBF.CurrentLife / 2;

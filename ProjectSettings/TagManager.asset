@@ -12,6 +12,7 @@ TagManager:
   - EnemyBossHitPoint
   - EnemyBoss
   - Box
+  - BossArms
   layers:
   - Default
   - TransparentFX

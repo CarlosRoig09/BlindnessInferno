@@ -83,7 +83,6 @@ public class GeneratePlatformController : MonoBehaviour
 
 
         }
-        Debug.Log(_nivel);
 
         _num = RandomMethods.ReturnARandomObject(_plSO, 0);
         _initPosition = new Vector3(transform.position.x, _plSO[_num].PlatformInitialYPosition);

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using UnityEngine;
 
 public enum BossFase
@@ -57,8 +58,8 @@ public class ControlBossFaces : MonoBehaviour
             case BossFase.StartBossFase2:
                 _collider.enabled = false;
                 MoveBoss(_centerCamera.position);
-                    _Arms.SetActive(true);
                 LifeForFace(BossEnemySO.LifeSecondFace, BossFase.BossFase2);
+                _Arms.SetActive(true);
                 break;
             case BossFase.BossFase2:
                 ComproveIfFaseEnd(BossFase.StartBossFase3, _currentLife);
@@ -70,6 +71,7 @@ public class ControlBossFaces : MonoBehaviour
                 LifeForFace(BossEnemySO.LifeThirtFace, BossFase.BossFase3);
                 break;
             case BossFase.BossFase3:
+                transform.localScale = new Vector3(0.5f,0.5f);
                 ComproveIfFaseEnd(BossFase.Death, _currentLife);
                 break;
             case BossFase.Death:

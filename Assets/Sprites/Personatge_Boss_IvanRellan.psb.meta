@@ -2854,8 +2854,8 @@ ScriptedImporter:
     spritePosition: {x: 812, y: 966}
   - name: "Bra\xE7 Izquierdo Inferior"
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.13854218, y: 0.08826904}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3222,8 +3222,8 @@ ScriptedImporter:
     spritePosition: {x: 534, y: 1041}
   - name: "Bra\xE7 Izquierdo Inferior"
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.8480073, y: 0.08259907}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
