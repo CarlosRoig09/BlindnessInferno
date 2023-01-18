@@ -56,7 +56,7 @@ public class WalkingScript : MonoBehaviour
         var platform = Physics2D.Raycast(transform.position, Vector2.down, 0.65f, groundLayer.value);
         if (platform.collider != null)
         {
-            if (platform.collider.gameObject.CompareTag("Fallable") && Input.GetKeyUp(KeyCode.DownArrow))
+            if (platform.collider.gameObject.CompareTag("Fallable") && (Input.GetKeyUp(KeyCode.DownArrow) || (Input.GetKeyUp(KeyCode.S))))
                 FallPlatform(platform.collider.gameObject);
             if (platform.collider.gameObject.CompareTag("Fall"))
             {
