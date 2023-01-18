@@ -27,8 +27,8 @@ public class WalkingScript : MonoBehaviour
         get { return _stopMomentum; }
         set { _stopMomentum = value;}
     }
-    //public LayerMask ground;
-    //public Collider2D footCollider;
+    [SerializeField]
+    private float _hitStop;
     private void Start()
     {
         _anim = gameObject.GetComponent<Animator>();
@@ -40,7 +40,6 @@ public class WalkingScript : MonoBehaviour
     private float jumpWaitTimer;*/
     private void FixedUpdate()
     {
-        Debug.Log(_stopMomentum);
         if (!_stopMomentum)
         {
             if (transform.position.x < _maxPosition.position.x)
@@ -52,7 +51,7 @@ public class WalkingScript : MonoBehaviour
             else
                 rb.velocity = new Vector2(_cameraRB2D.velocity.x, rb.velocity.y);
         }
-        else StartCoroutine(StartMomentum(0.2f));
+        else StartCoroutine(StartMomentum(0.3f));
     }
     void Update()
     {

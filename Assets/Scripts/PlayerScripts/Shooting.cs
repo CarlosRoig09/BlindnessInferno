@@ -31,7 +31,7 @@ public class Shooting : MonoBehaviour
 
         firePoint.rotation = Quaternion.Euler(0, 0, lookAngle);
 
-        if (Input.GetMouseButtonDown(0)&&_count>=_countdown)
+        if (Input.GetMouseButtonUp(0)&&_count>=_countdown)
         {
             _anim.SetBool("Attak", true);
         }

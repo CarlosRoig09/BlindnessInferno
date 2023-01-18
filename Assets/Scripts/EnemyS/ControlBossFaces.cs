@@ -36,9 +36,9 @@ public class ControlBossFaces : MonoBehaviour
     void Start()
     {
         _currentFase = BossFase.StartBossFase1;
-        _Arms = transform.GetChild(1).gameObject;
+        _Arms = GameObject.Find("Arms");
         _Arms.SetActive(false);
-        _collider = gameObject.GetComponent<PolygonCollider2D>();
+        _collider = gameObject.GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -80,7 +80,7 @@ public class ControlBossFaces : MonoBehaviour
 
     void MoveBoss(Vector3 newPosition)
     {
-        transform.position = new Vector3 (newPosition.x, transform.position.y);
+        transform.parent.position = new Vector3 (newPosition.x, transform.parent.position.y);
     }
 
     void ComproveIfFaseEnd(BossFase BF, float life)
