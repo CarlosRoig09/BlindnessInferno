@@ -13,6 +13,7 @@ public class CrossAwake : MonoBehaviour
     private GameObject _character;
     public GameObject Lightning;
     private int _lightningCount = 0;
+    private GameObject _awakenCross;
 
 
     void Start()
@@ -21,6 +22,7 @@ public class CrossAwake : MonoBehaviour
         z = -90.0f;
         rotationSpeed = 50.0f;
         _character = GameObject.Find("Character");
+        _awakenCross = GameObject.Find("AwakenCross");
     }
 
     void FixedUpdate()
@@ -31,7 +33,7 @@ public class CrossAwake : MonoBehaviour
         {
             _lightningCount++;
             GameObject lightningSpawned = Instantiate(Lightning);
-            lightningSpawned.transform.position = new Vector3(transform.localPosition.x, 1.25f, 0);
+            lightningSpawned.transform.position = new Vector3(_awakenCross.transform.localPosition.x, 1.25f, 0);
         }
 
         if (posDifference < awakenDistance)
@@ -42,7 +44,7 @@ public class CrossAwake : MonoBehaviour
             {
                 z = 0.0f;
             }
-
+            
             transform.localRotation = Quaternion.Euler(x, 0, z);
         }
     }
