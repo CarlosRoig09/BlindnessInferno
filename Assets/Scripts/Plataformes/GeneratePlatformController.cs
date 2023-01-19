@@ -13,6 +13,8 @@ public class GeneratePlatformController : MonoBehaviour
     private PlatformScriptableObject[] _plSONivel1;
     [SerializeField]
     private PlatformScriptableObject[] _plSONivel2;
+    [SerializeField]
+    private PlatformScriptableObject[] _plSONivel3;
 
     [SerializeField]
     private PlatformScriptableObject[] _plSOTransition;
@@ -38,12 +40,13 @@ public class GeneratePlatformController : MonoBehaviour
         _num = RandomMethods.ReturnARandomObject(_plSO, 0);
         _counter = _plSO[_num].PlatgormWaitTimer;
         _enemySpawn = gameObject.GetComponent<AlPamPamYAlPiumPium>();
+
     }
 
     // Update is called once per frame
     private void Update()
     {
-      //  if (_plSO == _plSOLastTransition || _plSO == _plSOTransition) _num = 0;
+        if (_plSO == _plSOLastTransition || _plSO == _plSOTransition) _num = 0;
         _enemySpawn = gameObject.GetComponent<AlPamPamYAlPiumPium>();
         if (_plSO[_num].PlatgormWaitTimer / _cameraRB.velocity.x <= _counter)
         {
@@ -71,11 +74,13 @@ public class GeneratePlatformController : MonoBehaviour
                 _plSO = _plSOTransition;
                 break;
             case Niveles.Nivel3:
+                _plSO = _plSONivel3;
                 break;
             case Niveles.TransNivel3:
                 _plSO = _plSOTransition;
                 break;
             case Niveles.NivelBoss:
+                _plSO = _plSONivel3;
                 break;
             case Niveles.TransNivelBoss:
                 _plSO = _plSOLastTransition;

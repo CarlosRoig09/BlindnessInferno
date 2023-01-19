@@ -7,7 +7,7 @@ public enum EnemyMovement
     Jump,
     Float
 }
-public class BasicEnemy : MonoBehaviour
+public class BasicEnemy : Enemy
 {
     private Rigidbody2D _rb;
     public BasicEnemySO _bESO;
@@ -16,17 +16,21 @@ public class BasicEnemy : MonoBehaviour
     private float _jumpDurationCounter;
     private float _movementCounter;
     public LayerMask groundLayer;
+
+
     // Start is called before the first frame update
-   protected virtual void Start()
+     void Start()
     {
         _rb = gameObject.GetComponent<Rigidbody2D>();
         eM = EnemyMovement.Left;
         _jumpCounter = _bESO.WaitjumpTime;
         _movementCounter = 0;
         _jumpDurationCounter = 0;
+        Score = 5;
+     
     }
     // Update is called once per frame
-    protected virtual void  Update()
+    void  Update()
     {
         //if(gameObject.name == "Enemy") Debug.Log("" + eM + " state " + _rb.gravityScale + " gravityScale");
         switch (eM)

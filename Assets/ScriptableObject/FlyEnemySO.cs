@@ -8,4 +8,5 @@ public class FlyEnemySO : RandomSO
     public float FlyingSpeed;
     public float AttackSpeed;
     public float TimeChaangeDirection;
+    public int score;
 }

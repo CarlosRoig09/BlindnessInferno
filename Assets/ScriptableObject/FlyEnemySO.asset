@@ -17,3 +17,4 @@ MonoBehaviour:
   FlyingSpeed: 50
   AttackSpeed: 400
   TimeChaangeDirection: 0.5
+  score: 15

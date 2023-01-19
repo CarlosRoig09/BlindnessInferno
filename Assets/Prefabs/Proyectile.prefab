@@ -147,3 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BulletSizeStatus: 0
+  _specialEnemySO: {fileID: 11400000, guid: 60a76a9edc1201a45bc93f7b445020ff, type: 2}
+  _basicEnemySO: {fileID: 11400000, guid: 9614e03a4438f974bac1dbf1ce078a7f, type: 2}
+  _atakEnemySO: {fileID: 11400000, guid: 910e222c895b62d4f808ef6c92746e38, type: 2}
+  _flyEnemySO: {fileID: 11400000, guid: 5ab1c4ee0f519da4296577f0d524126a, type: 2}

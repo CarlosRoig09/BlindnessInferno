@@ -13,7 +13,7 @@ public class LifeBonusScript : MovingPlatform
             _player = GameObject.Find("Character");
             _controlDeathScript = _player.GetComponent<ControlDeath>();
             
-            if (_controlDeathScript.PlayerLife < 5)
+            if (_controlDeathScript.PlayerLife < 3)
             {
                 _controlDeathScript.AddLife();
             }

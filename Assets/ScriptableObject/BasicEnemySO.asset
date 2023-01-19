@@ -20,3 +20,4 @@ MonoBehaviour:
   WaitjumpTime: 3
   jumTimeDuration: 1
   floatTime: 1
+  score: 5

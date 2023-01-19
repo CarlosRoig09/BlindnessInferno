@@ -9,4 +9,5 @@ public class BasicEnemySO : RandomSO
     public float WaitjumpTime;
     public float jumTimeDuration;
     public float floatTime;
+    public int score;
 }

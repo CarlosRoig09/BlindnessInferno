@@ -9,6 +9,15 @@ public class BulletScript : MonoBehaviour
     private float bulletWeight;
     public bool BulletSizeStatus;
     private float proyectileDamage;
+    private ControlScore _controlScore;
+    private int _score;
+
+    public SpecialEnemySO _specialEnemySO;
+    public BasicEnemySO _basicEnemySO;
+    public AtackEnemySO _atakEnemySO;
+    public FlyEnemySO _flyEnemySO;
+
+
     public float ProyectileDamage
     {
         set { proyectileDamage = value; }
@@ -21,6 +30,7 @@ public class BulletScript : MonoBehaviour
         bulletHeight = transform.GetComponent<SpriteRenderer>().bounds.size.y / 2;
         bulletWeight = transform.GetComponent<SpriteRenderer>().bounds.size.x / 2;
         BulletSizeStatus = false;
+        _controlScore = GameObject.Find("Character").GetComponent<ControlScore>();
     }
     void Update()
     {
@@ -35,7 +45,14 @@ public class BulletScript : MonoBehaviour
         if (collision.gameObject.name != "Character")
         {
             if (collision.gameObject.CompareTag("Enemy"))
+            {
+               _score= collision.gameObject.GetComponent<Enemy>().Score;
+                Debug.Log(collision.gameObject.name);
+                Debug.Log(_score);
+                _controlScore.ScorePlus(_score);
                 Destroy(collision.gameObject);
+            }
+                
             if (collision.gameObject.CompareTag("EnemyBossHitPoint"))
             {
                 gameObject.GetComponentInParent<ControlBossFaces>().GetDamaged(proyectileDamage);
