@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,11 +28,14 @@ public class BlindColorTest : MonoBehaviour
     private float _distance;
     private float _distanciaMax;
     private float _count;
+    private float _numRayo;
     public float DistanciaMax
     {
-        get=>_distanciaMax;
-        set=>_distanciaMax = value;
+        get => _distanciaMax;
+        set => _distanciaMax = value;
     }
+
+    public GameObject rayo;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,13 +43,16 @@ public class BlindColorTest : MonoBehaviour
         _distance = GameObject.Find("Kilomiters").GetComponent<Kilomiters>().Distancia;
         _colorBlind.Type = 1;
         _count = 0;
+        _numRayo = 0;
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
         _distance = GameObject.Find("Kilomiters").GetComponent<Kilomiters>().Distancia;
-      
+
 
         if (_colorBlind.Type == 0 && _distance <= _distanciaMax)
         {
@@ -55,6 +62,7 @@ public class BlindColorTest : MonoBehaviour
         {
             if (_count >= 0f && _count < 500f)
             {
+                _numRayo = 0;
                 Nivel = Niveles.Nivel1;
                 _colorBlind.Type = 1;
             }
@@ -64,12 +72,15 @@ public class BlindColorTest : MonoBehaviour
                 if (_count >= 550f)
                 {
                     _colorBlind.Type = 2;
+                    if (_numRayo == 0)
+                        StartCoroutine(ChargeRayo(3f));
 
                 }
-               
+
             }
             else if (_count >= 600f && _count < 1100f)
             {
+                _numRayo = 0;
                 Nivel = Niveles.Nivel2;
                 _colorBlind.Type = 2;
 
@@ -80,12 +91,15 @@ public class BlindColorTest : MonoBehaviour
                 if (_count >= 1150f)
                 {
                     _colorBlind.Type = 3;
+                    if (_numRayo == 0)
+                        StartCoroutine(ChargeRayo(3f));
 
                 }
 
             }
             else if (_count >= 1200f && _count < 1700f)
             {
+                _numRayo = 0;
                 Nivel = Niveles.Nivel3;
                 _colorBlind.Type = 3;
             }
@@ -95,12 +109,15 @@ public class BlindColorTest : MonoBehaviour
                 if (_count >= 1750f)
                 {
                     _colorBlind.Type = 3;
+                    if (_numRayo == 0)
+                        StartCoroutine(ChargeRayo(3f));
 
                 }
 
             }
             else if (_count >= 1700f && _count < 2200f)
             {
+                _numRayo = 0;
                 Nivel = Niveles.Nivel3;
                 _colorBlind.Type = 3;
             }
@@ -110,16 +127,23 @@ public class BlindColorTest : MonoBehaviour
                 if (_count >= 2250f)
                 {
                     _colorBlind.Type = 1;
+                    if (_numRayo == 0)
+                        StartCoroutine(ChargeRayo(3f));
 
                 }
 
             }
             else _count = 0;
         }
-        _count += 10*Time.deltaTime;
+        _count += 10 * Time.deltaTime;
         //Debug.Log(_count);
     }
 
- 
-
+    public IEnumerator ChargeRayo(float time)
+    {
+        Instantiate(rayo, gameObject.transform.position, Quaternion.identity);
+        _numRayo = 1;
+        yield return new WaitForSeconds(time);
+        Destroy(rayo);
+    }
 }

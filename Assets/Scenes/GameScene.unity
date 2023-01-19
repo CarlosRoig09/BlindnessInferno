@@ -677,6 +677,10 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: -15.9041
       objectReference: {fileID: 0}
+    - target: {fileID: 2091946161286021949, guid: 2e30d4eee6e4d764ea871adaa11acdeb, type: 3}
+      propertyPath: rayo
+      value: 
+      objectReference: {fileID: 2708259999882012638, guid: cb77519eb1aa7af4f980c60f893a45c8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e30d4eee6e4d764ea871adaa11acdeb, type: 3}
 --- !u!1001 &687002215
@@ -733,6 +737,10 @@ PrefabInstance:
     - target: {fileID: 2708259999882012638, guid: cb77519eb1aa7af4f980c60f893a45c8, type: 3}
       propertyPath: m_Name
       value: LightningScreenShake
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708259999882012638, guid: cb77519eb1aa7af4f980c60f893a45c8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb77519eb1aa7af4f980c60f893a45c8, type: 3}
@@ -895,10 +903,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 56debfa1bcebbb147a911c6823fec83f, type: 2}
   - {fileID: 11400000, guid: 0c24341c7afb11c42988571852f776b5, type: 2}
   - {fileID: 11400000, guid: 6b03c30b688c8d945a4bd1769691406a, type: 2}
-  - {fileID: 11400000, guid: d6381e2f32e29ad4d9696a9afc4be2eb, type: 2}
-  - {fileID: 11400000, guid: f4a3ab29d036db842bd4a0e3f1078e40, type: 2}
-  - {fileID: 11400000, guid: 5e3d50768680c994f8546fbb5c027090, type: 2}
-  - {fileID: 11400000, guid: 843353c5294e7384ab7cc36a503b43ad, type: 2}
   _plSONivel2:
   - {fileID: 11400000, guid: d6381e2f32e29ad4d9696a9afc4be2eb, type: 2}
   - {fileID: 11400000, guid: f4a3ab29d036db842bd4a0e3f1078e40, type: 2}
