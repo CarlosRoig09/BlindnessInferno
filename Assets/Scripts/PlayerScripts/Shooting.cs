@@ -10,6 +10,7 @@ public class Shooting : MonoBehaviour
     public float projectileSpeed = 50;
     [SerializeField]
     private float proyectileDamage;
+    private float _initialDamage;
     [SerializeField]
     private float _countdown;
     private float _count;
@@ -23,6 +24,7 @@ public class Shooting : MonoBehaviour
     private void Start()
     {
         _count = _countdown;
+        _initialDamage = proyectileDamage;
     }
     void Update()
     {
@@ -31,7 +33,7 @@ public class Shooting : MonoBehaviour
 
         firePoint.rotation = Quaternion.Euler(0, 0, lookAngle);
 
-        if (Input.GetMouseButtonUp(0)&&_count>=_countdown)
+        if (Input.GetMouseButton(0)&&_count>=_countdown)
         {
             _anim.SetBool("Attak", true);
         }
@@ -84,10 +86,10 @@ public class Shooting : MonoBehaviour
 
         if (_bulletSize == 2)
         {
-            //Debug.Log("MORE DAMAGE");
-        }else if (_bulletSize == 1)
-        {
-            //Debug.Log("LESS DAMAGE");
+            proyectileDamage*= 2;
+        }else if (_bulletSize == 1)
+        {
+            proyectileDamage = _initialDamage;
         }
     }
 }
