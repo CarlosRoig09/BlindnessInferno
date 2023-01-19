@@ -56,7 +56,7 @@ public class LightningBehaviour : PlatformControler
         {
             WhiteScreen.SetActive(false);
         }
-        WhiteScreen.GetComponent<SpriteRenderer>().color -= new Color(0, 0, 0, 0.001f);
+        WhiteScreen.GetComponent<SpriteRenderer>().color -= new Color(0, 0, 0, 0.00005f);
 
     }
 }

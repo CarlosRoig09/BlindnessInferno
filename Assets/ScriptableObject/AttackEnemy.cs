@@ -108,4 +108,13 @@ public class AttackEnemy : Enemy
     {
         Instantiate(atackEnemySO.proyectile,new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.gameObject.layer);
+        if (collision.gameObject.layer == 6)
+        {
+            _rb.gravityScale = 0;
+        }
+    }
 }
