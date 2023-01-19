@@ -40,7 +40,6 @@ public class WalkingScript : MonoBehaviour
     private float jumpWaitTimer;*/
     private void FixedUpdate()
     {
-        Debug.Log(_stopMomentum);
         if (!_stopMomentum)
         {
             if (transform.position.x < _maxPosition.position.x)

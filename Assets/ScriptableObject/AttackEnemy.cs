@@ -17,8 +17,6 @@ public class AttackEnemy : BasicEnemy
     protected override void Update()
     {
         base.Update();
-        if (eM == EnemyMovement.Float)
-        {
             if (atackEnemySO.proyectileTimer <= _countProyectile)
             {
                 Shoot();
@@ -26,7 +24,6 @@ public class AttackEnemy : BasicEnemy
             }
             else
                 _countProyectile += Time.deltaTime;
-        }
     }
 
     void Shoot()
