@@ -1,10 +1,11 @@
 using UnityEngine;
 
-public class Enemy : MovingPlatform
+public abstract class Enemy : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    private int _score;
+    public int Score
     {
-        if (collision.gameObject.CompareTag("Bullet"))
-            DestroyObject();
+        get => _score;
+        set => _score = value;
     }
 }

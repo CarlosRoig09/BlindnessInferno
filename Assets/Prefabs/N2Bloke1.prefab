@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 6659960403604844576}
   - component: {fileID: 6659960403604844583}
   - component: {fileID: 6659960403604844582}
+  - component: {fileID: 1993649739223453953}
   m_Layer: 6
   m_Name: N2Bloke1
   m_TagString: Untagged
@@ -187,7 +188,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.100809045}
   m_SpriteTilingProperty:
@@ -223,6 +224,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!251 &1993649739223453953
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6659960403604844580}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1001 &3209463789595411482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -237,6 +257,10 @@ PrefabInstance:
     - target: {fileID: 4889946608351815781, guid: f6a85623edc10f34190560f39c01ac86, type: 3}
       propertyPath: m_Offset.y
       value: -0.02244696
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889946608351815781, guid: f6a85623edc10f34190560f39c01ac86, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7531154320187766218, guid: f6a85623edc10f34190560f39c01ac86, type: 3}
       propertyPath: m_RootOrder
@@ -301,6 +325,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7531154320187766218, guid: f6a85623edc10f34190560f39c01ac86, type: 3}
   m_PrefabInstance: {fileID: 3209463789595411482}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4903934818479305173 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7531154320187766223, guid: f6a85623edc10f34190560f39c01ac86, type: 3}
+  m_PrefabInstance: {fileID: 3209463789595411482}
+  m_PrefabAsset: {fileID: 0}
+--- !u!251 &4277441396443169238
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4903934818479305173}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1001 &5257812049020196665
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -372,6 +420,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.035493094
       objectReference: {fileID: 0}
+    - target: {fileID: 8205379635794722953, guid: 9368352132e7fb441b781772bffc1639, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9368352132e7fb441b781772bffc1639, type: 3}
 --- !u!4 &5674263775204722936 stripped
@@ -379,6 +431,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 452762278059564993, guid: 9368352132e7fb441b781772bffc1639, type: 3}
   m_PrefabInstance: {fileID: 5257812049020196665}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5674263775204722941 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 452762278059564996, guid: 9368352132e7fb441b781772bffc1639, type: 3}
+  m_PrefabInstance: {fileID: 5257812049020196665}
+  m_PrefabAsset: {fileID: 0}
+--- !u!251 &2891019231296689928
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5674263775204722941}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1001 &5992945027545661904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -520,8 +596,36 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.022870565
       objectReference: {fileID: 0}
+    - target: {fileID: 1240866972697253753, guid: 660723b87a7e1b743886245d208bee74, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 660723b87a7e1b743886245d208bee74, type: 3}
+--- !u!1 &8221636636697956970 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 451467891833474372, guid: 660723b87a7e1b743886245d208bee74, type: 3}
+  m_PrefabInstance: {fileID: 8384278990164238126}
+  m_PrefabAsset: {fileID: 0}
+--- !u!251 &5654370998186625230
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8221636636697956970}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!4 &8221636636697956975 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 451467891833474369, guid: 660723b87a7e1b743886245d208bee74, type: 3}

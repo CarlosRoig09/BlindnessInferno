@@ -46,25 +46,9 @@ public class BulletScript : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Enemy"))
             {
-                switch (collision.gameObject.name)
-                {
-                    case "Enemy":
-                        _score = _basicEnemySO.score;
-                        break;
-                    case "AtackEnemy":
-                        _score = _atakEnemySO.score;
-                        break;
-                    case "FlyEnemy":
-                        _score = _flyEnemySO.score;
-                        break;
-                    case "EspecialE":
-                        _score = _specialEnemySO.score;
-                        break;
-                    default:
-                        break;
-
-                }
+               _score= collision.gameObject.GetComponent<Enemy>().Score;
                 Debug.Log(collision.gameObject.name);
+                Debug.Log(_score);
                 _controlScore.ScorePlus(_score);
                 Destroy(collision.gameObject);
             }
