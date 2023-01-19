@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         else
         {
+            Debug.Log("ManagerCreated");
             DontDestroyOnLoad(gameObject);
             _instance = this;
         }

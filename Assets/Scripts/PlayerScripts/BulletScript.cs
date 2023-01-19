@@ -48,7 +48,6 @@ public class BulletScript : MonoBehaviour
             {
                _score= collision.gameObject.GetComponent<Enemy>().Score;
                 Debug.Log(collision.gameObject.name);
-                Debug.Log(_score);
                 _controlScore.ScorePlus(_score);
                 Destroy(collision.gameObject);
             }

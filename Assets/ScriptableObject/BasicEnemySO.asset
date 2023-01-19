@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RateAperance: 70
   Prefab: {fileID: 2953489440314551874, guid: eae7752821728da4c87d14a522e28193, type: 3}
-  speed: 20
-  jumpSpeed: 50
-  changeDirectionTimer: 1.5
+  speed: 50
+  jumpSpeed: 100
+  changeDirectionTimer: 0.5
   WaitjumpTime: 3
-  jumTimeDuration: 1.5
+  jumTimeDuration: 1
   floatTime: 1
   score: 5
