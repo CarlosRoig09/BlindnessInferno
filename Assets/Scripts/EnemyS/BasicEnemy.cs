@@ -17,8 +17,9 @@ public class BasicEnemy : MonoBehaviour
     private float _movementCounter;
     public LayerMask groundLayer;
 
+
     // Start is called before the first frame update
-   protected virtual void Start()
+    protected virtual void Start()
     {
         _rb = gameObject.GetComponent<Rigidbody2D>();
         eM = EnemyMovement.Left;

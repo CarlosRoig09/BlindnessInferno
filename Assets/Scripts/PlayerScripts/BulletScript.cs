@@ -17,6 +17,7 @@ public class BulletScript : MonoBehaviour
     public AtackEnemySO _atakEnemySO;
     public FlyEnemySO _flyEnemySO;
 
+
     public float ProyectileDamage
     {
         set { proyectileDamage = value; }

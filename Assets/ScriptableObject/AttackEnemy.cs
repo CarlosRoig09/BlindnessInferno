@@ -6,7 +6,7 @@ public class AttackEnemy : BasicEnemy
 {
     private float _countProyectile;
     private AtackEnemySO atackEnemySO;
-    
+
     protected override void Start()
     {
         base.Start();

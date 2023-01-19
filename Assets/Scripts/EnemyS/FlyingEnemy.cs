@@ -16,6 +16,7 @@ public class FlyingEnemy : MonoBehaviour
     private Rigidbody2D _rb;
     private FlyingEnemyMovement _fEM;
 
+
     // Start is called before the first frame update
     void Start()
     {
