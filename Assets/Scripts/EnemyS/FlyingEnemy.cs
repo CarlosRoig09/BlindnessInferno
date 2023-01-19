@@ -5,7 +5,7 @@ public enum FlyingEnemyMovement
     Down,
     Attack,
 }
-public class FlyingEnemy : MonoBehaviour
+public class FlyingEnemy : Enemy
 {
     private Transform _playerTransform;
     private Vector3 _targetPosition;
@@ -15,6 +15,8 @@ public class FlyingEnemy : MonoBehaviour
     private float _countTimeCD;
     private Rigidbody2D _rb;
     private FlyingEnemyMovement _fEM;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class FlyingEnemy : MonoBehaviour
         _playerTransform = GameObject.Find("Character").GetComponent<Transform>();
         transform.position = new Vector3(transform.position.x, transform.position.y + 1f);
         _fEM = FlyingEnemyMovement.Up;
+        Score = 15;
     }
 
     // Update is called once per frame

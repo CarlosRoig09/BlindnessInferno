@@ -36,6 +36,7 @@ public class Shooting : MonoBehaviour
         if (Input.GetMouseButton(0)&&_count>=_countdown)
         {
             _anim.SetBool("Attak", true);
+            SpawnProyectile();
         }
        else _count += Time.deltaTime;
     }

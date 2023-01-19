@@ -10,6 +10,7 @@ public class ParallaxScript : MonoBehaviour
     private float x, y;
     public bool MovingUpParallax;
     private GameObject _sky;
+    public float VerticalParallaxSpeed;
 
     private void Awake()
     {
@@ -36,11 +37,21 @@ public class ParallaxScript : MonoBehaviour
         if (_sky.transform.localPosition.y < -2.5f)
         {
             MovingUpParallax = false;
+            y += 0.01f;
+            VerticalParallaxSpeed = 0.01f;
+            MovingUpParallax = true;
+        }
+        else if (_sky.transform.localPosition.y > 7.8f)
+        {
+            MovingUpParallax = false;
+            y -= 0.01f;
+            VerticalParallaxSpeed = -0.01f;
+            MovingUpParallax = true;
         }
 
         if (MovingUpParallax)
         {
-            transform.localPosition = new Vector3(x, y - 0.01f, 0);
+            transform.localPosition = new Vector3(x, y + VerticalParallaxSpeed, 0);
         }
     }
 }
