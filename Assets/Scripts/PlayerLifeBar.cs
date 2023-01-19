@@ -10,6 +10,7 @@ public class PlayerLifeBar : MonoBehaviour
     void Awake()
     {
         slider = GetComponent<Slider>();
+       
     }
 
     void Update()

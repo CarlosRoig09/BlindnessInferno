@@ -17,9 +17,13 @@ public class ControlDeath : MonoBehaviour
         get => life;
         set => life = value;
     }
-    void Start()
+    private void Awake()
     {
         life = Life.Alive;
+    }
+    void Start()
+    {
+        
         //Mido la camara
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         //Mido la altura del personaje
@@ -31,10 +35,10 @@ public class ControlDeath : MonoBehaviour
     void Update()
     {
         //Si la posicion de y es mas peke q la del escenario y la altura del jugador o si la posicion de x es mas peke o igual a lo mismo pero en x.
-        if (transform.position.y <= ((screenBounds.y * -1) - playerHeight) || transform.position.x <= ((screenBounds.x * -1) - playerWeight))
+        /*if (transform.position.y <= ((screenBounds.y * -1) - playerHeight) || transform.position.x <= ((screenBounds.x * -1) - playerWeight))
         {
             life = Life.Death;
-        }
+        }*/
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
