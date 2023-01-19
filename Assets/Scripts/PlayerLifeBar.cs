@@ -23,7 +23,7 @@ public class PlayerLifeBar : MonoBehaviour
         {
             fillImage.enabled = true;
         }
-        float fillValue = playerLife.PlayerLife / playerLife.MaxPlayerLife ;
+        float fillValue = playerLife.PlayerLife / playerLife.MaxPlayerLife;
         slider.value = fillValue;
     }
 }

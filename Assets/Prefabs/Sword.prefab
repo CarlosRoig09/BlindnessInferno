@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6947327645246654263}
   - component: {fileID: 6947327645246654262}
-  - component: {fileID: 4335081647282314747}
   - component: {fileID: 1631144721030918499}
   m_Layer: 0
   m_Name: Sword
@@ -86,24 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4335081647282314747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6947327645246654408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e98fbb97ae78fa346abc619587d05dc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 6254917911205190447, guid: d57f18fd6615a1948affa906d0e3f837, type: 3}
-  firePoint: {fileID: 0}
-  projectileSpeed: 20
-  proyectileDamage: 5
-  _countdown: 0.5
-  _bulletSize: 1
 --- !u!95 &1631144721030918499
 Animator:
   serializedVersion: 5

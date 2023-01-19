@@ -28,9 +28,12 @@ public class BasicEnemy : MonoBehaviour
     // Update is called once per frame
     protected virtual void  Update()
     {
+        //if(gameObject.name == "Enemy") Debug.Log("" + eM + " state " + _rb.gravityScale + " gravityScale");
         switch (eM)
         {
             case EnemyMovement.Right:
+                if (Physics2D.Raycast(transform.position, Vector2.down, 0.65f, groundLayer) && _rb.gravityScale > 0)
+                    _rb.gravityScale = 0;
                 LinearMovement(_bESO.speed, EnemyMovement.Left);
                 break;
             case EnemyMovement.Left:
@@ -43,6 +46,7 @@ public class BasicEnemy : MonoBehaviour
                 Float();
                 break;
         }
+
    }
     void Jump()
     {
@@ -58,7 +62,7 @@ public class BasicEnemy : MonoBehaviour
     {
         if (Physics2D.Raycast(transform.position, Vector2.down, 0.65f, groundLayer.value))
         {
-            _rb.velocity = new Vector3(speed * Time.fixedDeltaTime, _rb.velocity.y);
+            _rb.velocity = new Vector3(speed * Time.fixedDeltaTime, 0);
             if (_bESO.changeDirectionTimer <= _movementCounter)
             {
                 eM = enemyMovement;
@@ -89,5 +93,14 @@ public class BasicEnemy : MonoBehaviour
         yield return new WaitForSeconds(timer);
         _rb.gravityScale = 1;
         eM = enemyMovement;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.gameObject.layer);
+        if(collision.gameObject.layer == 6)
+        {
+            _rb.gravityScale = 0;
+        }
     }
 }

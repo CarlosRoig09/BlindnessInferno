@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7223639000476111238}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: maD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4431869186386226066}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: plumaB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 835717298220820583}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cua_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 175829603195347877}
   - component: {fileID: 1606706583375752972}
   - component: {fileID: 850574482082137106}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'maeskerre '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,10 +164,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1353000665
+  m_SortingLayer: 1
   m_SortingOrder: 4
-  m_Sprite: {fileID: -860697418608017695, guid: f315b75e759fe3441b4fdff12a285158, type: 3}
+  m_Sprite: {fileID: 6276355276522440468, guid: 0bb371aa68684e74b8bd783f36e81ebb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -194,8 +194,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 8941639799251627234}
   m_Bounds:
-    m_Center: {x: -0.02365224, y: 0.8087318, z: 0}
-    m_Extent: {x: 0.23974593, y: 0.1829232, z: 0}
+    m_Center: {x: -0.023654133, y: 0.808733, z: 0}
+    m_Extent: {x: 0.23974594, y: 0.18292326, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -208,7 +208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5541100030951653717}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7917388972468590718}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: femurD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1224484268370274103}
-  m_LocalRotation: {x: 0, y: 0, z: 0.43652147, w: 0.8996939}
+  m_LocalRotation: {x: 0, y: 0, z: 0.4365205, w: 0.8996944}
   m_LocalPosition: {x: 0.27868748, y: 0.00000007636358, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -274,7 +274,7 @@ GameObject:
   - component: {fileID: 5901798368673914696}
   - component: {fileID: 2196324139569830380}
   - component: {fileID: 1007593354854288062}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'plumablanca '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +345,7 @@ SpriteRenderer:
   m_Size: {x: 0.12, y: 0.46}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1007593354854288062
@@ -378,7 +378,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6435223384298204216}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tibiaD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,7 +392,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368746310432227403}
-  m_LocalRotation: {x: 0, y: 0, z: -0.12720212, w: 0.99187684}
+  m_LocalRotation: {x: 0, y: 0, z: -0.12720108, w: 0.991877}
   m_LocalPosition: {x: 1.0451406, y: -0.0000003709216, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -410,7 +410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2341642328167008541}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,7 +444,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5413676928626325038}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pluma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,7 +475,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7677637579041980842}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cua_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -489,7 +489,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015066470923482902}
-  m_LocalRotation: {x: 0, y: 0, z: -0.3771223, w: 0.92616343}
+  m_LocalRotation: {x: 0, y: 0, z: -0.37712288, w: 0.92616326}
   m_LocalPosition: {x: 0.4904025, y: 0.00000008637509, z: 0}
   m_LocalScale: {x: 0.99999976, y: 0.99999976, z: 1}
   m_ConstrainProportionsScale: 0
@@ -507,7 +507,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6883670622734232908}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tibiaI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -521,7 +521,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2472100606588315946}
-  m_LocalRotation: {x: 0, y: 0, z: -0.169102, w: 0.98559856}
+  m_LocalRotation: {x: 0, y: 0, z: -0.16910186, w: 0.98559856}
   m_LocalPosition: {x: 1.017937, y: -0.00000029295103, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 6836461307953233938}
   - component: {fileID: 4286068892475190966}
   - component: {fileID: 7753488329027589169}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'flecha '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -601,8 +601,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1353000665
+  m_SortingLayer: 1
   m_SortingOrder: 18
   m_Sprite: {fileID: 276330597017901316, guid: f315b75e759fe3441b4fdff12a285158, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -612,7 +612,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 1.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &7753488329027589169
@@ -647,7 +647,7 @@ GameObject:
   - component: {fileID: 6906809176254699215}
   - component: {fileID: 8803230062268240814}
   - component: {fileID: 5806766087789801914}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'botadreta '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -707,15 +707,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1353000665
+  m_SortingLayer: 1
   m_SortingOrder: 9
-  m_Sprite: {fileID: 5072599762953144292, guid: f315b75e759fe3441b4fdff12a285158, type: 3}
+  m_Sprite: {fileID: 7147603046985214512, guid: 0bb371aa68684e74b8bd783f36e81ebb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.8333333, y: 0.97333336}
+  m_Size: {x: 0.8333333, y: 0.98}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -737,8 +737,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 6883670622734232908}
   m_Bounds:
-    m_Center: {x: 0.37262547, y: 0.341142, z: 0}
-    m_Extent: {x: 0.43011355, y: 0.31632644, z: 0}
+    m_Center: {x: 0.3734152, y: 0.3345203, z: 0}
+    m_Extent: {x: 0.43011367, y: 0.31632647, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -751,7 +751,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3787143297901033677}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: espasa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -784,7 +784,7 @@ GameObject:
   - component: {fileID: 6069050350906575704}
   - component: {fileID: 2209653866931232691}
   - component: {fileID: 9021511996544324459}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'brazosuperiorderecho '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -844,10 +844,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1353000665
+  m_SortingLayer: 1
   m_SortingOrder: 23
-  m_Sprite: {fileID: 5425594926451690638, guid: f315b75e759fe3441b4fdff12a285158, type: 3}
+  m_Sprite: {fileID: 4719874682115523864, guid: 0bb371aa68684e74b8bd783f36e81ebb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -874,8 +874,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 1467034908061828864}
   m_Bounds:
-    m_Center: {x: 0.0103851855, y: 0.0055425763, z: 0}
-    m_Extent: {x: 0.35313767, y: 0.6192731, z: 0}
+    m_Center: {x: 0.01038897, y: 0.00554353, z: 0}
+    m_Extent: {x: 0.3531381, y: 0.6192728, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -888,7 +888,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 104239920695573881}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cua_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -922,7 +922,7 @@ GameObject:
   - component: {fileID: 1620983926507072075}
   - component: {fileID: 6301928309355917894}
   - component: {fileID: 3886977146099049242}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'arco '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -982,8 +982,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1353000665
+  m_SortingLayer: 1
   m_SortingOrder: 17
   m_Sprite: {fileID: 2719308366832046048, guid: f315b75e759fe3441b4fdff12a285158, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -993,7 +993,7 @@ SpriteRenderer:
   m_Size: {x: 0.76666665, y: 3.0733333}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &3886977146099049242
@@ -1033,7 +1033,7 @@ GameObject:
   - component: {fileID: 1372365184228762874}
   - component: {fileID: 8149597223268078712}
   - component: {fileID: 7401458746151049815}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'pluma '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1093,10 +1093,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1353000665
+  m_SortingLayer: 1
   m_SortingOrder: 26
-  m_Sprite: {fileID: 6784580932464156236, guid: f315b75e759fe3441b4fdff12a285158, type: 3}
+  m_Sprite: {fileID: -1407263391082171401, guid: 0bb371aa68684e74b8bd783f36e81ebb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1123,8 +1123,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 5413676928626325038}
   m_Bounds:
-    m_Center: {x: -0.014326319, y: -0.021677226, z: 0}
-    m_Extent: {x: 0.07868422, y: 0.23049736, z: 0}
+    m_Center: {x: -0.01432918, y: -0.02167748, z: 0}
+    m_Extent: {x: 0.07868422, y: 0.23049738, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1139,7 +1139,7 @@ GameObject:
   - component: {fileID: 3740995109800004340}
   - component: {fileID: 8394114453409813886}
   - component: {fileID: 5685485330414091785}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'Tibiaeskerre '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1199,10 +1199,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1353000665
+  m_SortingLayer: 1
   m_SortingOrder: 11
-  m_Sprite: {fileID: -1933761556181433483, guid: f315b75e759fe3441b4fdff12a285158, type: 3}
+  m_Sprite: {fileID: -9017371738671512616, guid: 0bb371aa68684e74b8bd783f36e81ebb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1229,8 +1229,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 6435223384298204216}
   m_Bounds:
-    m_Center: {x: -0.41205114, y: -0.007590562, z: 0}
-    m_Extent: {x: 0.3130195, y: 0.49018785, z: 0}
+    m_Center: {x: -0.41205117, y: -0.0075900853, z: 0}
+    m_Extent: {x: 0.31301942, y: 0.49018785, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1245,7 +1245,7 @@ GameObject:
   - component: {fileID: 710072158211204512}
   - component: {fileID: 1967306724445565049}
   - component: {fileID: 351166952072240646}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'Cadera '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1305,10 +1305,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1353000665
+  m_SortingLayer: 1
   m_SortingOrder: 21
-  m_Sprite: {fileID: -5176796204910302533, guid: f315b75e759fe3441b4fdff12a285158, type: 3}
+  m_Sprite: {fileID: 3042418751880113387, guid: 0bb371aa68684e74b8bd783f36e81ebb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1335,7 +1335,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 8424277291406810191}
   m_Bounds:
-    m_Center: {x: 0.122416645, y: -0.0013331175, z: 0}
+    m_Center: {x: 0.12242046, y: -0.0013343096, z: 0}
     m_Extent: {x: 0.46758336, y: 1.0020001, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1349,7 +1349,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8424277291406810191}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tronco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1384,7 +1384,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7124101679177856049}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: brasInfD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1398,7 +1398,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4519661706614225133}
-  m_LocalRotation: {x: 0, y: 0, z: 0.17063561, w: 0.98533416}
+  m_LocalRotation: {x: 0, y: 0, z: 0.17063476, w: 0.98533434}
   m_LocalPosition: {x: 1.0945518, y: 0.000000042358902, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1419,7 +1419,7 @@ GameObject:
   - component: {fileID: 779091669288825398}
   - component: {fileID: 2717182272180621598}
   - component: {fileID: 1618675010144575223}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'tridente '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1434,7 +1434,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4782945334268974983}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.4233332, y: 2.42, z: 0}
+  m_LocalPosition: {x: -2.4233341, y: 2.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1479,10 +1479,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1353000665
+  m_SortingLayer: 1
   m_SortingOrder: 15
-  m_Sprite: {fileID: 8712035361379299521, guid: f315b75e759fe3441b4fdff12a285158, type: 3}
+  m_Sprite: {fileID: 7550469067552120264, guid: 0bb371aa68684e74b8bd783f36e81ebb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1509,8 +1509,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 1797004930195437629}
   m_Bounds:
-    m_Center: {x: 3.2946837, y: 1.6247642, z: 0}
-    m_Extent: {x: 0.66576695, y: 2.162691, z: 0}
+    m_Center: {x: 3.2946894, y: 1.6247649, z: 0}
+    m_Extent: {x: 0.66576743, y: 2.162691, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1525,7 +1525,7 @@ GameObject:
   - component: {fileID: 2848974079395719850}
   - component: {fileID: 8196908756251086033}
   - component: {fileID: 1850099106941976610}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'brazosuperioreskerre '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1585,10 +1585,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1353000665
+  m_SortingLayer: 1
   m_SortingOrder: 3
-  m_Sprite: {fileID: -1604627600051714598, guid: f315b75e759fe3441b4fdff12a285158, type: 3}
+  m_Sprite: {fileID: -3875613003591714823, guid: 0bb371aa68684e74b8bd783f36e81ebb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1615,8 +1615,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 7716181043928346742}
   m_Bounds:
-    m_Center: {x: -0.112525165, y: -0.068999946, z: 0}
-    m_Extent: {x: 0.27750248, y: 0.6006479, z: 0}
+    m_Center: {x: -0.112522274, y: -0.06900066, z: 0}
+    m_Extent: {x: 0.27750254, y: 0.60064787, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1629,7 +1629,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8795270022913048436}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1661,7 +1661,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1109926229899078065}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1695,7 +1695,7 @@ GameObject:
   - component: {fileID: 4328461306344383252}
   - component: {fileID: 4260721804204439029}
   - component: {fileID: 373691576879746472}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'botaeskerre '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1755,15 +1755,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1353000665
+  m_SortingLayer: 1
   m_SortingOrder: 13
-  m_Sprite: {fileID: 5882704978105003566, guid: f315b75e759fe3441b4fdff12a285158, type: 3}
+  m_Sprite: {fileID: -4743193642762488307, guid: 0bb371aa68684e74b8bd783f36e81ebb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.82, y: 0.94666666}
+  m_Size: {x: 0.82, y: 0.98}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1785,8 +1785,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 6435223384298204216}
   m_Bounds:
-    m_Center: {x: -0.7717072, y: 0.12777665, z: 0}
-    m_Extent: {x: 0.34783113, y: 0.42111626, z: 0}
+    m_Center: {x: -0.78472054, y: 0.097087055, z: 0}
+    m_Extent: {x: 0.34783113, y: 0.4211162, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1799,7 +1799,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7319527664218503822}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1831,7 +1831,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1915243393828428706}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1864,7 +1864,7 @@ GameObject:
   - component: {fileID: 8396588058635417401}
   - component: {fileID: 2957284308902150443}
   - component: {fileID: 4892625650277221293}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'brazoinferiorderecho '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1924,10 +1924,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1353000665
+  m_SortingLayer: 1
   m_SortingOrder: 22
-  m_Sprite: {fileID: 7999863991844558511, guid: f315b75e759fe3441b4fdff12a285158, type: 3}
+  m_Sprite: {fileID: -5501934761521946234, guid: 0bb371aa68684e74b8bd783f36e81ebb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1954,8 +1954,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 7124101679177856049}
   m_Bounds:
-    m_Center: {x: 0.057632267, y: 0.047486812, z: 0}
-    m_Extent: {x: 0.32908806, y: 0.33942243, z: 0}
+    m_Center: {x: 0.057636082, y: 0.047488213, z: 0}
+    m_Extent: {x: 0.32908788, y: 0.33942252, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1970,7 +1970,7 @@ GameObject:
   - component: {fileID: 3775161264712532961}
   - component: {fileID: 2449114641878038872}
   - component: {fileID: 5814534335779226490}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'CuixaEskerre '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2030,10 +2030,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1353000665
+  m_SortingLayer: 1
   m_SortingOrder: 12
-  m_Sprite: {fileID: 608114388627005334, guid: f315b75e759fe3441b4fdff12a285158, type: 3}
+  m_Sprite: {fileID: 8789672743499402114, guid: 0bb371aa68684e74b8bd783f36e81ebb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2061,8 +2061,8 @@ MonoBehaviour:
   - {fileID: 7917388972468590718}
   - {fileID: 2341642328167008541}
   m_Bounds:
-    m_Center: {x: -0.013968289, y: -0.029437482, z: 0}
-    m_Extent: {x: 0.31730247, y: 0.66277087, z: 0}
+    m_Center: {x: -0.013968438, y: -0.029436827, z: 0}
+    m_Extent: {x: 0.3173055, y: 0.6627703, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -2075,7 +2075,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8941639799251627234}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: maI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2109,7 +2109,7 @@ GameObject:
   - component: {fileID: 4471517395842119262}
   - component: {fileID: 4962814271385177579}
   - component: {fileID: 7437961626666525833}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'TibiaDreta '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2169,10 +2169,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1353000665
+  m_SortingLayer: 1
   m_SortingOrder: 7
-  m_Sprite: {fileID: 651567890072480347, guid: f315b75e759fe3441b4fdff12a285158, type: 3}
+  m_Sprite: {fileID: -3917813682566727990, guid: 0bb371aa68684e74b8bd783f36e81ebb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2199,8 +2199,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 6883670622734232908}
   m_Bounds:
-    m_Center: {x: 0.33530226, y: 0.14636254, z: 0}
-    m_Extent: {x: 0.27429742, y: 0.5131625, z: 0}
+    m_Center: {x: 0.33530322, y: 0.14636064, z: 0}
+    m_Extent: {x: 0.2742976, y: 0.5131625, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -2215,7 +2215,7 @@ GameObject:
   - component: {fileID: 3892757277528598245}
   - component: {fileID: 4800832553551644789}
   - component: {fileID: 9127669414107030101}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'brazoinferioreskerre '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2275,10 +2275,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1353000665
+  m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 6752696210503150924, guid: f315b75e759fe3441b4fdff12a285158, type: 3}
+  m_Sprite: {fileID: -2025652772413597863, guid: 0bb371aa68684e74b8bd783f36e81ebb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2305,8 +2305,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 1411404091844195504}
   m_Bounds:
-    m_Center: {x: -0.13362479, y: 0.20083019, z: 0}
-    m_Extent: {x: 0.40946567, y: 0.241245, z: 0}
+    m_Center: {x: -0.13362762, y: 0.20083115, z: 0}
+    m_Extent: {x: 0.4094657, y: 0.24124497, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -2319,7 +2319,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6458211031075126640}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: femurI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2333,7 +2333,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6622964585546889607}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7405731, w: 0.6719758}
+  m_LocalRotation: {x: 0, y: 0, z: 0.74057317, w: 0.6719758}
   m_LocalPosition: {x: -0.10069073, y: 0.15772124, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2353,7 +2353,7 @@ GameObject:
   - component: {fileID: 7223481131995353851}
   - component: {fileID: 3597468986415237958}
   - component: {fileID: 6277113579138128817}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'madreta '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2413,10 +2413,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1353000665
+  m_SortingLayer: 1
   m_SortingOrder: 24
-  m_Sprite: {fileID: 7401656454462491747, guid: f315b75e759fe3441b4fdff12a285158, type: 3}
+  m_Sprite: {fileID: 3108498409199588964, guid: 0bb371aa68684e74b8bd783f36e81ebb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2443,8 +2443,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 7223639000476111238}
   m_Bounds:
-    m_Center: {x: 0.12263757, y: 0.10323441, z: 0}
-    m_Extent: {x: 0.20519835, y: 0.18851334, z: 0}
+    m_Center: {x: 0.12264229, y: 0.103235364, z: 0}
+    m_Extent: {x: 0.20519827, y: 0.18851346, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -2459,7 +2459,7 @@ GameObject:
   - component: {fileID: 5325907830732647319}
   - component: {fileID: 4600481612046847343}
   - component: {fileID: 783815358054298811}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'Coll '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2519,10 +2519,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1353000665
+  m_SortingLayer: 1
   m_SortingOrder: 19
-  m_Sprite: {fileID: -3013684464401284189, guid: f315b75e759fe3441b4fdff12a285158, type: 3}
+  m_Sprite: {fileID: 3199205279415236573, guid: 0bb371aa68684e74b8bd783f36e81ebb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2550,8 +2550,8 @@ MonoBehaviour:
   - {fileID: 8424277291406810191}
   - {fileID: 1109926229899078065}
   m_Bounds:
-    m_Center: {x: -0.19308147, y: -0.004613638, z: 0}
-    m_Extent: {x: 0.20325199, y: 0.28673267, z: 0}
+    m_Center: {x: -0.19308068, y: -0.004614204, z: 0}
+    m_Extent: {x: 0.20325278, y: 0.28673306, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -2564,7 +2564,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1411404091844195504}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: brasInfI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2578,7 +2578,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7202905489216493456}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071064, w: 0.70710725}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071065, w: 0.7071072}
   m_LocalPosition: {x: 0.9113518, y: 0.0000004956797, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2599,7 +2599,7 @@ GameObject:
   - component: {fileID: 2768103629686061301}
   - component: {fileID: 2885851340633467255}
   - component: {fileID: 5969568819094670562}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'Cap '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2659,10 +2659,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1353000665
+  m_SortingLayer: 1
   m_SortingOrder: 20
-  m_Sprite: {fileID: -1224625533362269981, guid: f315b75e759fe3441b4fdff12a285158, type: 3}
+  m_Sprite: {fileID: -4844264126329318487, guid: 0bb371aa68684e74b8bd783f36e81ebb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2690,7 +2690,7 @@ MonoBehaviour:
   - {fileID: 1109926229899078065}
   - {fileID: 5413676928626325038}
   m_Bounds:
-    m_Center: {x: -0.14911723, y: -0.021505952, z: 0}
+    m_Center: {x: -0.14911461, y: -0.021505594, z: 0}
     m_Extent: {x: 1.3777676, y: 1.52162, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -2706,7 +2706,7 @@ GameObject:
   - component: {fileID: 6169542973946027291}
   - component: {fileID: 8309470841143000926}
   - component: {fileID: 2029750146202820782}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'CuixaDreta '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2766,10 +2766,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1353000665
+  m_SortingLayer: 1
   m_SortingOrder: 8
-  m_Sprite: {fileID: 7807967897701291933, guid: f315b75e759fe3441b4fdff12a285158, type: 3}
+  m_Sprite: {fileID: -7257126726613252232, guid: 0bb371aa68684e74b8bd783f36e81ebb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2796,8 +2796,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 6458211031075126640}
   m_Bounds:
-    m_Center: {x: 0.12967813, y: 0.039660156, z: 0}
-    m_Extent: {x: 0.5655967, y: 0.61159766, z: 0}
+    m_Center: {x: 0.12967914, y: 0.039659202, z: 0}
+    m_Extent: {x: 0.5655969, y: 0.61159766, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -2810,7 +2810,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2564150307522780972}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cua
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2842,7 +2842,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9175793306003173219}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flexa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2873,7 +2873,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7738664319692911458}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2905,7 +2905,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7716181043928346742}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: brasSupI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2919,7 +2919,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8574437229245803021}
-  m_LocalRotation: {x: 0, y: 0, z: -0.9987122, w: 0.050734904}
+  m_LocalRotation: {x: 0, y: 0, z: -0.9987122, w: 0.05073493}
   m_LocalPosition: {x: 0.764193, y: -0.10788297, z: 0}
   m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2937,7 +2937,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1797004930195437629}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tridente
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2968,7 +2968,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3850931156742603445}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cua_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2982,7 +2982,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8740962693018431873}
-  m_LocalRotation: {x: 0, y: 0, z: -0.3453448, w: 0.9384759}
+  m_LocalRotation: {x: 0, y: 0, z: -0.34534422, w: 0.93847615}
   m_LocalPosition: {x: 0.44146383, y: 0.00000008711804, z: 0}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3005,8 +3005,10 @@ GameObject:
   - component: {fileID: 9105688564346804984}
   - component: {fileID: 6179156201951976860}
   - component: {fileID: 6179156201951976861}
-  - component: {fileID: 6179156201951976850}
-  m_Layer: 0
+  - component: {fileID: 3184486064711616306}
+  - component: {fileID: 4871419729047155098}
+  - component: {fileID: 2502019376221420336}
+  m_Layer: 7
   m_Name: personatge
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3022,7 +3024,7 @@ Transform:
   m_GameObject: {fileID: 8771367610926562139}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -15.178318, y: -6.9596815, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5901798368673914696}
@@ -3126,7 +3128,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8eb49f27c88f37641bea8e5ae3a5ee65, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -3140,7 +3142,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 8771367610926562139}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8eb49f27c88f37641bea8e5ae3a5ee65, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -3157,7 +3159,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.8906612, y: 6.992833}
   m_EdgeRadius: 0
---- !u!114 &6179156201951976850
+--- !u!114 &3184486064711616306
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3166,12 +3168,56 @@ MonoBehaviour:
   m_GameObject: {fileID: 8771367610926562139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2fc6f23b95abfb4b8d79c50c1a73a38, type: 3}
+  m_Script: {fileID: 11500000, guid: 05c0eb6b0bc99614baccbf34167ea65d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  capaFloor:
+  initialspeed: 50
+  jumpVelocity: 300
+  jumpWaitTime: 0.05
+  _playerData: {fileID: 11400000, guid: 507664301ab2b36459cb8d9f25917c48, type: 2}
+  rb: {fileID: 6179156201951976860}
+  jumpkey: 32
+  _maxPosition: {fileID: 0}
+  _acceleration: 10
+  groundLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 64
+  firstGodPosition: {fileID: 0}
+  _cameraRB2D: {fileID: 0}
+--- !u!114 &4871419729047155098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8771367610926562139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc618d7aa5b51c346a237302648dc24a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 0
+  MaxPlayerLife: 3
+  PlayerLife: 3
+--- !u!114 &2502019376221420336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8771367610926562139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98fbb97ae78fa346abc619587d05dc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 9176446701418556082, guid: 87b24235f9cb023499d1957273d6fed7, type: 3}
+  firePoint: {fileID: 1797004930195437629}
+  projectileSpeed: 20
+  proyectileDamage: 5
+  _countdown: 0.5
+  _bulletSize: 1
+  _anim: {fileID: 9105688564346804985}
 --- !u!1 &8801585594599301673
 GameObject:
   m_ObjectHideFlags: 0
@@ -3181,7 +3227,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1467034908061828864}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: brazSupD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3195,7 +3241,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8801585594599301673}
-  m_LocalRotation: {x: 0, y: 0, z: -0.99695957, w: 0.077921286}
+  m_LocalRotation: {x: 0, y: 0, z: -0.9969595, w: 0.07792175}
   m_LocalPosition: {x: 0.8181066, y: 0.22684637, z: 0}
   m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3213,7 +3259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4992331376747724019}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3247,7 +3293,7 @@ GameObject:
   - component: {fileID: 6812749822532208373}
   - component: {fileID: 2703007724406596331}
   - component: {fileID: 740314449617642042}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'espada '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3307,8 +3353,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1353000665
+  m_SortingLayer: 1
   m_SortingOrder: 16
   m_Sprite: {fileID: -3204551562129511327, guid: f315b75e759fe3441b4fdff12a285158, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3318,7 +3364,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 2.8466666}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &740314449617642042
@@ -3351,7 +3397,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9105688562860997168}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: brasEskerre_Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3382,7 +3428,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9105688563028048122}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cua_Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3414,7 +3460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9105688563093370654}
   - component: {fileID: 9105688563093370655}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: brasEskerre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3478,7 +3524,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9105688563579635190}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: brasDret_Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3510,7 +3556,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9105688563611356369}
   - component: {fileID: 9105688563611356370}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cua
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3574,7 +3620,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9105688563660709408}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: brasDretEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3588,7 +3634,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9105688563660709409}
-  m_LocalRotation: {x: -0, y: -0, z: -0.08266577, w: 0.9965773}
+  m_LocalRotation: {x: -0, y: -0, z: -0.08266537, w: 0.9965773}
   m_LocalPosition: {x: 0, y: -0.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3605,7 +3651,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9105688563730999110}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: camaEEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3619,7 +3665,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9105688563730999111}
-  m_LocalRotation: {x: -0, y: -0, z: -0.05920905, w: 0.9982456}
+  m_LocalRotation: {x: -0, y: -0, z: -0.059209228, w: 0.99824566}
   m_LocalPosition: {x: -0.07, y: -0.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3636,7 +3682,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9105688563796266087}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: boneEffectBrazEsq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3650,7 +3696,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9105688563796266088}
-  m_LocalRotation: {x: -0, y: -0, z: -0.35139507, w: 0.93622726}
+  m_LocalRotation: {x: -0, y: -0, z: -0.3513952, w: 0.9362273}
   m_LocalPosition: {x: 0, y: -0.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3667,7 +3713,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9105688563902610447}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cuaEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3681,7 +3727,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9105688563902610480}
-  m_LocalRotation: {x: -0, y: -0, z: 0.67376596, w: 0.7389448}
+  m_LocalRotation: {x: -0, y: -0, z: 0.67376596, w: 0.73894495}
   m_LocalPosition: {x: -0.1, y: 0.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3698,7 +3744,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9105688563979812079}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: camaDret_Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3729,7 +3775,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9105688564339285294}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: camaDEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3743,7 +3789,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9105688564339285295}
-  m_LocalRotation: {x: -0, y: -0, z: 0.19912434, w: 0.97997427}
+  m_LocalRotation: {x: -0, y: -0, z: 0.19912438, w: 0.9799742}
   m_LocalPosition: {x: 0.14, y: -0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3761,7 +3807,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9105688564535410902}
   - component: {fileID: 9105688564535410903}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: camaDret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3826,7 +3872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9105688564728227306}
   - component: {fileID: 9105688564728227307}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: camaEsk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3891,7 +3937,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9105688564832048971}
   - component: {fileID: 9105688564832048972}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: brasDret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3955,7 +4001,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9105688564972070891}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: camaEsk_Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3988,7 +4034,7 @@ GameObject:
   - component: {fileID: 8202798224735714025}
   - component: {fileID: 1281418898082463356}
   - component: {fileID: 1731538329389148740}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'cola '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4048,10 +4094,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1353000665
+  m_SortingLayer: 1
   m_SortingOrder: 6
-  m_Sprite: {fileID: -708703035499714742, guid: f315b75e759fe3441b4fdff12a285158, type: 3}
+  m_Sprite: {fileID: 5456706275893291406, guid: 0bb371aa68684e74b8bd783f36e81ebb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4082,8 +4128,8 @@ MonoBehaviour:
   - {fileID: 104239920695573881}
   - {fileID: 835717298220820583}
   m_Bounds:
-    m_Center: {x: -0.09299469, y: -0.021464705, z: 0}
-    m_Extent: {x: 0.75299495, y: 0.9818686, z: 0}
+    m_Center: {x: -0.0929898, y: -0.021464229, z: 0}
+    m_Extent: {x: 0.7529975, y: 0.98186827, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
