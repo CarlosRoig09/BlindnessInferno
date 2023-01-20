@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 public enum Life
 {
@@ -6,12 +7,11 @@ public enum Life
 }
 public class ControlDeath : MonoBehaviour
 {
-    private Vector2 screenBounds;
-    private float playerHeight;
-    private float playerWeight;
+    private WalkingScript _walk;
     public Life life;
     public float MaxPlayerLife;
     public float PlayerLife;
+    private bool _invencible;
     public Life Life
     {
         get => life;
@@ -19,34 +19,33 @@ public class ControlDeath : MonoBehaviour
     }
     void Start()
     {
+        _invencible = false;
         life = Life.Alive;
         //Mido la camara
-        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-        //Mido la altura del personaje
-        playerHeight = transform.GetComponent<SpriteRenderer>().bounds.size.y / 2;
-        //Mido la amplitud del personaje
-        playerWeight = transform.GetComponent<SpriteRenderer>().bounds.size.x / 2;
-
+        _walk = gameObject.GetComponent<WalkingScript>();
     }
     void Update()
     {
-        //Si la posicion de y es mas peke q la del escenario y la altura del jugador o si la posicion de x es mas peke o igual a lo mismo pero en x.
-        if (transform.position.y <= ((screenBounds.y * -1) - playerHeight) || transform.position.x <= ((screenBounds.x * -1) - playerWeight))
-        {
-            life = Life.Death;
-        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy")||collision.gameObject.CompareTag("EnemyBossHitPoint"))
+        if ((collision.gameObject.CompareTag("Enemy")||collision.gameObject.CompareTag("EnemyBossHitPoint"))&&!_invencible)
         {
             //PlayerLife--;
             SubstractLife();
-            if (PlayerLife == 0)
+            _walk.StopMomentum = true;
+            _invencible = true;
+            StartCoroutine(StartMomentum(0.5f));
+            if (PlayerLife < 1)
             {
                 life = Life.Death;
             }
         }
+    }
+    private IEnumerator StartMomentum(float Time)
+    {
+        yield return new WaitForSeconds(Time);
+        _invencible = false;
     }
 
     public void SubstractLife()

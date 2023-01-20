@@ -16,7 +16,7 @@ public class MoveAroundThePlayerByMousePController : MonoBehaviour
     {
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         RotationZ(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.parent.transform.position);
     }
@@ -24,10 +24,7 @@ public class MoveAroundThePlayerByMousePController : MonoBehaviour
     void RotationZ(Vector3 vector)
     {
         float angle = Mathf.Atan2(vector.y, vector.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y,angle);
-        float xPosition = Mathf.Cos(Mathf.Deg2Rad * angle);
-        float yPosition = Mathf.Sin(Mathf.Deg2Rad * angle);
-        transform.localPosition = new Vector3( Mathf.Abs(xPosition)/_nearThePlayer, yPosition/_nearThePlayer, 0);
+        transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y,angle*-1);
     }
 
     void RotateAround(Vector3 pointToRotate)

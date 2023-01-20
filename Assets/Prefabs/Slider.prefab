@@ -179,7 +179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 79fac6d9c9b92c6468d96c2b2b37f010, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1523b88269e7bae409f582969439e77b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -199,7 +199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 178652672912423760}
   - component: {fileID: 178652672912423763}
-  - component: {fileID: 178652672912423762}
+  - component: {fileID: 4424095015057406761}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -281,7 +281,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &178652672912423762
+--- !u!114 &4424095015057406761
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -290,10 +290,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 178652672912423761}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcce0e71f83f7f544950df69c7addd4e, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ccb89896c692dd499a0feebefe3fe13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerData: {fileID: 0}
+  playerLife: {fileID: 717934448672254265, guid: e6f5615d91d95b3458f0e5acb1eb4902, type: 3}
   fillImage: {fileID: 178652673585196742}
 --- !u!1 &178652673585196740
 GameObject:

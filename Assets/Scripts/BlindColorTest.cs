@@ -58,26 +58,61 @@ public class BlindColorTest : MonoBehaviour
                 Nivel = Niveles.Nivel1;
                 _colorBlind.Type = 1;
             }
-            else if (_count >= 500f && _count < 650f)
+            else if (_count >= 500f && _count < 600f)
             {
                 Nivel = Niveles.TransNivel1;
-                if (_count >= 600f)
+                if (_count >= 550f)
                 {
                     _colorBlind.Type = 2;
 
                 }
                
             }
-            else if (_count >= 650f && _count < 2000f)
+            else if (_count >= 600f && _count < 1100f)
             {
                 Nivel = Niveles.Nivel2;
                 _colorBlind.Type = 2;
 
             }
-            else if (_count >= 2000f && _count < 3000f)
+            else if (_count >= 1100f && _count < 1200f)
+            {
+                Nivel = Niveles.TransNivel2;
+                if (_count >= 1150f)
+                {
+                    _colorBlind.Type = 3;
+
+                }
+
+            }
+            else if (_count >= 1200f && _count < 1700f)
             {
                 Nivel = Niveles.Nivel3;
                 _colorBlind.Type = 3;
+            }
+            else if (_count >= 1700f && _count < 1800f)
+            {
+                Nivel = Niveles.TransNivel3;
+                if (_count >= 1750f)
+                {
+                    _colorBlind.Type = 3;
+
+                }
+
+            }
+            else if (_count >= 1700f && _count < 2200f)
+            {
+                Nivel = Niveles.Nivel3;
+                _colorBlind.Type = 3;
+            }
+            else if (_count >= 2200f && _count < 2300f)
+            {
+                Nivel = Niveles.TransNivelBoss;
+                if (_count >= 2250f)
+                {
+                    _colorBlind.Type = 1;
+
+                }
+
             }
             else _count = 0;
         }
