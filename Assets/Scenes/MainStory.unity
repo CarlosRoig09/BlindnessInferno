@@ -269,7 +269,7 @@ MonoBehaviour:
   m_text: Estos imploran por su salvacion al unico angel que no pudo ser sometido,
     el angel caido, Luzbel.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f7cadf881dee0a348a5d41c7943fdd03, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7c399bf36ee1da14ba22135348c54802, type: 2}
   m_sharedMaterial: {fileID: -4815502638822104499, guid: f7cadf881dee0a348a5d41c7943fdd03, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -333,7 +333,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &430000704
@@ -426,7 +426,7 @@ MonoBehaviour:
   m_text: 'Pues aquellos angeles que consiguieron escapar de las garras de Dios,
     les fue robada su voluntad, convirtiendolos en monstruos crueles. '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f7cadf881dee0a348a5d41c7943fdd03, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7c399bf36ee1da14ba22135348c54802, type: 2}
   m_sharedMaterial: {fileID: -4815502638822104499, guid: f7cadf881dee0a348a5d41c7943fdd03, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -490,7 +490,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &521510558
@@ -563,8 +563,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press "ESCAPE" to skip
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f7cadf881dee0a348a5d41c7943fdd03, type: 2}
-  m_sharedMaterial: {fileID: -4815502638822104499, guid: f7cadf881dee0a348a5d41c7943fdd03, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7c399bf36ee1da14ba22135348c54802, type: 2}
+  m_sharedMaterial: {fileID: -4815502638822104499, guid: 7c399bf36ee1da14ba22135348c54802, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -947,7 +947,7 @@ MonoBehaviour:
   m_text: 'Pero Dios no lo pondra nada facil, pues te ira lanzando maldiciones que
     perjudican tu vision. '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f7cadf881dee0a348a5d41c7943fdd03, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7c399bf36ee1da14ba22135348c54802, type: 2}
   m_sharedMaterial: {fileID: -4815502638822104499, guid: f7cadf881dee0a348a5d41c7943fdd03, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1011,7 +1011,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1214050293
@@ -1460,7 +1460,7 @@ MonoBehaviour:
   m_text: "Has ascendido del inframundo a este de aspecto sombrio y de colores apagados...
     \xA1Desafia la creacion de Dios y libera a tus hermanos!\r"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f7cadf881dee0a348a5d41c7943fdd03, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7c399bf36ee1da14ba22135348c54802, type: 2}
   m_sharedMaterial: {fileID: -4815502638822104499, guid: f7cadf881dee0a348a5d41c7943fdd03, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1524,7 +1524,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1402824455
@@ -1617,7 +1617,7 @@ MonoBehaviour:
   m_text: Luzbel, debes liberar a los angeles de las garras del hacedor mientras
     evitas las creaciones que pone en tu camino.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f7cadf881dee0a348a5d41c7943fdd03, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7c399bf36ee1da14ba22135348c54802, type: 2}
   m_sharedMaterial: {fileID: -4815502638822104499, guid: f7cadf881dee0a348a5d41c7943fdd03, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1681,7 +1681,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1637395259
@@ -1776,8 +1776,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f7cadf881dee0a348a5d41c7943fdd03, type: 2}
-  m_sharedMaterial: {fileID: -4815502638822104499, guid: f7cadf881dee0a348a5d41c7943fdd03, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7c399bf36ee1da14ba22135348c54802, type: 2}
+  m_sharedMaterial: {fileID: -4815502638822104499, guid: 7c399bf36ee1da14ba22135348c54802, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
