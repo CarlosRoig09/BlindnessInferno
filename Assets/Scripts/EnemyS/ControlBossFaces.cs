@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using UnityEngine;
 
 public enum BossFase
@@ -36,9 +37,9 @@ public class ControlBossFaces : MonoBehaviour
     void Start()
     {
         _currentFase = BossFase.StartBossFase1;
-        _Arms = transform.GetChild(1).gameObject;
+        _Arms = GameObject.Find("Arms");
         _Arms.SetActive(false);
-        _collider = gameObject.GetComponent<PolygonCollider2D>();
+        _collider = gameObject.GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -57,8 +58,8 @@ public class ControlBossFaces : MonoBehaviour
             case BossFase.StartBossFase2:
                 _collider.enabled = false;
                 MoveBoss(_centerCamera.position);
-                    _Arms.SetActive(true);
                 LifeForFace(BossEnemySO.LifeSecondFace, BossFase.BossFase2);
+                _Arms.SetActive(true);
                 break;
             case BossFase.BossFase2:
                 ComproveIfFaseEnd(BossFase.StartBossFase3, _currentLife);
@@ -70,6 +71,7 @@ public class ControlBossFaces : MonoBehaviour
                 LifeForFace(BossEnemySO.LifeThirtFace, BossFase.BossFase3);
                 break;
             case BossFase.BossFase3:
+                transform.localScale = new Vector3(0.5f,0.5f);
                 ComproveIfFaseEnd(BossFase.Death, _currentLife);
                 break;
             case BossFase.Death:
@@ -80,7 +82,7 @@ public class ControlBossFaces : MonoBehaviour
 
     void MoveBoss(Vector3 newPosition)
     {
-        transform.position = new Vector3 (newPosition.x, transform.position.y);
+        transform.parent.position = new Vector3 (newPosition.x, transform.parent.position.y);
     }
 
     void ComproveIfFaseEnd(BossFase BF, float life)

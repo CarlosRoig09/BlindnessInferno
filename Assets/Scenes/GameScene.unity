@@ -933,7 +933,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &884668093
 MonoBehaviour:
@@ -1114,8 +1114,9 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 2492dd889c60cb04fa10a0308d7a767d, type: 3}
 --- !u!114 &1406151643 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4871419729047155098, guid: 623b05640b3ff94428d5079be4885d82, type: 3}
-  m_PrefabInstance: {fileID: 7814931662217707916}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 717934448672254265, guid: e6f5615d91d95b3458f0e5acb1eb4902, type: 3}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1720243696}
   m_Enabled: 1
@@ -1123,6 +1124,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc618d7aa5b51c346a237302648dc24a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  life: 0
+  MaxPlayerLife: 3
+  PlayerLife: 3
 --- !u!1 &1650753920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1619,7 +1623,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &2113467414
 Rigidbody2D:
@@ -1800,7 +1804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7456955742422405079, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34cd422be89738749bda12f0d82251b2, type: 3}

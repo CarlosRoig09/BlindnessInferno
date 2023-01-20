@@ -45,8 +45,6 @@ public class AttackEnemy : Enemy
                 Float();
                 break;
         }
-        if (eM == EnemyMovement.Float)
-        {
             if (atackEnemySO.proyectileTimer <= _countProyectile)
             {
                 Shoot();
@@ -54,7 +52,6 @@ public class AttackEnemy : Enemy
             }
             else
                 _countProyectile += Time.deltaTime;
-        }
     }
 
     void Jump()
@@ -71,7 +68,7 @@ public class AttackEnemy : Enemy
     {
         if (Physics2D.Raycast(transform.position, Vector2.down, 0.65f, groundLayer.value))
         {
-            _rb.velocity = new Vector3(speed * Time.fixedDeltaTime, _rb.velocity.y);
+            _rb.velocity = new Vector3(speed * Time.fixedDeltaTime, 0);
             if (_bESO.changeDirectionTimer <= _movementCounter)
             {
                 eM = enemyMovement;
@@ -111,10 +108,10 @@ public class AttackEnemy : Enemy
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.layer);
         if (collision.gameObject.layer == 6)
         {
             _rb.gravityScale = 0;
+            _rb.velocity = new Vector3(0, 0);
         }
     }
 }

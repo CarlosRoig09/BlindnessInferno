@@ -36,6 +36,7 @@ public class Shooting : MonoBehaviour
         if (Input.GetMouseButton(0)&&_count>=_countdown)
         {
             _anim.SetBool("Attak", true);
+            SpawnProyectile();
         }
        else _count += Time.deltaTime;
     }
@@ -87,9 +88,9 @@ public class Shooting : MonoBehaviour
         if (_bulletSize == 2)
         {
             proyectileDamage*= 2;
-        }else if (_bulletSize == 1)
-        {
-            proyectileDamage = _initialDamage;
+        }else if (_bulletSize == 1)
+        {
+            proyectileDamage = _initialDamage;
         }
     }
 }

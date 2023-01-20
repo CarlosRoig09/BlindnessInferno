@@ -18,15 +18,14 @@ public class ArmAttack : MonoBehaviour, IEnemyWeapon
     [SerializeField]
     private Rigidbody2D _cameraRB2D;
     public float Life;
+    private float _damage;
     // Start is called before the first frame update
     void Start()
     {
         cll2D = gameObject.GetComponent<Collider2D>();
         //cll2D.enabled = false;
         _aP = ArmPosition.Stay;
-        _parentCBF = transform.parent.GetComponent<ControlBossFaces>();
     }
-
     private void Update()
     {
         if (_aP == ArmPosition.Attack)
@@ -71,6 +70,7 @@ public class ArmAttack : MonoBehaviour, IEnemyWeapon
 
     public void Attack(float speed)
     {
+        Debug.Log("Attack");
         _initialPosition = transform.localPosition;
         Move(speed);
         _speed = speed;
@@ -89,9 +89,10 @@ public class ArmAttack : MonoBehaviour, IEnemyWeapon
 
     private void OnEnable()
     {
+        _parentCBF = GameObject.Find("Dios_Boss").GetComponent<ControlBossFaces>();
         _rb = gameObject.GetComponent<Rigidbody2D>();
         _rb.velocity = new Vector3(_cameraRB2D.velocity.x, 0);
-
+        _damage = _parentCBF.CurrentLife / 2;
     }
 
     private IEnumerator WaitTime(float time)
@@ -103,7 +104,7 @@ public class ArmAttack : MonoBehaviour, IEnemyWeapon
     public void DamageBoss(float damage)
     {
         Life=- damage;
-        if (damage <= 0)
-            _parentCBF.GetDamaged(_parentCBF.CurrentLife/2);
+        if (Life <= 0)
+             _parentCBF.GetDamaged(_damage);
     }
 }
