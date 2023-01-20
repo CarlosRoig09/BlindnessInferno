@@ -141,7 +141,7 @@ public class BlindColorTest : MonoBehaviour
 
     public IEnumerator ChargeRayo(float time)
     {
-        Instantiate(rayo, gameObject.transform.position, Quaternion.identity);
+       rayo=Instantiate(rayo, gameObject.transform.position, Quaternion.identity);
         _numRayo = 1;
         yield return new WaitForSeconds(time);
         Destroy(rayo);
