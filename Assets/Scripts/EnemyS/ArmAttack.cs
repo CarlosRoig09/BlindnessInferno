@@ -30,14 +30,14 @@ public class ArmAttack : MonoBehaviour, IEnemyWeapon
     {
         if (_aP == ArmPosition.Attack)
         {
-            if (_firstGodPosition.position.x - transform.position.x < 7.5f)
+            if (_firstGodPosition.position.x - transform.position.x < 0.5f)
             {
                 _rb.velocity = new  Vector3(_cameraRB2D.velocity.x, 0);
                 cll2D.enabled = true;
                 _rb.gravityScale = 30;
             }
 
-            if (Physics2D.Raycast(transform.position, Vector2.down, 0.65f, groundLayer.value)||transform.position.y<=-7.59f)
+            if (Physics2D.Raycast(transform.position, Vector2.down, 0.65f, groundLayer.value)||transform.position.y<=-3.59f)
             {
                 _rb.velocity = new Vector3(0, 0);
                 _rb.gravityScale = 0;

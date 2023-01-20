@@ -42,8 +42,6 @@ public class SelectArm : MonoBehaviour
                         case ArmPosition.Stay:
                             Debug.Log("attack");
                             Arms[_armCount].GetComponent<ArmAttack>().Attack(_speed);
-                            if (_armCount == 1)
-                                Arms[_armCount].GetComponent<ArmAttack>().Attack(_speed * -1);
                             break;
                         case ArmPosition.AttackEnd:
                             if (_countBetweenArms <= _count)
