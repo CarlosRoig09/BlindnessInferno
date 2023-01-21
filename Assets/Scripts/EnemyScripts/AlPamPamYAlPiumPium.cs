@@ -27,12 +27,11 @@ public class AlPamPamYAlPiumPium : MonoBehaviour
         GameObject enemy;
        var numPlatforms = platform.transform.childCount;
       if(platform!=null)  {
-            for (var i = 0; i < Random.Range(1, 5); i++)
+            for (var i = 0; i < Random.Range(2, 5); i++)
             {
                 var num = RandomMethods.ReturnARandomObject(_randomRate, 0);
                 if (num >= 0)
                 {
-                    Debug.Log("Something Droppeed");
                     var currentPlatform = platform.transform.GetChild(Random.Range(0, numPlatforms));
                     instant = _randomRate[num].Prefab;
                     ComproveIsAPlatform(currentPlatform);

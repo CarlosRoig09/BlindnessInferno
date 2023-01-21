@@ -1057,22 +1057,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: gafas
       objectReference: {fileID: 0}
-    - target: {fileID: 8706181407779684794, guid: b02581d7bfa1ab04b93bf76b07090ec1, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8706181407779684794, guid: b02581d7bfa1ab04b93bf76b07090ec1, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8706181407779684794, guid: b02581d7bfa1ab04b93bf76b07090ec1, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8706181407779684794, guid: b02581d7bfa1ab04b93bf76b07090ec1, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8706181407779684795, guid: b02581d7bfa1ab04b93bf76b07090ec1, type: 3}
       propertyPath: m_RootOrder
       value: 2

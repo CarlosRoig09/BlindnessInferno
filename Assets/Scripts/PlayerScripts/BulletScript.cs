@@ -26,19 +26,19 @@ public class BulletScript : MonoBehaviour
 
     void Start()
     {
-        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+       /* screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         bulletHeight = transform.GetComponent<SpriteRenderer>().bounds.size.y / 2;
-        bulletWeight = transform.GetComponent<SpriteRenderer>().bounds.size.x / 2;
+        bulletWeight = transform.GetComponent<SpriteRenderer>().bounds.size.x / 2;*/
         BulletSizeStatus = false;
         _controlScore = GameObject.Find("Character").GetComponent<ControlScore>();
     }
     void Update()
     {
-        if (transform.position.y >= ((screenBounds.y) - bulletHeight) || transform.position.y <=(screenBounds.y*-1) || transform.position.x >= ((screenBounds.x) - bulletWeight))
+        /*if (transform.position.y >= ((screenBounds.y) - bulletHeight) || transform.position.y <=(screenBounds.y*-1) || transform.position.x >= ((screenBounds.x) - bulletWeight))
         {
             //Destruir objecto
             Destroy(gameObject);
-        }
+        }*/
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

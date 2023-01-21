@@ -54,6 +54,11 @@ public class BookScript : MonoBehaviour, IEnemyWeapon
         _parentCBF.OnEndFace -= Death;
     }
 
+    private void OnDestroy()
+    {
+        _parentCBF.OnEndFace -= Death;
+    }
+
     public void DamageBoss(float damage)
     {
         _parentCBF.GetDamaged(damage);
