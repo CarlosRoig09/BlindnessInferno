@@ -23,6 +23,7 @@ public class BlindColorTest : MonoBehaviour
 
     private Colorblind _colorBlind;
     private Niveles _nivel;
+    private SoundManagerScript _soundManager;
     public Niveles Nivel
     {
         get => _nivel;
@@ -46,7 +47,8 @@ public class BlindColorTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        _soundManager=GameObject.Find("Sound").GetComponent<SoundManagerScript>();
+        _soundManager.PlaySound("Vs_demon");
         _colorBlind = Camera.main.GetComponent<Colorblind>();
         _distance = GameObject.Find("Kilomiters").GetComponent<Kilomiters>().Distancia;
         _colorBlind.Type = 1;
@@ -70,18 +72,20 @@ public class BlindColorTest : MonoBehaviour
         {
             if (_count >= 0f && _count < 500f)
             {
+                _soundManager.PlaySound("Vs_demon");
                 _numRayo = 0;
                 Nivel = Niveles.Nivel1;
                 _colorBlind.Type = 1;
             }
             else if (_count >= 500f && _count < 575f)
             {
+               
                 Nivel = Niveles.TransNivel1;
                 if (_count >= 537f)
                 {
                     _colorBlind.Type = 2;
-                    if (_numRayo == 0)
-                        StartCoroutine(ChargeRayo(3f));
+                 //   if (_numRayo == 0)
+                  //      StartCoroutine(ChargeRayo(3f));
 
                 }
 
@@ -89,6 +93,7 @@ public class BlindColorTest : MonoBehaviour
             else if (_count >= 575f && _count < 1075f)
             {
                 _numRayo = 0;
+                _soundManager.PlaySound("GodOfBlaze");
                 Nivel = Niveles.Nivel2;
                 _colorBlind.Type = 2;
 
@@ -99,8 +104,8 @@ public class BlindColorTest : MonoBehaviour
                 if (_count >= 1112f)
                 {
                     _colorBlind.Type = 3;
-                    if (_numRayo == 0)
-                        StartCoroutine(ChargeRayo(3f));
+                   // if (_numRayo == 0)
+                   //     StartCoroutine(ChargeRayo(3f));
 
                 }
 
@@ -108,11 +113,13 @@ public class BlindColorTest : MonoBehaviour
             else if (_count >= 1150f && _count < 1650f)
             {
                 _numRayo = 0;
+                _soundManager.PlaySound("DragonSlayer");
                 Nivel = Niveles.Nivel3;
                 _colorBlind.Type = 3;
             }
             else if (_count >= 1650f && _count < 1725f)
             {
+                
                 Nivel = Niveles.TransNivel3;
                 if (_count >= 1687f)
                 {
@@ -125,6 +132,7 @@ public class BlindColorTest : MonoBehaviour
             }
             else if (_count >= 1725f && _count < 2225f)
             {
+                _soundManager.PlaySound("RequiemDiesIraeWolfgangAmadeusMozart");
                 Nivel = Niveles.NivelBoss1;
                 if (_count >= 1800)
                 {
@@ -176,6 +184,7 @@ public class BlindColorTest : MonoBehaviour
             }
             else if (_count >= 2225f && _count < 2300f)
             {
+                
                 Nivel = Niveles.TransNivelBoss;
                 if (_count >= 2262f)
                 {

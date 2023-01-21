@@ -26,6 +26,6 @@ public class Kilomiters : MonoBehaviour
         distancia += playerData.speed * Time.deltaTime;
         _realDistance = distancia / 10;
         //Meter resultado en texto:
-        distanciaText.text = "Distancia: " + _realDistance.ToString("F2") + " Mts.";
+        distanciaText.text = _realDistance.ToString("F2") + " Kms.";
     }
 }

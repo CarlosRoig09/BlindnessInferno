@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -68,7 +69,10 @@ public class GameManager : MonoBehaviour
         if (_scene == Escenas.GameScreen)
         {
             if (_player.Life == Life.Death)
+            {
                 SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+            }
+
         }
         
     }
