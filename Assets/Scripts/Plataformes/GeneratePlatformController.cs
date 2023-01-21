@@ -51,7 +51,7 @@ public class GeneratePlatformController : MonoBehaviour
         if (_num < 0)
             _num = UnityEngine.Random.Range(0, _plSO.Length);
         _counter = _plSO[_num].PlatgormWaitTimer;
-        _enemySpawn = gameObject.GetComponent<AlPamPamYAlPiumPium>();
+        //_enemySpawn = gameObject.GetComponent<AlPamPamYAlPiumPium>();
         _plSONivel2y3 = GenerateNevel3();
         for(int i=0; i < _plSONivel2y3.Length;i++)
         {
@@ -65,7 +65,7 @@ public class GeneratePlatformController : MonoBehaviour
     private void Update()
     {
         if (_plSO == _plSOLastTransition || _plSO == _plSOTransition) _num = 0;
-        _enemySpawn = gameObject.GetComponent<AlPamPamYAlPiumPium>();
+       // _enemySpawn = gameObject.GetComponent<AlPamPamYAlPiumPium>();
         if (_plSO[_num].PlatgormWaitTimer / _cameraRB.velocity.x <= _counter)
         {
             GeneratePlatform();
@@ -137,7 +137,7 @@ public class GeneratePlatformController : MonoBehaviour
         _initPosition = new Vector3(transform.position.x, _plSO[_num].PlatformInitialYPosition);
         var platform = Instantiate(_plSO[_num].PlatformPrefab, _initPosition, Quaternion.identity);
         _counter = 0;
-        if (platform != null&&_enemySpawn!=null)
-            _enemySpawn.InstantObstacle(platform);
+       // if (platform != null&&_enemySpawn!=null)
+          //  _enemySpawn.InstantObstacle(platform);
     }
 }

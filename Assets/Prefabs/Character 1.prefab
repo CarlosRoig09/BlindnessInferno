@@ -1378,14 +1378,12 @@ MonoBehaviour:
   _playerData: {fileID: 11400000, guid: 507664301ab2b36459cb8d9f25917c48, type: 2}
   rb: {fileID: 4781907587522361079}
   jumpkey: 32
-  _maxPosition: {fileID: 0}
   _acceleration: 10
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  firstGodPosition: {fileID: 0}
-  _cameraRB2D: {fileID: 0}
-  _hitStop: 0
+  _cameraRB2D: {fileID: 2091946161084203154, guid: 2e30d4eee6e4d764ea871adaa11acdeb, type: 3}
+  _hitStop: 0.3
 --- !u!114 &717934448672254265
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class ArmAttack : MonoBehaviour, IEnemyWeapon
     public ArmPosition _aP;
     private float _speed;
     private ControlBossFaces _parentCBF;
-    [SerializeField]
+
     private Transform _firstGodPosition;
     [SerializeField]
     private LayerMask groundLayer;
@@ -28,6 +28,9 @@ public class ArmAttack : MonoBehaviour, IEnemyWeapon
     }
     private void Update()
     {
+        Debug.Log(_initialPosition);
+        _cameraRB2D=GameObject.Find("MovingCamera").GetComponent<Rigidbody2D>();
+        _firstGodPosition= GameObject.Find("FirstGodPosition").GetComponent<Transform>();
         if (_aP == ArmPosition.Attack)
         {
             if (_firstGodPosition.position.x - transform.position.x < 0.5f)

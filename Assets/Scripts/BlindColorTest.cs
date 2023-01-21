@@ -20,6 +20,7 @@ public enum Niveles
 }
 public class BlindColorTest : MonoBehaviour
 {
+
     private Colorblind _colorBlind;
     private Niveles _nivel;
     public Niveles Nivel
@@ -49,7 +50,7 @@ public class BlindColorTest : MonoBehaviour
         _colorBlind = Camera.main.GetComponent<Colorblind>();
         _distance = GameObject.Find("Kilomiters").GetComponent<Kilomiters>().Distancia;
         _colorBlind.Type = 1;
-        _count = 1780f;
+        _count = 0;
         _numRayo = 0;
         _diositoNoCuenta = true;
         _diositoInstancia = 0;
@@ -60,7 +61,6 @@ public class BlindColorTest : MonoBehaviour
     void Update()
     {
         _distance = GameObject.Find("Kilomiters").GetComponent<Kilomiters>().Distancia;
-
 
         if (_colorBlind.Type == 0 && _distance <= _distanciaMax)
         {
@@ -74,10 +74,10 @@ public class BlindColorTest : MonoBehaviour
                 Nivel = Niveles.Nivel1;
                 _colorBlind.Type = 1;
             }
-            else if (_count >= 500f && _count < 600f)
+            else if (_count >= 500f && _count < 575f)
             {
                 Nivel = Niveles.TransNivel1;
-                if (_count >= 550f)
+                if (_count >= 537f)
                 {
                     _colorBlind.Type = 2;
                     if (_numRayo == 0)
@@ -86,17 +86,17 @@ public class BlindColorTest : MonoBehaviour
                 }
 
             }
-            else if (_count >= 600f && _count < 1100f)
+            else if (_count >= 575f && _count < 1075f)
             {
                 _numRayo = 0;
                 Nivel = Niveles.Nivel2;
                 _colorBlind.Type = 2;
 
             }
-            else if (_count >= 1100f && _count < 1200f)
+            else if (_count >= 1075f && _count < 1150f)
             {
                 Nivel = Niveles.TransNivel2;
-                if (_count >= 1150f)
+                if (_count >= 1112f)
                 {
                     _colorBlind.Type = 3;
                     if (_numRayo == 0)
@@ -105,77 +105,83 @@ public class BlindColorTest : MonoBehaviour
                 }
 
             }
-            else if (_count >= 1200f && _count < 1700f)
+            else if (_count >= 1150f && _count < 1650f)
             {
                 _numRayo = 0;
                 Nivel = Niveles.Nivel3;
                 _colorBlind.Type = 3;
             }
-            else if (_count >= 1700f && _count < 1800f)
+            else if (_count >= 1650f && _count < 1725f)
             {
                 Nivel = Niveles.TransNivel3;
-                if (_count >= 1750f)
+                if (_count >= 1687f)
                 {
                     _colorBlind.Type = 3;
-                    if (_numRayo == 0)
-                        StartCoroutine(ChargeRayo(3f));
+                    //  if (_numRayo == 0)
+                    //  StartCoroutine(ChargeRayo(3f));
 
                 }
 
             }
-            else if (_count >= 1700f && _count < 2200f)
+            else if (_count >= 1725f && _count < 2225f)
             {
-                _numRayo = 0;
-                if(_diositoInstancia==0)
+                Nivel = Niveles.NivelBoss1;
+                if (_count >= 1800)
                 {
-                   diosito=Instantiate(diosito);
-                    _diositoNoCuenta = false;
-                    _diositoInstancia = 1;
-                }
+                    _numRayo = 0;
+                    if (_diositoInstancia == 0)
+                    {
+                        diosito = Instantiate(diosito);
+                        _diositoNoCuenta = false;
+                        _diositoInstancia = 1;
+                    }
+                    _currentFase = GameObject.Find("Dios_Boss").GetComponent<ControlBossFaces>().CurrentFase;
 
-                switch (_currentFase)
-                {
-                    case BossFase.StartBossFase1:
-                        Nivel = Niveles.NivelBoss1;
-                        _colorBlind.Type = 1;
-                        break;
-                    case BossFase.BossFase1:
-                        Nivel = Niveles.NivelBoss1;
-                        _colorBlind.Type = 1;
-                        break;
-                    case BossFase.StartBossFase2:
-                        Nivel = Niveles.NivelBoss2;
-                        _colorBlind.Type = 2;
-                        break;
-                    case BossFase.BossFase2:
-                        Nivel = Niveles.NivelBoss2;
-                        _colorBlind.Type = 2;
-                        break;
-                    case BossFase.StartBossFase3:
-                        Nivel = Niveles.NivelBoss3;
-                        _colorBlind.Type = 3;
-                        break;
-                    case BossFase.BossFase3:
-                        Nivel = Niveles.NivelBoss3;
-                        _colorBlind.Type = 3;
-                        break;
-                    case BossFase.Death:
-                        _diositoNoCuenta = true;
-                        _count = 2200f;
-                        _diositoInstancia = 0;
-                        break;
+                    switch (_currentFase)
+                    {
+                        case BossFase.StartBossFase1:
+                            Nivel = Niveles.NivelBoss1;
+                            _colorBlind.Type = 1;
+                            break;
+                        case BossFase.BossFase1:
+                            Nivel = Niveles.NivelBoss1;
+                            _colorBlind.Type = 1;
+                            break;
+                        case BossFase.StartBossFase2:
+                            Nivel = Niveles.NivelBoss2;
+                            _colorBlind.Type = 2;
+                            break;
+                        case BossFase.BossFase2:
+                            Nivel = Niveles.NivelBoss2;
+                            _colorBlind.Type = 2;
+                            break;
+                        case BossFase.StartBossFase3:
+                            Nivel = Niveles.NivelBoss3;
+                            _colorBlind.Type = 3;
+                            break;
+                        case BossFase.BossFase3:
+                            Nivel = Niveles.NivelBoss3;
+                            _colorBlind.Type = 3;
+                            break;
+                        case BossFase.Death:
+                            _diositoNoCuenta = true;
+                            _count = 2225f;
+                            _diositoInstancia = 0;
+                            break;
 
                 }
-            
+                }
+              
+
             }
-            else if (_count >= 2200f && _count < 2300f)
+            else if (_count >= 2225f && _count < 2300f)
             {
                 Nivel = Niveles.TransNivelBoss;
-                if (_count >= 2250f)
+                if (_count >= 2262f)
                 {
                     _colorBlind.Type = 1;
-                    if (_numRayo == 0)
-                        StartCoroutine(ChargeRayo(3f));
+                    // if (_numRayo == 0)
+                    //   StartCoroutine(ChargeRayo(3f));
 
                 }
 
