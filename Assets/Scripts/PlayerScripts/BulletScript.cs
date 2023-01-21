@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    private Vector2 screenBounds;
-    private float bulletHeight;
-    private float bulletWeight;
     public bool BulletSizeStatus;
     private float proyectileDamage;
     private ControlScore _controlScore;
@@ -16,7 +13,8 @@ public class BulletScript : MonoBehaviour
     public BasicEnemySO _basicEnemySO;
     public AtackEnemySO _atakEnemySO;
     public FlyEnemySO _flyEnemySO;
-
+    private Animator _anim;
+    private Rigidbody2D _rb;
 
     public float ProyectileDamage
     {
@@ -29,8 +27,11 @@ public class BulletScript : MonoBehaviour
        /* screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         bulletHeight = transform.GetComponent<SpriteRenderer>().bounds.size.y / 2;
         bulletWeight = transform.GetComponent<SpriteRenderer>().bounds.size.x / 2;*/
+       _anim= gameObject.GetComponent<Animator>();
         BulletSizeStatus = false;
         _controlScore = GameObject.Find("Character").GetComponent<ControlScore>();
+        _rb = gameObject.GetComponent<Rigidbody2D>();
+
     }
     void Update()
     {
@@ -66,8 +67,18 @@ public class BulletScript : MonoBehaviour
                 collision.gameObject.GetComponent<SupriseBox>().BreakAnimation();
             }
             //Destroy(collision.gameObject);
-            Destroy(gameObject);
+            _anim.SetBool("Explosion", true);
         }
+    }
+
+    public void StopMomentum()
+    {
+        _rb.velocity= Vector3.zero;
+    }
+
+    public void DestroyThis()
+    {
+        Destroy(gameObject);
     }
 
     /*public void IncrementProjectileSize()
