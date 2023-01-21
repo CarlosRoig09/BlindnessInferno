@@ -91,7 +91,7 @@ public class GeneratePlatformController : MonoBehaviour
         switch (_nivel)
         {
             case Niveles.Nivel1:
-                _plSO = _plSONivel1;
+                _plSO = _plSONivel3;
                 break;
             case Niveles.TransNivel1:
                 _plSO = _plSOTransition;

@@ -17,4 +17,4 @@ MonoBehaviour:
   _platformName: '"BlokePrueva"'
   _platformPrefab: {fileID: 5379563564969153193, guid: 053d7926aa550064d872cd60dc184913, type: 3}
   _platformWaitTimer: 52
-  _platformInitialYPosition: -3
+  _platformInitialYPosition: -3.6
