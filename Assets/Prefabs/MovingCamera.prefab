@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerData: {fileID: 11400000, guid: 507664301ab2b36459cb8d9f25917c48, type: 2}
   _rb: {fileID: 2091946161084203154}
+  _speedMultiplicator: 6
 --- !u!50 &2091946161084203154
 Rigidbody2D:
   serializedVersion: 4
@@ -185,6 +186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b0c32bdd9880524a96acaf1fa4b3729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rayo: {fileID: 2708259999882012638, guid: cb77519eb1aa7af4f980c60f893a45c8, type: 3}
+  diosito: {fileID: 2237716874940454739, guid: f0e801ee21148f642b01efed9a83d1f0, type: 3}
 --- !u!61 &2091946161286021945
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -198,7 +201,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -34.53, y: -9.15577}
+  m_Offset: {x: -43.62504, y: -9.15577}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -209,7 +212,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3600006, y: 28.916224}
+  m_Size: {x: 2.2027168, y: 28.916224}
   m_EdgeRadius: 0
 --- !u!61 &2091946161286021946
 BoxCollider2D:
@@ -224,7 +227,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -11.443378, y: -25.269146}
+  m_Offset: {x: -15.9041, y: -25.269146}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -235,7 +238,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 44.5577, y: 2.5696964}
+  m_Size: {x: 53.479145, y: 2.5696945}
   m_EdgeRadius: 0
 --- !u!114 &2091946161286021944
 MonoBehaviour:

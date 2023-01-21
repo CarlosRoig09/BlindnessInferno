@@ -21,6 +21,7 @@ public class ControlBossFaces : MonoBehaviour
         get => _currentLife;
     }
     private BossFase _currentFase;
+ 
     private Collider2D _collider;
     [SerializeField]
     private BossEnemySO BossEnemySO;

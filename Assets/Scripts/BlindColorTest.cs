@@ -13,7 +13,9 @@ public enum Niveles
     TransNivel2,
     Nivel3,
     TransNivel3,
-    NivelBoss,
+    NivelBoss1,
+    NivelBoss2,
+    NivelBoss3,
     TransNivelBoss
 }
 public class BlindColorTest : MonoBehaviour
@@ -29,6 +31,7 @@ public class BlindColorTest : MonoBehaviour
     private float _distanciaMax;
     private float _count;
     private float _numRayo;
+    private float _diositoInstancia;
     public float DistanciaMax
     {
         get => _distanciaMax;
@@ -36,15 +39,20 @@ public class BlindColorTest : MonoBehaviour
     }
 
     public GameObject rayo;
+    private BossFase _currentFase;
+    public GameObject diosito;
+    private bool _diositoNoCuenta;
     // Start is called before the first frame update
     void Start()
     {
+
         _colorBlind = Camera.main.GetComponent<Colorblind>();
         _distance = GameObject.Find("Kilomiters").GetComponent<Kilomiters>().Distancia;
         _colorBlind.Type = 1;
-        _count = 0;
+        _count = 1780f;
         _numRayo = 0;
-
+        _diositoNoCuenta = true;
+        _diositoInstancia = 0;
 
     }
 
@@ -118,8 +126,47 @@ public class BlindColorTest : MonoBehaviour
             else if (_count >= 1700f && _count < 2200f)
             {
                 _numRayo = 0;
-                Nivel = Niveles.Nivel3;
-                _colorBlind.Type = 3;
+                if(_diositoInstancia==0)
+                {
+                   diosito=Instantiate(diosito);
+                    _diositoNoCuenta = false;
+                    _diositoInstancia = 1;
+                }
+
+                switch (_currentFase)
+                {
+                    case BossFase.StartBossFase1:
+                        Nivel = Niveles.NivelBoss1;
+                        _colorBlind.Type = 1;
+                        break;
+                    case BossFase.BossFase1:
+                        Nivel = Niveles.NivelBoss1;
+                        _colorBlind.Type = 1;
+                        break;
+                    case BossFase.StartBossFase2:
+                        Nivel = Niveles.NivelBoss2;
+                        _colorBlind.Type = 2;
+                        break;
+                    case BossFase.BossFase2:
+                        Nivel = Niveles.NivelBoss2;
+                        _colorBlind.Type = 2;
+                        break;
+                    case BossFase.StartBossFase3:
+                        Nivel = Niveles.NivelBoss3;
+                        _colorBlind.Type = 3;
+                        break;
+                    case BossFase.BossFase3:
+                        Nivel = Niveles.NivelBoss3;
+                        _colorBlind.Type = 3;
+                        break;
+                    case BossFase.Death:
+                        _diositoNoCuenta = true;
+                        _count = 2200f;
+                        _diositoInstancia = 0;
+                        break;
+
+                }
+            
             }
             else if (_count >= 2200f && _count < 2300f)
             {
@@ -135,7 +182,11 @@ public class BlindColorTest : MonoBehaviour
             }
             else _count = 0;
         }
-        _count += 10 * Time.deltaTime;
+        if (_diositoNoCuenta == true)
+        {
+            _count += 10 * Time.deltaTime;
+        }
+        
         //Debug.Log(_count);
     }
 

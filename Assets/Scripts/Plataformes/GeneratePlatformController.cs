@@ -19,6 +19,13 @@ public class GeneratePlatformController : MonoBehaviour
     private PlatformScriptableObject[] _plSONivel3;
 
     [SerializeField]
+    private PlatformScriptableObject[] _plSOFase1;
+    [SerializeField]
+    private PlatformScriptableObject[] _plSOFase2;
+    [SerializeField]
+    private PlatformScriptableObject[] _plSOFase3;
+
+    [SerializeField]
     private PlatformScriptableObject[] _plSOTransition;
 
     [SerializeField]
@@ -91,7 +98,7 @@ public class GeneratePlatformController : MonoBehaviour
         switch (_nivel)
         {
             case Niveles.Nivel1:
-                _plSO = _plSONivel3;
+                _plSO = _plSONivel1;
                 break;
             case Niveles.TransNivel1:
                 _plSO = _plSOTransition;
@@ -108,8 +115,14 @@ public class GeneratePlatformController : MonoBehaviour
             case Niveles.TransNivel3:
                 _plSO = _plSOTransition;
                 break;
-            case Niveles.NivelBoss:
-                _plSO = _plSONivel1;
+            case Niveles.NivelBoss1:
+                _plSO = _plSOFase1;
+                break;
+            case Niveles.NivelBoss2:
+                _plSO = _plSOFase2;
+                break;
+            case Niveles.NivelBoss3:
+                _plSO = _plSOFase3;
                 break;
             case Niveles.TransNivelBoss:
                 _plSO = _plSOLastTransition;
