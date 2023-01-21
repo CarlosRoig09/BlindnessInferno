@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ca7e6dccc771f45a41ce54e3f680f4, type: 3}
   m_Name: glassesSO
   m_EditorClassIdentifier: 
-  RateAperance: 20
+  RateAperance: 40
   Prefab: {fileID: 8706181407779684775, guid: b02581d7bfa1ab04b93bf76b07090ec1, type: 3}

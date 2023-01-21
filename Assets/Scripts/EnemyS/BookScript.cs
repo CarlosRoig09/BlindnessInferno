@@ -37,7 +37,7 @@ public class BookScript : MonoBehaviour, IEnemyWeapon
 
     void LinearMovement(float speed, EnemyMovement enemyMovement)
     {
-        _rb.velocity = new Vector3(_rb.velocity.x, speed * Time.fixedDeltaTime);
+        _rb.velocity = new Vector3(Camera.main.GetComponentInParent<MoveCamara>().Speed*Time.fixedDeltaTime, speed * Time.deltaTime);
         if (_timeChangeDirection <= _countTimeCD)
         {
             _eM = enemyMovement;

@@ -24,6 +24,7 @@ public class AlPamPamYAlPiumPium : MonoBehaviour
     }
     public void InstantObstacle(GameObject platform)
     {
+        GameObject enemy;
        var numPlatforms = platform.transform.childCount;
       if(platform!=null)  {
             for (var i = 0; i < Random.Range(1, 5); i++)
@@ -31,11 +32,12 @@ public class AlPamPamYAlPiumPium : MonoBehaviour
                 var num = RandomMethods.ReturnARandomObject(_randomRate, 0);
                 if (num >= 0)
                 {
+                    Debug.Log("Something Droppeed");
                     var currentPlatform = platform.transform.GetChild(Random.Range(0, numPlatforms));
                     instant = _randomRate[num].Prefab;
                     ComproveIsAPlatform(currentPlatform);
                     if (instant != null && currentPlatform != null)
-                        Instantiate(instant, _initPosition, Quaternion.identity);
+                      Instantiate(instant, _initPosition, Quaternion.identity);
                 }
             }
         }
@@ -44,10 +46,18 @@ public class AlPamPamYAlPiumPium : MonoBehaviour
     private void ComproveIsAPlatform(Transform currentPlatform)
     {
         float xPosition = Random.Range(currentPlatform.transform.position.x, currentPlatform.transform.position.x + currentPlatform.transform.localScale.x / 2);
-            _initPosition = new Vector3(xPosition, currentPlatform.transform.position.y + Random.Range(-0.4f, 5));
+            _initPosition = new Vector3(xPosition, currentPlatform.transform.position.y + Random.Range(-0.35f, 3));
             Debug.Log(_initPosition.y);
-       if (!Physics2D.Raycast(_initPosition, Vector2.up, 0.65f))
-            _initPosition.y = 5;
+        RaycastHit2D hit;
+        if (hit = Physics2D.Raycast(_initPosition, Vector2.up, 0.65f))
+        {
+            var point = hit.point.y / hit.collider.bounds.size.y;
+            _initPosition.y += hit.collider.bounds.size.y / point;
+        }
+        if (Physics2D.Raycast(_initPosition, Vector2.down, Mathf.Infinity, 8))
+        {
+            _initPosition.x += 0.2f;
+        }
     }
 
 }

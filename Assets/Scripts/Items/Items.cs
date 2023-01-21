@@ -5,11 +5,12 @@ public abstract class Items : MovingPlatform
 
     public string name;
     // Start is called before the first frame update
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Effecto(collision);
+            Effecto(collision.collider);
             Destroy(gameObject);
         }
     }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7329844802678677367}
   - component: {fileID: 7329844802678677352}
   - component: {fileID: 7329844802678677353}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BasicCross
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ca7e6dccc771f45a41ce54e3f680f4, type: 3}
   m_Name: lifeSo
   m_EditorClassIdentifier: 
-  RateAperance: 30
+  RateAperance: 60
   Prefab: {fileID: 8735426491085853404, guid: c966f09ee9a7c4f40ac6e45fe8e38f61, type: 3}
