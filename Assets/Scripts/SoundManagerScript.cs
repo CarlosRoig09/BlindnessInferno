@@ -8,9 +8,9 @@ public class SoundManagerScript : MonoBehaviour
     private  AudioClip nivel1, nivel2, nivel3, nivel4;
     private AudioSource audioSrc;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        nivel1 = Resources.Load<AudioClip>("Vs_demon");
+        nivel1 = Resources.Load<AudioClip>("Vsdemon");
         nivel2 = Resources.Load<AudioClip>("GodOfBlaze");
         nivel3 = Resources.Load<AudioClip>("DragonSlayer");
         nivel4 = Resources.Load<AudioClip>("RequiemDiesIraeWolfgangAmadeusMozart");
@@ -22,7 +22,7 @@ public class SoundManagerScript : MonoBehaviour
     {
         switch (clip)
         {
-            case "Vs_demon":
+            case "Vsdemon":
                 audioSrc.clip = nivel1;
                 audioSrc.Play();
                 break;

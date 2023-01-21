@@ -48,7 +48,7 @@ public class BlindColorTest : MonoBehaviour
     void Start()
     {
         _soundManager=GameObject.Find("Sound").GetComponent<SoundManagerScript>();
-        _soundManager.PlaySound("Vs_demon");
+        _soundManager.PlaySound("Vsdemon");
         _colorBlind = Camera.main.GetComponent<Colorblind>();
         _distance = GameObject.Find("Kilomiters").GetComponent<Kilomiters>().Distancia;
         _colorBlind.Type = 1;
@@ -63,7 +63,7 @@ public class BlindColorTest : MonoBehaviour
     void Update()
     {
         _distance = GameObject.Find("Kilomiters").GetComponent<Kilomiters>().Distancia;
-
+        _colorBlind = Camera.main.GetComponent<Colorblind>();
         if (_colorBlind.Type == 0 && _distance <= _distanciaMax)
         {
             _colorBlind.Type = 0;
@@ -72,7 +72,7 @@ public class BlindColorTest : MonoBehaviour
         {
             if (_count >= 0f && _count < 500f)
             {
-                _soundManager.PlaySound("Vs_demon");
+                _soundManager.PlaySound("Vsdemon");
                 _numRayo = 0;
                 Nivel = Niveles.Nivel1;
                 _colorBlind.Type = 1;
