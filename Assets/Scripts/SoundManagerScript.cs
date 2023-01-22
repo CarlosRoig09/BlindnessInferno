@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class SoundManagerScript : MonoBehaviour
 {
-    [SerializeField]
-    private  AudioClip nivel1, nivel2, nivel3, nivel4;
+    
+    private  AudioClip nivel1, nivel2, nivel3, nivel4, muriendo;
     private AudioSource audioSrc;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -14,31 +15,30 @@ public class SoundManagerScript : MonoBehaviour
         nivel2 = Resources.Load<AudioClip>("GodOfBlaze");
         nivel3 = Resources.Load<AudioClip>("DragonSlayer");
         nivel4 = Resources.Load<AudioClip>("RequiemDiesIraeWolfgangAmadeusMozart");
+        muriendo = Resources.Load<AudioClip>("Muerte");
         audioSrc = gameObject.GetComponent<AudioSource>();
+
     }
 
 
     public void PlaySound(string clip)
     {
+        audioSrc.Stop();
         switch (clip)
         {
             case "Vsdemon":
-                audioSrc.clip = nivel1;
-                audioSrc.Play();
+                audioSrc.PlayOneShot(nivel1, 0.7F);
                 break;
             case "GodOfBlaze":
-                audioSrc.clip = nivel2;
-                audioSrc.Play();
+                audioSrc.PlayOneShot(nivel2, 0.8F);
                 break;
             case "DragonSlayer":
-                audioSrc.clip = nivel3;
-                audioSrc.Play();
+                audioSrc.PlayOneShot(nivel3, 0.9F);
                 break;
             case "RequiemDiesIraeWolfgangAmadeusMozart":
-                audioSrc.clip = nivel4;
-                audioSrc.Play();
+                audioSrc.PlayOneShot(nivel4, 0.95F);
                 break;
-            
+          
         }
         
     }

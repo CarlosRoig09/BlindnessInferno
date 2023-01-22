@@ -642,10 +642,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4fc0cffd206d5241bdff0abc6c76d5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nivel1: {fileID: 0}
-  nivel2: {fileID: 0}
-  nivel3: {fileID: 0}
-  nivel4: {fileID: 0}
 --- !u!1001 &563622730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1269,7 +1265,7 @@ PrefabInstance:
     - target: {fileID: 6718570922874765641, guid: 2492dd889c60cb04fa10a0308d7a767d, type: 3}
       propertyPath: playerLife
       value: 
-      objectReference: {fileID: 1406151643}
+      objectReference: {fileID: 0}
     - target: {fileID: 6865626583718178738, guid: 2492dd889c60cb04fa10a0308d7a767d, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1289,21 +1285,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6718570922874765641, guid: 2492dd889c60cb04fa10a0308d7a767d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2492dd889c60cb04fa10a0308d7a767d, type: 3}
---- !u!114 &1406151643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 717934448672254265, guid: e6f5615d91d95b3458f0e5acb1eb4902, type: 3}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1720243696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc618d7aa5b51c346a237302648dc24a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  life: 0
-  MaxPlayerLife: 0
-  PlayerLife: 0
 --- !u!1 &1669278543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1757,46 +1738,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 347460010655721975, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3546840114759891246, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
-      propertyPath: Lightning
-      value: 
-      objectReference: {fileID: 4994730118261067, guid: c64fa90bd8dc4ac4e8ed7f29692b8e4c, type: 3}
-    - target: {fileID: 3546840114759891246, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
-      propertyPath: awakenDistance
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3546840114759891246, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
-      propertyPath: lightningDistance
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 3546840114759891247, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456955742422405074, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
-      propertyPath: m_Name
-      value: Platform 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456955742422405078, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456955742422405078, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456955742422405078, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456955742422405079, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2091946161084203156, guid: 2e30d4eee6e4d764ea871adaa11acdeb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1844,6 +1785,46 @@ PrefabInstance:
     - target: {fileID: 2091946161286021891, guid: 2e30d4eee6e4d764ea871adaa11acdeb, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 347460010655721975, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546840114759891246, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
+      propertyPath: Lightning
+      value: 
+      objectReference: {fileID: 4994730118261067, guid: c64fa90bd8dc4ac4e8ed7f29692b8e4c, type: 3}
+    - target: {fileID: 3546840114759891246, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
+      propertyPath: awakenDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546840114759891246, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
+      propertyPath: lightningDistance
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546840114759891247, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456955742422405074, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
+      propertyPath: m_Name
+      value: Platform 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456955742422405078, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456955742422405078, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456955742422405078, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456955742422405079, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
@@ -2499,5 +2480,6 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.19912438
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 717934448672254265, guid: e6f5615d91d95b3458f0e5acb1eb4902, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 623b05640b3ff94428d5079be4885d82, type: 3}

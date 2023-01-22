@@ -72,7 +72,7 @@ public class BlindColorTest : MonoBehaviour
         {
             if (_count >= 0f && _count < 500f)
             {
-                _soundManager.PlaySound("Vsdemon");
+                
                 _numRayo = 0;
                 Nivel = Niveles.Nivel1;
                 _colorBlind.Type = 1;
@@ -84,8 +84,9 @@ public class BlindColorTest : MonoBehaviour
                 if (_count >= 537f)
                 {
                     _colorBlind.Type = 2;
-                 //   if (_numRayo == 0)
-                  //      StartCoroutine(ChargeRayo(3f));
+                    if (_numRayo == 0)
+                        _soundManager.PlaySound("GodOfBlaze");
+                    //      StartCoroutine(ChargeRayo(3f));
 
                 }
 
@@ -93,7 +94,6 @@ public class BlindColorTest : MonoBehaviour
             else if (_count >= 575f && _count < 1075f)
             {
                 _numRayo = 0;
-                _soundManager.PlaySound("GodOfBlaze");
                 Nivel = Niveles.Nivel2;
                 _colorBlind.Type = 2;
 
@@ -104,8 +104,9 @@ public class BlindColorTest : MonoBehaviour
                 if (_count >= 1112f)
                 {
                     _colorBlind.Type = 3;
-                   // if (_numRayo == 0)
-                   //     StartCoroutine(ChargeRayo(3f));
+                    if (_numRayo == 0)
+                        _soundManager.PlaySound("DragonSlayer");
+                    //     StartCoroutine(ChargeRayo(3f));
 
                 }
 
@@ -113,7 +114,6 @@ public class BlindColorTest : MonoBehaviour
             else if (_count >= 1150f && _count < 1650f)
             {
                 _numRayo = 0;
-                _soundManager.PlaySound("DragonSlayer");
                 Nivel = Niveles.Nivel3;
                 _colorBlind.Type = 3;
             }
@@ -124,7 +124,8 @@ public class BlindColorTest : MonoBehaviour
                 if (_count >= 1687f)
                 {
                     _colorBlind.Type = 3;
-                    //  if (_numRayo == 0)
+                     if (_numRayo == 0)
+                        _soundManager.PlaySound("RequiemDiesIraeWolfgangAmadeusMozart");
                     //  StartCoroutine(ChargeRayo(3f));
 
                 }
@@ -132,7 +133,7 @@ public class BlindColorTest : MonoBehaviour
             }
             else if (_count >= 1725f && _count < 2225f)
             {
-                _soundManager.PlaySound("RequiemDiesIraeWolfgangAmadeusMozart");
+               
                 Nivel = Niveles.NivelBoss1;
                 if (_count >= 1800)
                 {
@@ -189,7 +190,8 @@ public class BlindColorTest : MonoBehaviour
                 if (_count >= 2262f)
                 {
                     _colorBlind.Type = 1;
-                    // if (_numRayo == 0)
+                    if (_numRayo == 0)
+                        _soundManager.PlaySound("Vsdemon");
                     //   StartCoroutine(ChargeRayo(3f));
 
                 }
