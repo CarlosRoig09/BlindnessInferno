@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 214816988b1af234c9923847c8055af6, type: 3}
+  m_Name: BasicEnemySO
+  m_EditorClassIdentifier: 
+  RateAperance: 70
+  Prefab: {fileID: 1091621492984054334, guid: b2d5d8882163fca4e97e57f7449117f0, type: 3}
+  speed: 50
+  jumpSpeed: 100
+  changeDirectionTimer: 0.5
+  WaitjumpTime: 3
+  jumTimeDuration: 1
+  floatTime: 1
+  score: 5

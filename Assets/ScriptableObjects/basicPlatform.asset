@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f2b7b1b93a1db540b1ed5f077f9da24, type: 3}
+  m_Name: basicPlatform
+  m_EditorClassIdentifier: 
+  RateAperance: 60
+  _platformName: "\"B\xE1sic platform\""
+  _platformPrefab: {fileID: 451467891833474372, guid: 660723b87a7e1b743886245d208bee74, type: 3}
+  _platformWaitTimer: 10
+  _platformInitialYPosition: -3

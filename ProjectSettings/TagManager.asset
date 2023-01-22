@@ -6,16 +6,23 @@ TagManager:
   tags:
   - Bullet
   - Enemy
+  - Fall
+  - Fallable
+  - AguaBendita
+  - EnemyBossHitPoint
+  - EnemyBoss
+  - Box
+  - BossArms
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Obstacle
+  - Ground
   - Water
   - UI
   - Platform
-  - 
-  - 
+  - Player
+  - Spawner
   - 
   - 
   - 
@@ -42,4 +49,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2941966631
+    locked: 0
+  - name: Ground
+    uniqueID: 1598750605
     locked: 0

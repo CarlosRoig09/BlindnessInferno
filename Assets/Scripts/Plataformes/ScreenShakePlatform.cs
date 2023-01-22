@@ -8,7 +8,7 @@ public class ScreenShakePlatform : PlatformControler
     private float _duracion;
     private float _fuerza;
 
-    protected override void PlatformHability()
+    public override void PlatformHability()
     {
      
         _shake.StartShake(_duracion, _fuerza);
@@ -20,8 +20,6 @@ public class ScreenShakePlatform : PlatformControler
         _shake = GameObject.Find("Main Camera").GetComponent<ShakeBehaviour>();
         _duracion = gameObject.GetComponent<SpriteRenderer>().bounds.size.x/8;
         _fuerza = 0.2f;
-
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
