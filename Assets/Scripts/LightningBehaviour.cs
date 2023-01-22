@@ -11,6 +11,7 @@ public class LightningBehaviour : PlatformControler
     private float count = 0;
     private float _whiteScreenX;
     private float _whiteScreenY;
+    public float AlphaDegradationSpeed = 0.0001f;
 
     private bool _isFalled = false;
 
@@ -52,11 +53,14 @@ public class LightningBehaviour : PlatformControler
         if (count < 2.5f && count > 1.9f)
         {
             WhiteScreen.SetActive(true);
-        }else if (count > 12.9f)
+        }else if (count > 30.9f)
         {
             WhiteScreen.SetActive(false);
+        }else if (count < 30.9f && count > 1.9f)
+        {
+            if (count > 17.9f)
+                AlphaDegradationSpeed = 0.001f;
+            WhiteScreen.GetComponent<SpriteRenderer>().color -= new Color(0, 0, 0, AlphaDegradationSpeed);
         }
-        WhiteScreen.GetComponent<SpriteRenderer>().color -= new Color(0, 0, 0, 0.00005f);
-
     }
 }

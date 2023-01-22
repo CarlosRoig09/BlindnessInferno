@@ -12,6 +12,9 @@ public class ParallaxScript : MonoBehaviour
     private GameObject _sky;
     public float VerticalParallaxSpeed;
 
+    private BlindColorTest _blindColorTest;
+    private GameObject _blindColor;
+
     private void Awake()
     {
         material = GetComponent<SpriteRenderer>().material;
@@ -19,6 +22,8 @@ public class ParallaxScript : MonoBehaviour
     private void Start()
     {
         _sky = GameObject.Find("Sky3");
+        _blindColor = GameObject.Find("Main Camera");
+        _blindColorTest = _blindColor.GetComponent<BlindColorTest>();
     }
 
     private void Update()
@@ -32,21 +37,63 @@ public class ParallaxScript : MonoBehaviour
         x = transform.localPosition.x;
         y = transform.localPosition.y;
 
-        //-3.19008f
-        //0.8899164f
-        if (_sky.transform.localPosition.y < -2.5f)
+        
+        if (_sky.transform.localPosition.y < -2.5f)//Tope por arriba
         {
             MovingUpParallax = false;
             y += 0.01f;
             VerticalParallaxSpeed = 0.01f;
-            MovingUpParallax = true;
         }
-        else if (_sky.transform.localPosition.y > 7.8f)
+        else if (_sky.transform.localPosition.y > 7.8f)//Tope por abajo
         {
             MovingUpParallax = false;
             y -= 0.01f;
             VerticalParallaxSpeed = -0.01f;
-            MovingUpParallax = true;
+        }
+
+        switch (_blindColorTest.Nivel)
+        {
+            case Niveles.Nivel1:
+                MovingUpParallax = false;
+                break;
+            case Niveles.TransNivel1:
+                MovingUpParallax = true;
+                if (_sky.transform.localPosition.y < 1.5f)
+                {
+                    MovingUpParallax = false;
+                }
+                break;
+            case Niveles.Nivel2:
+                MovingUpParallax = false;
+                break;
+            case Niveles.TransNivel2:
+                MovingUpParallax = true;
+                if (_sky.transform.localPosition.y < -2.3f)
+                {
+                    MovingUpParallax = false;
+                }
+                break;
+            case Niveles.Nivel3:
+                MovingUpParallax = false;
+                break;
+            case Niveles.TransNivel3:
+                //MovingUpParallax = true;
+                break;
+            case Niveles.NivelBoss:
+                MovingUpParallax = false;
+                break;
+            case Niveles.TransNivelBoss:
+                MovingUpParallax = true;
+                VerticalParallaxSpeed = 0.05f;
+                if (_sky.transform.localPosition.y > 7.8f)
+                {
+                    MovingUpParallax = false;
+                    y -= 0.01f;
+                    VerticalParallaxSpeed = -0.01f;
+                }
+                break;
+            default:
+                break;
         }
 
         if (MovingUpParallax)

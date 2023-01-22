@@ -33,7 +33,7 @@ public class CrossAwake : MonoBehaviour
         {
             _lightningCount++;
             GameObject lightningSpawned = Instantiate(Lightning);
-            lightningSpawned.transform.position = new Vector3(_awakenCross.transform.localPosition.x, 1.25f, 0);
+            lightningSpawned.transform.position = new Vector3(_awakenCross.transform.localPosition.x, _awakenCross.transform.localPosition.y + 3.25f, 0);
         }
 
         if (posDifference < awakenDistance)
