@@ -5,7 +5,8 @@ public enum EnemyMovement
     Right,
     Left,
     Jump,
-    Float
+    Float,
+    Death
 }
 public class BasicEnemy : Enemy
 {
@@ -16,10 +17,11 @@ public class BasicEnemy : Enemy
     private float _jumpDurationCounter;
     private float _movementCounter;
     public LayerMask groundLayer;
-
+    private Animator _anim;
+    private Collider2D _cll;
 
     // Start is called before the first frame update
-     void Start()
+    void Start()
     {
         _rb = gameObject.GetComponent<Rigidbody2D>();
         eM = EnemyMovement.Left;
@@ -27,7 +29,8 @@ public class BasicEnemy : Enemy
         _movementCounter = 0;
         _jumpDurationCounter = 0;
         Score = 5;
-     
+        _anim = GetComponent<Animator>();
+        _cll = GetComponent<Collider2D>();  
     }
     // Update is called once per frame
     void  Update()
@@ -44,10 +47,14 @@ public class BasicEnemy : Enemy
                 LinearMovement(_bESO.speed * -1, EnemyMovement.Right);
                 break;
             case EnemyMovement.Jump:
+                _anim.SetBool("Jump", true);
                 Jump();
                 break;
             case EnemyMovement.Float:
                 Float();
+                break;
+            case EnemyMovement.Death:
+                _rb.velocity = new Vector2(0, _bESO.speed * 15*Time.deltaTime);
                 break;
         }
 
@@ -104,6 +111,13 @@ public class BasicEnemy : Enemy
         if(collision.gameObject.layer == 6)
         {
             _rb.gravityScale = 0;
+            _anim.SetBool("Jump", false);
+        }
+        if (collision.CompareTag("Bullet"))
+        {
+            _cll.enabled= false;
+            eM = EnemyMovement.Death;
+            _anim.SetBool("Die", true);
         }
     }
 }

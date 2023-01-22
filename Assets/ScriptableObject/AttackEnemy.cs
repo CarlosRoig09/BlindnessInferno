@@ -14,8 +14,9 @@ public class AttackEnemy : Enemy
     private float _movementCounter;
     public LayerMask groundLayer;
     private Transform _playerTransform;
-
-     void Start()
+    private Animator _anim;
+    private Collider2D _cll;
+    void Start()
     {
         
         _rb = gameObject.GetComponent<Rigidbody2D>();
@@ -27,6 +28,8 @@ public class AttackEnemy : Enemy
         _countProyectile = 0;
         Score = 10;
         _playerTransform = GameObject.Find("Character").GetComponent<Transform>();
+        _anim = GetComponent<Animator>();
+        _cll= GetComponent<Collider2D>();
     }
     // Update is called once per frame
     void Update()
@@ -40,10 +43,14 @@ public class AttackEnemy : Enemy
                 LinearMovement(_bESO.speed * -1, EnemyMovement.Right);
                 break;
             case EnemyMovement.Jump:
+                _anim.SetBool("Fly", true);
                 Jump();
                 break;
             case EnemyMovement.Float:
                 Float();
+                break;
+            case EnemyMovement.Death:
+                _rb.velocity = new Vector2(0, _bESO.speed * 15 * Time.deltaTime);
                 break;
         }
             if (atackEnemySO.proyectileTimer <= _countProyectile && transform.position.x - _playerTransform.position.x < 13)
@@ -111,8 +118,15 @@ public class AttackEnemy : Enemy
     {
         if (collision.gameObject.layer == 6)
         {
+            _anim.SetBool("Fly", false);
             _rb.gravityScale = 0;
             _rb.velocity = new Vector3(0, 0);
+        }
+        if (collision.CompareTag("Bullet"))
+        {
+            _cll.enabled= false;
+            eM = EnemyMovement.Death;
+            _anim.SetBool("Die", true);
         }
     }
 }

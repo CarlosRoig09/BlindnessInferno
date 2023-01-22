@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 7595718342168432614}
   - component: {fileID: 7595718342168432615}
   - component: {fileID: 7595718342168432612}
+  - component: {fileID: 54942723801777698}
   m_Layer: 0
   m_Name: EnemyProyectile
-  m_TagString: Enemy
+  m_TagString: EnemyProyectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,3 +148,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Velocity: 200
+--- !u!114 &54942723801777698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7595718342168432613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c1e7e2cc32ef448b7b17319e7edd9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorLevel1: {r: 0.754717, g: 0.64180464, b: 0.12388747, a: 0}
+  colorLevel2: {r: 0.8679245, g: 0.32753187, b: 0.117906675, a: 0}
+  colorLevel3: {r: 0.17702027, g: 0.8018868, b: 0.3087525, a: 0}

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9222874410430169695}
   - component: {fileID: 9222874410430169694}
   - component: {fileID: 9222874410430169689}
+  - component: {fileID: 4378059257085137118}
   m_Layer: 8
   m_Name: AwakenCross
   m_TagString: Untagged
@@ -176,3 +177,18 @@ MonoBehaviour:
   awakenDistance: 6
   lightningDistance: 9
   Lightning: {fileID: 4994730118261067, guid: c64fa90bd8dc4ac4e8ed7f29692b8e4c, type: 3}
+--- !u!114 &4378059257085137118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9222874410430169688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c1e7e2cc32ef448b7b17319e7edd9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorLevel1: {r: 0.85154325, g: 0.9056604, b: 0.080313236, a: 1}
+  colorLevel2: {r: 0.7028034, g: 0.7169812, b: 0.15151297, a: 1}
+  colorLevel3: {r: 0.8207547, g: 0.7890138, b: 0.11924169, a: 1}

@@ -24,6 +24,7 @@ public class AttackTheBoss : MonoBehaviour
     {
         if (collision.CompareTag("EnemyBoss"))
         {
+            Debug.Log("I hit the boss yeah");
             collision.gameObject.GetComponent<ControlBossFaces>().GetDamaged(_damage);
             Destroy(gameObject);
         }

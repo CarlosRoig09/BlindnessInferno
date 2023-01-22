@@ -146,6 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3c1e7e2cc32ef448b7b17319e7edd9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorLevel1: {r: 0.21226418, g: 0.9659848, b: 1, a: 1}
-  colorLevel2: {r: 1, g: 0.24056602, b: 0.24056602, a: 1}
-  colorLevel3: {r: 0.9302997, g: 0.25943398, b: 1, a: 1}
+  colorLevel1: {r: 0.84912556, g: 0.8773585, b: 0.12746526, a: 1}
+  colorLevel2: {r: 0.5660378, g: 0.53600436, b: 0.09291561, a: 1}
+  colorLevel3: {r: 0.8207547, g: 0.764406, b: 0.17344245, a: 1}

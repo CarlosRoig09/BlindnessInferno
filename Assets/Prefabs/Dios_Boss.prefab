@@ -1161,7 +1161,7 @@ GameObject:
   - component: {fileID: 3247654736164579053}
   m_Layer: 0
   m_Name: Dios_Boss
-  m_TagString: Untagged
+  m_TagString: EnemyBoss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

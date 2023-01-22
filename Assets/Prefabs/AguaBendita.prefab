@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 5807560008015179214}
   - component: {fileID: 5807560008015179249}
   - component: {fileID: 5807560008015179248}
+  - component: {fileID: 6305506196206493448}
   m_Layer: 8
   m_Name: AguaBenditaBase
   m_TagString: AguaBendita
@@ -157,6 +158,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b016c6082e9302242b1b07f7db7d38a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6305506196206493448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5807560008015179250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c1e7e2cc32ef448b7b17319e7edd9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorLevel1: {r: 0.106349446, g: 0.9056604, b: 0.08885722, a: 1}
+  colorLevel2: {r: 0.22193485, g: 0.7169812, b: 0.10416517, a: 1}
+  colorLevel3: {r: 0.12260585, g: 0.77958435, b: 0.7924528, a: 1}
 --- !u!1 &5807560008106302743
 GameObject:
   m_ObjectHideFlags: 0

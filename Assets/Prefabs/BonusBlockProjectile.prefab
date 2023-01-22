@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4495740819615325425}
   - component: {fileID: 4495740819615325426}
   - component: {fileID: 4495740819615325427}
+  - component: {fileID: -4898476201007286858}
   m_Layer: 8
   m_Name: BonusBlockProjectile
   m_TagString: Untagged
@@ -149,3 +150,18 @@ MonoBehaviour:
   _plSO: {fileID: 0}
   Bonus: {fileID: 5231074932599116372, guid: a2e07ffe179caa14581f829fcc7c732a, type: 3}
   Timer: {fileID: 3146346550533298744, guid: 8fa41cb3f33c13445becb2c364008ae4, type: 3}
+--- !u!114 &-4898476201007286858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4495740819615325428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c1e7e2cc32ef448b7b17319e7edd9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorLevel1: {r: 0.49504203, g: 0.9339623, b: 0.3119081, a: 1}
+  colorLevel2: {r: 0.56484073, g: 0.8679245, b: 0.1915984, a: 1}
+  colorLevel3: {r: 0.8679245, g: 0.7983862, b: 0.15884651, a: 1}

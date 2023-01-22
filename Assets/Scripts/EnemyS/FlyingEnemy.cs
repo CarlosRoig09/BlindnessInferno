@@ -4,6 +4,7 @@ public enum FlyingEnemyMovement
     Up,
     Down,
     Attack,
+    Death
 }
 public class FlyingEnemy : Enemy
 {
@@ -16,7 +17,7 @@ public class FlyingEnemy : Enemy
     private Rigidbody2D _rb;
     private FlyingEnemyMovement _fEM;
     private Animator _anim;
-
+    private Collider2D _cll;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,7 @@ public class FlyingEnemy : Enemy
         _fEM = FlyingEnemyMovement.Up;
         Score = 15;
         _anim = GetComponent<Animator>();
+        _cll = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -45,6 +47,9 @@ public class FlyingEnemy : Enemy
                 break;
             case FlyingEnemyMovement.Attack:
                 Attack();
+                break;
+            case FlyingEnemyMovement.Death:
+                _rb.velocity = new Vector2(0, 0);
                 break;
         }
     }
@@ -78,5 +83,15 @@ public class FlyingEnemy : Enemy
             _rb.velocity = _flyEnemySO.AttackSpeed * Time.fixedDeltaTime * _attackDirection.normalized;
         else
             _rb.velocity = _flyEnemySO.AttackSpeed * Time.fixedDeltaTime * new Vector3(_attackDirection.normalized.x, _attackDirection.normalized.y*-0.2f);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Bullet"))
+        {
+            _cll.enabled = false;
+            _fEM = FlyingEnemyMovement.Death;
+            _anim.SetBool("Die", true);
+        }
     }
 }

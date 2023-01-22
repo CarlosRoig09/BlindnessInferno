@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8706181407779684793}
   - component: {fileID: 8706181407779684792}
   - component: {fileID: 2404666259166068434}
+  - component: {fileID: -8315713029447161565}
   m_Layer: 8
   m_Name: gafas
   m_TagString: Untagged
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 1598750605
   m_SortingLayer: 2
   m_SortingOrder: 3
-  m_Sprite: {fileID: 1824460430, guid: e4f9168c4a16a3244b32ea7ca365f3c5, type: 3}
+  m_Sprite: {fileID: -1493287960, guid: e4f9168c4a16a3244b32ea7ca365f3c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -161,3 +162,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-8315713029447161565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8706181407779684775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c1e7e2cc32ef448b7b17319e7edd9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorLevel1: {r: 0.764151, g: 0.3388406, b: 0.30566037, a: 1}
+  colorLevel2: {r: 0.25079226, g: 0.990566, b: 0.031772807, a: 1}
+  colorLevel3: {r: 0.032075405, g: 0.883281, b: 1, a: 1}

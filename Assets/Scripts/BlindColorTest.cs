@@ -54,7 +54,7 @@ public class BlindColorTest : MonoBehaviour
         _colorBlind = Camera.main.GetComponent<Colorblind>();
         _distance = GameObject.Find("Kilomiters").GetComponent<Kilomiters>().Distancia;
         _colorBlind.Type = 1;
-        _count = 1720f;
+        _count = 0;
         _numRayo = 0;
         _diositoNoCuenta = true;
         _diositoInstancia = 0;
@@ -194,7 +194,7 @@ public class BlindColorTest : MonoBehaviour
             {
                 
                 Nivel = Niveles.TransNivelBoss;
-                if (_count >= 2299f)
+                if (_count >= 2280f)
                 {
                     _colorBlind.Type = 1;
                     if (_numRayo == 0)
@@ -212,9 +212,7 @@ public class BlindColorTest : MonoBehaviour
         {
             _count += 10 * Time.deltaTime;
         }
-        
-        //Debug.Log(_count);
-    }
+     }
 
     public void ChargeRayo()
     {

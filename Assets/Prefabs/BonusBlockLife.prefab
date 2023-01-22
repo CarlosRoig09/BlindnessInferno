@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8735426491085853411}
   - component: {fileID: 8735426491085853410}
   - component: {fileID: 8735426491085853405}
+  - component: {fileID: -1877743252343191740}
   m_Layer: 8
   m_Name: BonusBlockLife
   m_TagString: Untagged
@@ -76,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 1598750605
   m_SortingLayer: 2
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 1523b88269e7bae409f582969439e77b, type: 3}
-  m_Color: {r: 0.8962264, g: 0.027139463, b: 0.004227493, a: 1}
+  m_Sprite: {fileID: 21300000, guid: e7b97ce41913e1341b34f63a7b34a1fe, type: 3}
+  m_Color: {r: 0.38999942, g: 0.990566, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -147,3 +148,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _plSO: {fileID: 0}
+--- !u!114 &-1877743252343191740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8735426491085853404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c1e7e2cc32ef448b7b17319e7edd9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorLevel1: {r: 0.78431374, g: 0.59607846, b: 0.09019608, a: 1}
+  colorLevel2: {r: 0.9339623, g: 0.58008766, b: 0.19736557, a: 1}
+  colorLevel3: {r: 0.6278157, g: 1, b: 0, a: 1}

@@ -35,11 +35,7 @@ public class BulletScript : MonoBehaviour
     }
     void Update()
     {
-        /*if (transform.position.y >= ((screenBounds.y) - bulletHeight) || transform.position.y <=(screenBounds.y*-1) || transform.position.x >= ((screenBounds.x) - bulletWeight))
-        {
-            //Destruir objecto
-            Destroy(gameObject);
-        }*/
+        Destroy(gameObject, 8);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -48,7 +44,13 @@ public class BulletScript : MonoBehaviour
             if (collision.gameObject.CompareTag("Enemy"))
             {
                _score= collision.gameObject.GetComponent<Enemy>().Score;
-                Debug.Log(collision.gameObject.name);
+                _controlScore.ScorePlus(_score);
+                Destroy(collision.gameObject, collision.gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+            }
+
+            if (collision.gameObject.CompareTag("EnemyProyectile"))
+            {
+                _score = collision.gameObject.GetComponent<Enemy>().Score;
                 _controlScore.ScorePlus(_score);
                 Destroy(collision.gameObject);
             }
