@@ -52,7 +52,7 @@ public class BlindColorTest : MonoBehaviour
         _colorBlind = Camera.main.GetComponent<Colorblind>();
         _distance = GameObject.Find("Kilomiters").GetComponent<Kilomiters>().Distancia;
         _colorBlind.Type = 1;
-        _count = 0;
+        _count = 1725f;
         _numRayo = 0;
         _diositoNoCuenta = true;
         _diositoInstancia = 0;

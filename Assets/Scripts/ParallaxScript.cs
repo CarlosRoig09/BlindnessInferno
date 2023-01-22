@@ -58,7 +58,7 @@ public class ParallaxScript : MonoBehaviour
                 break;
             case Niveles.TransNivel1:
                 MovingUpParallax = true;
-                if (_sky.transform.localPosition.y < 1.5f)
+                if (_sky.transform.localPosition.y < 0f)
                 {
                     MovingUpParallax = false;
                 }
@@ -68,7 +68,7 @@ public class ParallaxScript : MonoBehaviour
                 break;
             case Niveles.TransNivel2:
                 MovingUpParallax = true;
-                if (_sky.transform.localPosition.y < -2.3f)
+                if (_sky.transform.localPosition.y < -3f)
                 {
                     MovingUpParallax = false;
                 }
@@ -79,12 +79,17 @@ public class ParallaxScript : MonoBehaviour
             case Niveles.TransNivel3:
                 //MovingUpParallax = true;
                 break;
-            case Niveles.NivelBoss:
+            case Niveles.NivelBoss1:
+                MovingUpParallax = false;
+                break;
+            case Niveles.NivelBoss2:
+                MovingUpParallax = false;
+                break;
+            case Niveles.NivelBoss3:
                 MovingUpParallax = false;
                 break;
             case Niveles.TransNivelBoss:
                 MovingUpParallax = true;
-                VerticalParallaxSpeed = 0.05f;
                 if (_sky.transform.localPosition.y > 7.8f)
                 {
                     MovingUpParallax = false;

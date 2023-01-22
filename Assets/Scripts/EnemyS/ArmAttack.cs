@@ -14,8 +14,6 @@ public class ArmAttack : MonoBehaviour, IEnemyWeapon
     private Transform _firstGodPosition;
     [SerializeField]
     private LayerMask groundLayer;
-    [SerializeField]
-    private Rigidbody2D _cameraRB2D;
     public float Life;
     private float _damage;
     [SerializeField]
@@ -26,27 +24,34 @@ public class ArmAttack : MonoBehaviour, IEnemyWeapon
         cll2D = gameObject.GetComponent<Collider2D>();
         //cll2D.enabled = false;
         _aP = ArmPosition.Stay;
+        _firstGodPosition = GameObject.Find("FirstGodPosition").transform;
     }
     private void Update()
     {
-        Debug.Log("velocity arm " + gameObject.name + " " + _rb.velocity);
+        if(_aP == ArmPosition.Stay)
+        {
+            _rb.velocity = new Vector2(Camera.main.GetComponentInParent<MoveCamara>()._rb.velocity.x,0);
+        }
         if (_aP == ArmPosition.Attack)
         {
-            if (_firstGodPosition.position.x - transform.position.x < 7f)
+            if (_firstGodPosition.position.x - transform.position.x < 0.8f)
             {
-                _rb.velocity = new  Vector3(_cameraRB2D.velocity.x, 0);
+                _rb.velocity = new  Vector3(Camera.main.GetComponentInParent<MoveCamara>()._rb.velocity.x, 0);
                 if (Physics2D.Raycast(transform.position, Vector2.down))
                 {
                     cll2D.enabled = true;
-                    _rb.gravityScale = 30;
+                    _rb.gravityScale = 0.5f;
+                    _aP= ArmPosition.Fall;  
                 }
-            }
-
-            if (Physics2D.Raycast(transform.position, Vector2.down, 0.65f, groundLayer.value)||transform.position.y<=-3.59f)
+            }   
+        }
+        if (_aP == ArmPosition.Fall)
+        {
+            if (Physics2D.Raycast(transform.position, Vector2.down, 0.65f, groundLayer.value) || transform.position.y <= -3f)
             {
                 _rb.velocity = new Vector3(0, 0);
                 _rb.gravityScale = 0;
-                StartCoroutine(WaitTime(1));
+                StartCoroutine(WaitTime(1f));
                 Debug.Log("touch ground");
             }
         }
@@ -66,7 +71,7 @@ public class ArmAttack : MonoBehaviour, IEnemyWeapon
                 if (proximityToInitialPos<=0.5f)
                 {
                     Debug.Log("He vuelto");
-                    _rb.velocity = new Vector3(_cameraRB2D.velocity.x, 0);
+                    _rb.velocity = new Vector3(Camera.main.GetComponentInParent<MoveCamara>()._rb.velocity.x, 0);
                     _aP = ArmPosition.AttackEnd;
                 }
             }
@@ -88,14 +93,14 @@ public class ArmAttack : MonoBehaviour, IEnemyWeapon
 
     private void Elevate(float speed)
     {
-        _rb.velocity = new Vector3(_cameraRB2D.velocity.x, speed*Time.fixedDeltaTime);
+        _rb.velocity = new Vector3(Camera.main.GetComponentInParent<MoveCamara>()._rb.velocity.x, speed*Time.fixedDeltaTime);
     }
 
     private void OnEnable()
     {
         _parentCBF = GameObject.Find("Dios_Boss").GetComponent<ControlBossFaces>();
         _rb = gameObject.GetComponent<Rigidbody2D>();
-        _rb.velocity = new Vector3(_cameraRB2D.velocity.x, 0);
+        _rb.velocity = new Vector3(Camera.main.GetComponentInParent<MoveCamara>()._rb.velocity.x, 0);
         _damage = _parentCBF.CurrentLife / 2;
     }
 

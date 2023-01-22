@@ -7,6 +7,7 @@ public enum ArmPosition
     Stay,
     Positionate,
     Attack,
+    Fall,
     Elevate,
     AttackEnd
 }
