@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8735426491085853411}
   - component: {fileID: 8735426491085853410}
   - component: {fileID: 8735426491085853405}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BonusBlockLife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1

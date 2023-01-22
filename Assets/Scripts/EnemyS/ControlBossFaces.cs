@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using UnityEngine;
 
 public enum BossFase
@@ -32,13 +33,15 @@ public class ControlBossFaces : MonoBehaviour
     [SerializeField]
     private Transform _leftCamera;
     private GameObject _Arms;
+    private Animator _anim;
     // Start is called before the first frame update
     void Start()
     {
         _currentFase = BossFase.StartBossFase1;
-        _Arms = transform.GetChild(1).gameObject;
+        _Arms = GameObject.Find("Arms");
         _Arms.SetActive(false);
-        _collider = gameObject.GetComponent<PolygonCollider2D>();
+        _collider = gameObject.GetComponent<Collider2D>();
+        _anim = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -49,19 +52,18 @@ public class ControlBossFaces : MonoBehaviour
             case BossFase.StartBossFase1:
                 MoveBoss(_rightCamera.position);
                 LifeForFace(BossEnemySO.LifeFirstFace, BossFase.BossFase1);
-                transform.localScale = new Vector3(9.88271f, 9.88271f);
                 break;
             case BossFase.BossFase1:
-                ComproveIfFaseEnd(BossFase.StartBossFase2, _currentLife);
+                ComproveIfFaseEnd(_currentLife);
                 break;
             case BossFase.StartBossFase2:
                 _collider.enabled = false;
                 MoveBoss(_centerCamera.position);
-                    _Arms.SetActive(true);
                 LifeForFace(BossEnemySO.LifeSecondFace, BossFase.BossFase2);
+                _Arms.SetActive(true);
                 break;
             case BossFase.BossFase2:
-                ComproveIfFaseEnd(BossFase.StartBossFase3, _currentLife);
+                ComproveIfFaseEnd(_currentLife);
                 break;
             case BossFase.StartBossFase3:
                 _collider.enabled = true;
@@ -70,7 +72,8 @@ public class ControlBossFaces : MonoBehaviour
                 LifeForFace(BossEnemySO.LifeThirtFace, BossFase.BossFase3);
                 break;
             case BossFase.BossFase3:
-                ComproveIfFaseEnd(BossFase.Death, _currentLife);
+                transform.localScale = new Vector3(0.5f,0.5f);
+                ComproveIfFaseEnd(_currentLife);
                 break;
             case BossFase.Death:
                 Destroy(gameObject);
@@ -80,15 +83,19 @@ public class ControlBossFaces : MonoBehaviour
 
     void MoveBoss(Vector3 newPosition)
     {
-        transform.position = new Vector3 (newPosition.x, transform.position.y);
+        transform.parent.position = new Vector3 (newPosition.x, transform.parent.position.y);
+        _anim.SetBool("Start", true);
     }
 
-    void ComproveIfFaseEnd(BossFase BF, float life)
+    void ComproveIfFaseEnd(float life)
     {
-        if (life <= 0)
+        _anim.SetBool("Start", false);
+        _anim.SetBool("Hit", false);
+        _anim.SetBool("End", false);
+        if (life <= 0&&OnEndFace!=null)
         {
-            _currentFase = BF;
-            OnEndFace();
+             OnEndFace();
+            _anim.SetBool("End", true);
         }
     }
     void LifeForFace(float newLife, BossFase BF)
@@ -96,8 +103,25 @@ public class ControlBossFaces : MonoBehaviour
         _currentLife = newLife;
         _currentFase = BF;
     }
+
+    public void ChangeFace()
+    {
+        switch (_currentFase)
+        {
+            case BossFase.BossFase1:
+                _currentFase = BossFase.StartBossFase2;
+                break;
+            case BossFase.BossFase2:
+                _currentFase = BossFase.StartBossFase3;
+                break;
+            case BossFase.BossFase3:
+                _currentFase = BossFase.Death;
+                break;
+        }
+    }
     public void GetDamaged(float damage)
     {
+        _anim.SetBool("Hit", true);
         _currentLife -= damage;
     }
 }

@@ -89,8 +89,11 @@ public class Shooting : MonoBehaviour
         {
             proyectileDamage*= 2;
         }else if (_bulletSize == 1)
+
         {
+
             proyectileDamage = _initialDamage;
+
         }
     }
 }

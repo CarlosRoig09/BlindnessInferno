@@ -13,7 +13,7 @@ public class AttackTheBoss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _boss = GameObject.Find("Dios").GetComponent<Transform>();
+        _boss = GameObject.Find("Boss").GetComponent<Transform>();
         _rb = gameObject.GetComponent<Rigidbody2D>();
         var lookDirection = _boss.position - transform.position;
         var lookAngle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;

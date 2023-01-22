@@ -12,6 +12,7 @@ TagManager:
   - EnemyBossHitPoint
   - EnemyBoss
   - Box
+  - BossArms
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - UI
   - Platform
   - Player
-  - 
+  - Spawner
   - 
   - 
   - 

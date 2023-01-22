@@ -9,6 +9,9 @@ public class DestroyObjects : MonoBehaviour
             collision.gameObject.GetComponent<ControlDeath>().Life = Life.Death;
         }
         else
-            Destroy(collision.gameObject);
+        {
+            if(collision.gameObject.layer==6||collision.CompareTag("Enemy")||collision.CompareTag("Bullet"))
+             Destroy(collision.gameObject);
+        }
     }
 }

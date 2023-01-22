@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ca7e6dccc771f45a41ce54e3f680f4, type: 3}
   m_Name: BalasSO
   m_EditorClassIdentifier: 
-  RateAperance: 20
+  RateAperance: 50
   Prefab: {fileID: 4495740819615325428, guid: 91da03635fe47134d92bd0719666df3d, type: 3}

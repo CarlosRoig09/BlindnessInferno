@@ -90,7 +90,6 @@ public class GeneratePlatformController : MonoBehaviour
 
 
         }
-        Debug.Log(_nivel);
 
         _num = RandomMethods.ReturnARandomObject(_plSO, 0);
         if (_num < 0)

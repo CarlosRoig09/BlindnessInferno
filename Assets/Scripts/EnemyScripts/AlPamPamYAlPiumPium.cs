@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class AlPamPamYAlPiumPium : MonoBehaviour
 {
@@ -23,16 +24,38 @@ public class AlPamPamYAlPiumPium : MonoBehaviour
     }
     public void InstantObstacle(GameObject platform)
     {
+        GameObject enemy;
+       var numPlatforms = platform.transform.childCount;
       if(platform!=null)  {
-            var num = RandomMethods.ReturnARandomObject(_randomRate, 20);
-            if (num >= 0)
+            for (var i = 0; i < Random.Range(2, 5); i++)
             {
-                instant = _randomRate[num].Prefab;
-                float xPosition = Random.Range(platform.transform.position.x, platform.transform.position.x + platform.transform.localScale.x / 2);
-                _initPosition = new Vector3(xPosition, platform.transform.position.y + platform.transform.localScale.y / 2 + transform.localScale.y / 2);
-                if (instant != null && platform != null)
-                    Instantiate(instant, _initPosition, Quaternion.identity);
+                var num = RandomMethods.ReturnARandomObject(_randomRate, 0);
+                if (num >= 0)
+                {
+                    var currentPlatform = platform.transform.GetChild(Random.Range(0, numPlatforms));
+                    instant = _randomRate[num].Prefab;
+                    ComproveIsAPlatform(currentPlatform);
+                    if (instant != null && currentPlatform != null)
+                      Instantiate(instant, _initPosition, Quaternion.identity);
+                }
             }
+        }
+    }
+
+    private void ComproveIsAPlatform(Transform currentPlatform)
+    {
+        float xPosition = Random.Range(currentPlatform.transform.position.x, currentPlatform.transform.position.x + currentPlatform.transform.localScale.x / 2);
+            _initPosition = new Vector3(xPosition, currentPlatform.transform.position.y + Random.Range(-0.35f, 3));
+            Debug.Log(_initPosition.y);
+        RaycastHit2D hit;
+        if (hit = Physics2D.Raycast(_initPosition, Vector2.up, 0.65f))
+        {
+            var point = hit.point.y / hit.collider.bounds.size.y;
+            _initPosition.y += hit.collider.bounds.size.y / point;
+        }
+        if (Physics2D.Raycast(_initPosition, Vector2.down, Mathf.Infinity, 8))
+        {
+            _initPosition.x += 0.2f;
         }
     }
 
