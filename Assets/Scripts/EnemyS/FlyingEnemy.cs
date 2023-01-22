@@ -15,6 +15,7 @@ public class FlyingEnemy : Enemy
     private float _countTimeCD;
     private Rigidbody2D _rb;
     private FlyingEnemyMovement _fEM;
+    private Animator _anim;
 
 
     // Start is called before the first frame update
@@ -26,6 +27,7 @@ public class FlyingEnemy : Enemy
         transform.position = new Vector3(transform.position.x, transform.position.y + 1f);
         _fEM = FlyingEnemyMovement.Up;
         Score = 15;
+        _anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -60,7 +62,8 @@ public class FlyingEnemy : Enemy
 
     void DetectPlayer()
     {
-        if (transform.position.x-_playerTransform.position.x<10)
+        _anim.SetBool("Attac", true);
+        if (transform.position.x-_playerTransform.position.x<6)
         {
             _rb.velocity = new Vector3(0, 0);
             _fEM = FlyingEnemyMovement.Attack;
