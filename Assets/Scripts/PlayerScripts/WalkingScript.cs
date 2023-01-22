@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class WalkingScript : MonoBehaviour
@@ -9,45 +10,52 @@ public class WalkingScript : MonoBehaviour
     public Rigidbody2D rb;
     public KeyCode jumpkey;
     [SerializeField]
-    private float _maxSpeed;
-    [SerializeField]
     private Transform _maxPosition;
     private float _initPos;
     [SerializeField]
-    private float _timeToMaxSpeed;
     private float _acceleration;
     private bool _secondJump;
     public LayerMask groundLayer;
     [SerializeField]
+    private Transform firstGodPosition;
+    [SerializeField]
     private Rigidbody2D _cameraRB2D;
-    //public LayerMask ground;
-    //public Collider2D footCollider;
+    private Animator _anim;
+    private bool _stopMomentum;
+    public bool StopMomentum
+    {
+        get { return _stopMomentum; }
+        set { _stopMomentum = value;}
+    }
+    [SerializeField]
+    private float _hitStop;
     private void Start()
     {
+        _anim = gameObject.GetComponent<Animator>();
         _secondJump = false;
-        _initPos = transform.position.x;
-        _acceleration = (_maxSpeed - initialspeed) / _timeToMaxSpeed;
+        _initPos = firstGodPosition.position.x;
+        _stopMomentum = false;
     }
     /*private bool isGrounded;
     private float jumpWaitTimer;*/
     private void FixedUpdate()
     {
-        if (transform.position.x < _maxPosition.position.x)
+        if (!_stopMomentum)
         {
-            _playerData.speed = Mathf.Sqrt(2 * _acceleration * (transform.position.x - _initPos) + Mathf.Pow(initialspeed, 2));
-            _initPos = transform.position.x;
-            rb.velocity = new Vector2(_playerData.speed * Time.fixedDeltaTime + _cameraRB2D.velocity.x, rb.velocity.y);
+            if (transform.position.x < _maxPosition.position.x)
+            {
+                _playerData.speed = Mathf.Sqrt(2 * _acceleration * (transform.position.x - _initPos) + Mathf.Pow(initialspeed, 2));
+                _initPos = transform.position.x;
+                rb.velocity = new Vector2(_playerData.speed * Time.fixedDeltaTime + _cameraRB2D.velocity.x, rb.velocity.y);
+            }
+            else
+                rb.velocity = new Vector2(_cameraRB2D.velocity.x, rb.velocity.y);
         }
-        else
-        {
-            /*  if (_speedAtCenterPos > Camera.main.GetComponent<MoveCamara>()._rb.velocity.x)
-                  _speedAtCenterPos -= 0.25f;
-              else _speedAtCenterPos = Camera.main.GetComponent<MoveCamara>()._rb.velocity.x;*/
-            rb.velocity = new Vector2(_cameraRB2D.velocity.x, rb.velocity.y);
-        }
+        else StartCoroutine(StartMomentum(0.3f));
     }
     void Update()
     {
+        _anim.SetFloat("Jump", rb.velocity.y);
         //Debug.Log(speed);
         //isGrounded = footCollider.IsTouchingLayers(ground);
 
@@ -63,12 +71,16 @@ public class WalkingScript : MonoBehaviour
         var platform = Physics2D.Raycast(transform.position, Vector2.down, 0.65f, groundLayer.value);
         if (platform.collider != null)
         {
-            if (platform.collider.gameObject.CompareTag("Fallable") && Input.GetKeyUp(KeyCode.DownArrow))
+            if (platform.collider.gameObject.CompareTag("Fallable") && (Input.GetKeyUp(KeyCode.DownArrow) || (Input.GetKeyUp(KeyCode.S))))
                 FallPlatform(platform.collider.gameObject);
             if (platform.collider.gameObject.CompareTag("Fall"))
+            {
                 FallingPlatform(platform.collider.gameObject);
+            }
+
             //Debug.Log(transform.position);
         }
+    }
 
         void Jump()
         {
@@ -99,7 +111,12 @@ public class WalkingScript : MonoBehaviour
             }
         }
 
-
+    private IEnumerator StartMomentum(float Time)
+    {
+        rb.velocity = new Vector3(0, 0);
+        yield return new WaitForSeconds(Time);
+        _stopMomentum = false;
     }
-}
+ }
+
 

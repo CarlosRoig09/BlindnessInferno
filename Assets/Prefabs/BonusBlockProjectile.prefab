@@ -102,7 +102,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -148,3 +148,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _plSO: {fileID: 0}
   Bonus: {fileID: 5231074932599116372, guid: a2e07ffe179caa14581f829fcc7c732a, type: 3}
+  Timer: {fileID: 3146346550533298744, guid: 8fa41cb3f33c13445becb2c364008ae4, type: 3}
