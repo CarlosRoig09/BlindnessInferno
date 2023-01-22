@@ -86,7 +86,8 @@ public class ControlBossFaces : MonoBehaviour
                 ComproveIfFaseEnd(_currentLife);
                 break;
             case BossFase.Death:
-                Destroy(gameObject, 5f);
+                _anim.SetBool("End", true);
+                Destroy(gameObject, 1f);
                 break;
         }
     }

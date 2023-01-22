@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ca7e6dccc771f45a41ce54e3f680f4, type: 3}
   m_Name: BoxSO
   m_EditorClassIdentifier: 
-  RateAperance: 100
+  RateAperance: 250
   Prefab: {fileID: 933415381194816366, guid: 06790df666383d24d8a36ecdd7cfd2bf, type: 3}

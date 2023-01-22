@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7259817932962614118}
   - component: {fileID: 6472087505098265715}
   - component: {fileID: 2704774060579781201}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Iris
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1598750605
+  m_SortingLayer: 2
   m_SortingOrder: 6
   m_Sprite: {fileID: 2986311610889458487, guid: 5b6751eb7aa93fa448cf7169fe2ddc1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 8731128910418117802}
   m_Bounds:
-    m_Center: {x: 13.295686, y: 0.039521024, z: 0}
+    m_Center: {x: 13.295678, y: 0.039520785, z: 0}
     m_Extent: {x: 2.1918497, y: 0.20410502, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -115,7 +115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7493961253657150863}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bone_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 7899541638716460316}
   - component: {fileID: 1374571365217616507}
   - component: {fileID: 7213379999033355051}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ala_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,9 +209,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: 1598750605
+  m_SortingLayer: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 2425614364518443728, guid: 5b6751eb7aa93fa448cf7169fe2ddc1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -242,8 +242,8 @@ MonoBehaviour:
   - {fileID: 7473297935902037055}
   - {fileID: 2331085294442706858}
   m_Bounds:
-    m_Center: {x: 1.1296936, y: -4.985634, z: 0}
-    m_Extent: {x: 1.7550008, y: 0.85500026, z: 0}
+    m_Center: {x: 1.1296939, y: -4.985634, z: 0}
+    m_Extent: {x: 1.7550006, y: 0.85500026, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -256,7 +256,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7473297935902037055}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bone_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1103373766906378220}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bone_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 5998257091809370478}
   - component: {fileID: 7422034024787999134}
   - component: {fileID: 281495645971777913}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,8 +380,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1598750605
+  m_SortingLayer: 2
   m_SortingOrder: 4
   m_Sprite: {fileID: 6438998285181575721, guid: 5b6751eb7aa93fa448cf7169fe2ddc1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 1450222436028758599}
   - component: {fileID: 2764816726490032621}
   - component: {fileID: 53837670426109729}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ala
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,8 +486,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1598750605
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: -298464148042300801, guid: 5b6751eb7aa93fa448cf7169fe2ddc1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -534,7 +534,7 @@ GameObject:
   - component: {fileID: 5490856958823408104}
   - component: {fileID: 2572583187468698369}
   - component: {fileID: 8651008768082862159}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Aureola
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -594,8 +594,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1598750605
+  m_SortingLayer: 2
   m_SortingOrder: 7
   m_Sprite: {fileID: -8335642427334377028, guid: 5b6751eb7aa93fa448cf7169fe2ddc1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -626,8 +626,8 @@ MonoBehaviour:
   - {fileID: 3455624720313801315}
   - {fileID: 6482736167642677975}
   m_Bounds:
-    m_Center: {x: 1.1183276, y: 1.485651, z: 0}
-    m_Extent: {x: 1.2086346, y: 1.0712852, z: 0}
+    m_Center: {x: 1.1183281, y: 1.485651, z: 0}
+    m_Extent: {x: 1.2086351, y: 1.0712854, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -640,7 +640,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8499273342426847952}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bone_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -671,7 +671,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1938230466037049637}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bone_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -703,7 +703,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8731128910418117802}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -734,7 +734,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2331085294442706858}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bone_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -766,7 +766,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3767964397028469698}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bone_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -802,8 +802,8 @@ GameObject:
   - component: {fileID: 1670789331404009654}
   - component: {fileID: 1670789331404009655}
   - component: {fileID: 1670789331404009653}
-  m_Layer: 0
-  m_Name: Minion2 1
+  m_Layer: 8
+  m_Name: MinionFly
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -936,7 +936,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6482736167642677975}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -973,7 +973,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6157351292467798363}
   - component: {fileID: 2128002862764976821}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ala.jpg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1033,8 +1033,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1598750605
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 3551101652285560114, guid: 5b6751eb7aa93fa448cf7169fe2ddc1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1056,7 +1056,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3455624720313801315}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bone_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1088,7 +1088,7 @@ GameObject:
   m_Component:
   - component: {fileID: 855128445702011438}
   - component: {fileID: 1092188739300688582}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ullfora
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1148,8 +1148,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1598750605
+  m_SortingLayer: 2
   m_SortingOrder: 5
   m_Sprite: {fileID: 7408587655147034945, guid: 5b6751eb7aa93fa448cf7169fe2ddc1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -5,12 +5,12 @@ using UnityEngine;
 
 public static class RandomMethods 
 {
-    public static int ReturnARandomObject(RandomSO[] SO, float dropNothingChane)
+    public static int ReturnARandomObject(RandomSO[] SO, float dropNothingChane, int max, int min)
     {
         float minRange = 0;
         float maxRange = 0;
         var random = UnityEngine.Random.Range(minRange, SetMaxValueOfRandom(SO) + dropNothingChane);
-        for (var i = 0; i < SO.Length; i++)
+        for (var i = min; i < max; i++)
         {
             //Debug.Log(random);
             if (random >= minRange && random <= (maxRange += SO[i].RateAperance / SO.Length))

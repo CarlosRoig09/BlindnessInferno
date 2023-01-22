@@ -8,8 +8,12 @@ public class AlPamPamYAlPiumPium : MonoBehaviour
     private Vector3 _initPosition;
     [SerializeField]
     private RandomSO[] _randomRate;
+    public RandomSO[] RandomRate
+    {
+        get { return _randomRate; }
+        set { _randomRate = value; }
+    }
     [SerializeField]
-    private GameObject[] _items;
     private GameObject instant;
     // Start is called before the first frame update
     void Start()
@@ -22,14 +26,14 @@ public class AlPamPamYAlPiumPium : MonoBehaviour
     {
         
     }
-    public void InstantObstacle(GameObject platform)
+    public void InstantObstacle(GameObject platform, int max, int min)
     {
         GameObject enemy;
        var numPlatforms = platform.transform.childCount;
       if(platform!=null)  {
             for (var i = 0; i < Random.Range(2, 5); i++)
             {
-                var num = RandomMethods.ReturnARandomObject(_randomRate, 0);
+                var num = RandomMethods.ReturnARandomObject(_randomRate, 0,max,min);
                 if (num >= 0)
                 {
                     var currentPlatform = platform.transform.GetChild(UnityEngine.Random.Range(0, numPlatforms));
@@ -45,7 +49,7 @@ public class AlPamPamYAlPiumPium : MonoBehaviour
     private void ComproveIsAPlatform(Transform currentPlatform)
     {
         float xPosition = Random.Range(currentPlatform.transform.position.x, currentPlatform.transform.position.x + currentPlatform.transform.localScale.x / 2);
-            _initPosition = new Vector3(xPosition, currentPlatform.transform.position.y + Random.Range(-0.35f, 3));
+            _initPosition = new Vector3(xPosition, currentPlatform.transform.position.y + Random.Range(-0.35f, 2.2f));
             Debug.Log(_initPosition.y);
         RaycastHit2D hit;
         if (hit = Physics2D.Raycast(_initPosition, Vector2.up, 0.65f))

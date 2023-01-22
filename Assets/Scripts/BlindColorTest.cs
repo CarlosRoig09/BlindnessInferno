@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using Wilberforce;
 
 
@@ -44,6 +45,7 @@ public class BlindColorTest : MonoBehaviour
     private BossFase _currentFase;
     public GameObject diosito;
     private bool _diositoNoCuenta;
+    private GameObject _character;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,11 +54,11 @@ public class BlindColorTest : MonoBehaviour
         _colorBlind = Camera.main.GetComponent<Colorblind>();
         _distance = GameObject.Find("Kilomiters").GetComponent<Kilomiters>().Distancia;
         _colorBlind.Type = 1;
-        _count = 0f;
+        _count = 1720f;
         _numRayo = 0;
         _diositoNoCuenta = true;
         _diositoInstancia = 0;
-
+        _character = GameObject.Find("Character");
     }
 
     // Update is called once per frame
@@ -81,12 +83,14 @@ public class BlindColorTest : MonoBehaviour
             {
                
                 Nivel = Niveles.TransNivel1;
-                if (_count >= 537f)
+                if (_count >= 574f)
                 {
                     _colorBlind.Type = 2;
                     if (_numRayo == 0)
+                    {
                         _soundManager.PlaySound("GodOfBlaze");
-                    //      StartCoroutine(ChargeRayo(3f));
+                        ChargeRayo();
+                    }
 
                 }
 
@@ -101,12 +105,14 @@ public class BlindColorTest : MonoBehaviour
             else if (_count >= 1075f && _count < 1150f)
             {
                 Nivel = Niveles.TransNivel2;
-                if (_count >= 1112f)
+                if (_count >= 1149f)
                 {
                     _colorBlind.Type = 3;
                     if (_numRayo == 0)
+                    {
                         _soundManager.PlaySound("DragonSlayer");
-                    //     StartCoroutine(ChargeRayo(3f));
+                        ChargeRayo();
+                    }
 
                 }
 
@@ -121,13 +127,14 @@ public class BlindColorTest : MonoBehaviour
             {
                 
                 Nivel = Niveles.TransNivel3;
-                if (_count >= 1687f)
+                if (_count >= 1f)
                 {
                     _colorBlind.Type = 3;
-                     if (_numRayo == 0)
+                    if (_numRayo == 0)
+                    {
                         _soundManager.PlaySound("RequiemDiesIraeWolfgangAmadeusMozart");
-                    //  StartCoroutine(ChargeRayo(3f));
-
+                        ChargeRayo();
+                    }
                 }
 
             }
@@ -135,7 +142,7 @@ public class BlindColorTest : MonoBehaviour
             {
                
                 Nivel = Niveles.NivelBoss1;
-                if (_count >= 1800)
+                if (_count >= 1900)
                 {
                     _numRayo = 0;
                     if (_diositoInstancia == 0)
@@ -187,12 +194,14 @@ public class BlindColorTest : MonoBehaviour
             {
                 
                 Nivel = Niveles.TransNivelBoss;
-                if (_count >= 2262f)
+                if (_count >= 2299f)
                 {
                     _colorBlind.Type = 1;
                     if (_numRayo == 0)
+                    {
                         _soundManager.PlaySound("Vsdemon");
-                    //   StartCoroutine(ChargeRayo(3f));
+                       ChargeRayo();
+                    }
 
                 }
 
@@ -207,11 +216,9 @@ public class BlindColorTest : MonoBehaviour
         //Debug.Log(_count);
     }
 
-    public IEnumerator ChargeRayo(float time)
+    public void ChargeRayo()
     {
-       rayo=Instantiate(rayo, gameObject.transform.position, Quaternion.identity);
+       Instantiate(rayo, new Vector3(_character.transform.position.x + 3.0f, _character.transform.position.y + 4.5f, 0), Quaternion.identity);
         _numRayo = 1;
-        yield return new WaitForSeconds(time);
-        Destroy(rayo);
     }
 }

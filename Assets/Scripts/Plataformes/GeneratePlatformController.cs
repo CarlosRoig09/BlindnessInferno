@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Burst.Intrinsics;
 using UnityEngine;
 
 
@@ -10,14 +9,15 @@ public class GeneratePlatformController : MonoBehaviour
 {
     private Vector3 _initPosition;
     private PlatformScriptableObject[] _plSO;
-
+    [SerializeField]
+    private List<RandomSO> _enemySOItemSO;
+    private List<RandomSO> _currentEnemyItemSO;
     [SerializeField]
     private PlatformScriptableObject[] _plSONivel1;
     [SerializeField]
     private PlatformScriptableObject[] _plSONivel2;
     [SerializeField]
     private PlatformScriptableObject[] _plSONivel3;
-
     [SerializeField]
     private PlatformScriptableObject[] _plSOFase1;
     [SerializeField]
@@ -47,25 +47,23 @@ public class GeneratePlatformController : MonoBehaviour
     {
         
         _plSO = _plSONivel1;
-        _num = RandomMethods.ReturnARandomObject(_plSO, 0);
+        _num = RandomMethods.ReturnARandomObject(_plSO, 0, _plSO.Length,0);
         if (_num < 0)
             _num = UnityEngine.Random.Range(0, _plSO.Length);
         _counter = _plSO[_num].PlatgormWaitTimer;
-        //_enemySpawn = gameObject.GetComponent<AlPamPamYAlPiumPium>();
+        _enemySpawn = gameObject.GetComponent<AlPamPamYAlPiumPium>();
         _plSONivel2y3 = GenerateNevel3();
         for(int i=0; i < _plSONivel2y3.Length;i++)
         {
             Debug.Log(_plSONivel2y3[i]);
         }
-        
-
     }
 
     // Update is called once per frame
     private void Update()
     {
         if (_plSO == _plSOLastTransition || _plSO == _plSOTransition) _num = 0;
-       // _enemySpawn = gameObject.GetComponent<AlPamPamYAlPiumPium>();
+         _enemySpawn = gameObject.GetComponent<AlPamPamYAlPiumPium>();
         if (_plSO[_num].PlatgormWaitTimer / _cameraRB.velocity.x <= _counter)
         {
             GeneratePlatform();
@@ -94,50 +92,72 @@ public class GeneratePlatformController : MonoBehaviour
 
     private void GeneratePlatform()
     {
+        int min = 0;
+        int max = 0;
         _nivel = GameObject.Find("Main Camera").GetComponent<BlindColorTest>().Nivel;
         switch (_nivel)
         {
             case Niveles.Nivel1:
                 _plSO = _plSONivel1;
+                min = 1;
+                max = 6;
                 break;
             case Niveles.TransNivel1:
+                min = 0;
+                max = 0;
                 _plSO = _plSOTransition;
                 break;
             case Niveles.Nivel2:
+                min = 1;
+                max = 7;
                 _plSO = _plSONivel2;
                 break;
             case Niveles.TransNivel2:
+                min = 0;
+                max = 0;
                 _plSO = _plSOTransition;
                 break;
             case Niveles.Nivel3:
+                min = 1;
+                max = 7;
                 _plSO = _plSONivel2y3;
                 break;
             case Niveles.TransNivel3:
+                min = 1;
+                max = 4;
                 _plSO = _plSOTransition;
                 break;
             case Niveles.NivelBoss1:
+                min = 1;
+                max = 4;
                 _plSO = _plSOFase1;
                 break;
             case Niveles.NivelBoss2:
+                min = 1;
+                max = 4;
                 _plSO = _plSOFase2;
                 break;
             case Niveles.NivelBoss3:
+                min = 0;
+                max = 4;
                 _plSO = _plSOFase3;
                 break;
             case Niveles.TransNivelBoss:
+                min = 0;
+                max = 0;
                 _plSO = _plSOLastTransition;
                 break;
 
 
         }
 
-        _num = RandomMethods.ReturnARandomObject(_plSO, 0);
-        if (_num < 0)
-            _num = UnityEngine.Random.Range(0, _plSO.Length);
+        _num = RandomMethods.ReturnARandomObject(_plSO, 0, _plSO.Length,0);
+       /* if (_num < 0)
+            _num = UnityEngine.Random.Range(0, _plSO.Length);*/
         _initPosition = new Vector3(transform.position.x, _plSO[_num].PlatformInitialYPosition);
         var platform = Instantiate(_plSO[_num].PlatformPrefab, _initPosition, Quaternion.identity);
         _counter = 0;
-       // if (platform != null&&_enemySpawn!=null)
-          //  _enemySpawn.InstantObstacle(platform);
+       if (platform != null&&_enemySpawn!=null)
+         _enemySpawn.InstantObstacle(platform,max,min);
     }
 }

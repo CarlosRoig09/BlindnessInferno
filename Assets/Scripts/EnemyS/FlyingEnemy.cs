@@ -63,7 +63,7 @@ public class FlyingEnemy : Enemy
     void DetectPlayer()
     {
         _anim.SetBool("Attac", true);
-        if (transform.position.x-_playerTransform.position.x<6)
+        if (transform.position.x-_playerTransform.position.x<13)
         {
             _rb.velocity = new Vector3(0, 0);
             _fEM = FlyingEnemyMovement.Attack;

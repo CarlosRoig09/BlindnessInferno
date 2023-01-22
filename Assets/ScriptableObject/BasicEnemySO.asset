@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BasicEnemySO
   m_EditorClassIdentifier: 
   RateAperance: 70
-  Prefab: {fileID: 2953489440314551874, guid: eae7752821728da4c87d14a522e28193, type: 3}
+  Prefab: {fileID: 1091621492984054334, guid: b2d5d8882163fca4e97e57f7449117f0, type: 3}
   speed: 50
   jumpSpeed: 100
   changeDirectionTimer: 0.5

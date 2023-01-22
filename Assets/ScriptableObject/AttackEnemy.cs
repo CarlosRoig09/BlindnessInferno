@@ -13,6 +13,7 @@ public class AttackEnemy : Enemy
     private float _jumpDurationCounter;
     private float _movementCounter;
     public LayerMask groundLayer;
+    private Transform _playerTransform;
 
      void Start()
     {
@@ -25,7 +26,7 @@ public class AttackEnemy : Enemy
         atackEnemySO = (AtackEnemySO)_bESO;
         _countProyectile = 0;
         Score = 10;
-      
+        _playerTransform = GameObject.Find("Character").GetComponent<Transform>();
     }
     // Update is called once per frame
     void Update()
@@ -45,7 +46,7 @@ public class AttackEnemy : Enemy
                 Float();
                 break;
         }
-            if (atackEnemySO.proyectileTimer <= _countProyectile)
+            if (atackEnemySO.proyectileTimer <= _countProyectile && transform.position.x - _playerTransform.position.x < 13)
             {
                 Shoot();
                 _countProyectile = 0;
