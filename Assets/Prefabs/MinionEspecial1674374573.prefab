@@ -105,8 +105,8 @@ MonoBehaviour:
   - {fileID: 7422357848707309165}
   - {fileID: 4207999678398229667}
   m_Bounds:
-    m_Center: {x: -0.0025901794, y: -0.0019450188, z: 0}
-    m_Extent: {x: 2.0389304, y: 1.0180553, z: 0}
+    m_Center: {x: -0.0025911331, y: -0.0019453764, z: 0}
+    m_Extent: {x: 2.0389304, y: 1.0180554, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -656,8 +656,8 @@ MonoBehaviour:
   - {fileID: 8231539752880887230}
   - {fileID: 20046801119261413}
   m_Bounds:
-    m_Center: {x: -0.000174582, y: -0.0014594793, z: 0}
-    m_Extent: {x: 0.50482523, y: 0.48354012, z: 0}
+    m_Center: {x: -0.00017464161, y: -0.0014595389, z: 0}
+    m_Extent: {x: 0.5048254, y: 0.48354006, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -979,8 +979,8 @@ MonoBehaviour:
   - {fileID: 3902951136169425816}
   - {fileID: 6781915198094374397}
   m_Bounds:
-    m_Center: {x: 0.00000071525574, y: -0.001339674, z: 0}
-    m_Extent: {x: 2.0449998, y: 1.0186598, z: 0}
+    m_Center: {x: 0.00000071525574, y: -0.0013399124, z: 0}
+    m_Extent: {x: 2.045, y: 1.0186601, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1149,8 +1149,8 @@ MonoBehaviour:
   - {fileID: 20046801119261413}
   - {fileID: 8231539752880887230}
   m_Bounds:
-    m_Center: {x: 0.00000023841858, y: -0.00000011920929, z: 0}
-    m_Extent: {x: 0.83500016, y: 1.7899998, z: 0}
+    m_Center: {x: 0, y: -0.00000047683716, z: 0}
+    m_Extent: {x: 0.8350001, y: 1.7899997, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1255,7 +1255,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 4553304345825277961}
   m_Bounds:
-    m_Center: {x: 0.00015643239, y: 0.00000047683716, z: 0}
+    m_Center: {x: 0.00015595555, y: 0, z: 0}
     m_Extent: {x: 0.19484499, y: 0.22499998, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1301,6 +1301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6775154020253354613}
   - component: {fileID: 1881886903387681796}
+  - component: {fileID: 4382872182622193087}
   m_Layer: 0
   m_Name: MinionEspecial1674374573
   m_TagString: Untagged
@@ -1317,7 +1318,7 @@ Transform:
   m_GameObject: {fileID: 5678537184656331286}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.18, y: -3.12, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2849345117015581866}
@@ -1361,6 +1362,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!61 &4382872182622193087
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5678537184656331286}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.03198743, y: 4.8875723}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.0875807, y: 6.3894386}
+  m_EdgeRadius: 0
 --- !u!1 &6248066117718818286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,7 +1521,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 6941500989429312964}
   m_Bounds:
-    m_Center: {x: 0.00003145635, y: 0.0000004917383, z: 0}
+    m_Center: {x: 0.000030979514, y: 0.000000014901161, z: 0}
     m_Extent: {x: 0.18992001, y: 0.22499998, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1897,7 +1924,7 @@ MonoBehaviour:
   - {fileID: 2357750229029024500}
   - {fileID: 7731370344752571173}
   m_Bounds:
-    m_Center: {x: -0.00025376678, y: -0.00210917, z: 0}
+    m_Center: {x: -0.0002540052, y: -0.0021102428, z: 0}
     m_Extent: {x: 0.45474505, y: 1.1428902, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -2091,8 +2118,8 @@ MonoBehaviour:
   - {fileID: 2357750229029024500}
   - {fileID: 4553304345825277961}
   m_Bounds:
-    m_Center: {x: 0.00039577484, y: 0, z: 0}
-    m_Extent: {x: 0.9796052, y: 1.1999995, z: 0}
+    m_Center: {x: 0.00039559603, y: -0.00000047683716, z: 0}
+    m_Extent: {x: 0.97960544, y: 1.2, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
