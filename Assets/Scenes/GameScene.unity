@@ -697,6 +697,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 2091946161286021945, guid: 2e30d4eee6e4d764ea871adaa11acdeb, type: 3}
+      propertyPath: m_Size.x
+      value: 30.925835
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091946161286021945, guid: 2e30d4eee6e4d764ea871adaa11acdeb, type: 3}
+      propertyPath: m_Size.y
+      value: 31.81909
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091946161286021945, guid: 2e30d4eee6e4d764ea871adaa11acdeb, type: 3}
+      propertyPath: m_Offset.x
+      value: -29.263477
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091946161286021945, guid: 2e30d4eee6e4d764ea871adaa11acdeb, type: 3}
+      propertyPath: m_Offset.y
+      value: -10.6072035
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091946161286021946, guid: 2e30d4eee6e4d764ea871adaa11acdeb, type: 3}
+      propertyPath: m_Size.x
+      value: 55.46532
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091946161286021946, guid: 2e30d4eee6e4d764ea871adaa11acdeb, type: 3}
+      propertyPath: m_Size.y
+      value: 19.834126
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091946161286021946, guid: 2e30d4eee6e4d764ea871adaa11acdeb, type: 3}
+      propertyPath: m_Offset.x
+      value: -16.897188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091946161286021946, guid: 2e30d4eee6e4d764ea871adaa11acdeb, type: 3}
+      propertyPath: m_Offset.y
+      value: -16.63693
+      objectReference: {fileID: 0}
     - target: {fileID: 2091946161286021949, guid: 2e30d4eee6e4d764ea871adaa11acdeb, type: 3}
       propertyPath: _position
       value: 
@@ -1738,50 +1770,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 347460010655721975, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2919318036041642547, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3546840114759891246, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
-      propertyPath: Lightning
-      value: 
-      objectReference: {fileID: 4994730118261067, guid: c64fa90bd8dc4ac4e8ed7f29692b8e4c, type: 3}
-    - target: {fileID: 3546840114759891246, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
-      propertyPath: awakenDistance
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3546840114759891246, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
-      propertyPath: lightningDistance
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 3546840114759891247, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456955742422405074, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
-      propertyPath: m_Name
-      value: Platform 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456955742422405078, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456955742422405078, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456955742422405078, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456955742422405079, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2091946161084203156, guid: 2e30d4eee6e4d764ea871adaa11acdeb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1829,6 +1817,50 @@ PrefabInstance:
     - target: {fileID: 2091946161286021891, guid: 2e30d4eee6e4d764ea871adaa11acdeb, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 347460010655721975, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919318036041642547, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546840114759891246, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
+      propertyPath: Lightning
+      value: 
+      objectReference: {fileID: 4994730118261067, guid: c64fa90bd8dc4ac4e8ed7f29692b8e4c, type: 3}
+    - target: {fileID: 3546840114759891246, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
+      propertyPath: awakenDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546840114759891246, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
+      propertyPath: lightningDistance
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546840114759891247, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456955742422405074, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
+      propertyPath: m_Name
+      value: Platform 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456955742422405078, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456955742422405078, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456955742422405078, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456955742422405079, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34cd422be89738749bda12f0d82251b2, type: 3}
