@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17f8a2f4c97e09f448ecde3dff2d11a7, type: 3}
   m_Name: FlyEnemySO
   m_EditorClassIdentifier: 
-  RateAperance: 50
+  RateAperance: 60
   Prefab: {fileID: 7279282113572636031, guid: cf80ddc005b396648bbc765c7a73a845, type: 3}
   FlyingSpeed: 50
   AttackSpeed: 300
