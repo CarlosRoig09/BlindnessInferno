@@ -24,7 +24,7 @@ public class AguaBendita : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             //Debug.Log("Agua Bendita tocada!!");
-            //_controlDeath.life = Life.Death;
+            _controlDeath.life = Life.Death;
 
             var e = ps.emission;
             e.rateOverTime = 80.0f;

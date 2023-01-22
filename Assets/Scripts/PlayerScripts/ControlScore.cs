@@ -21,7 +21,7 @@ public class ControlScore : MonoBehaviour
     }
     public void ScorePlus(int _score)
     {
-        Debug.Log(_controlDeathScript.PlayerLife);
+       // Debug.Log(_controlDeathScript.PlayerLife);
         _score = _score * (int)_controlDeathScript.PlayerLife;
         GameManager.Instance.Score += _score;
     }

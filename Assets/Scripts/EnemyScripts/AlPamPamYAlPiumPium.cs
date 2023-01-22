@@ -32,7 +32,7 @@ public class AlPamPamYAlPiumPium : MonoBehaviour
                 var num = RandomMethods.ReturnARandomObject(_randomRate, 0);
                 if (num >= 0)
                 {
-                    var currentPlatform = platform.transform.GetChild(Random.Range(0, numPlatforms));
+                    var currentPlatform = platform.transform.GetChild(UnityEngine.Random.Range(0, numPlatforms));
                     instant = _randomRate[num].Prefab;
                     ComproveIsAPlatform(currentPlatform);
                     if (instant != null && currentPlatform != null)

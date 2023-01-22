@@ -21,4 +21,5 @@ public class FallablePlatform : PlatformControler
         yield return new WaitForSeconds(timer);
         _collider2D.enabled = true;
     }
+
 }

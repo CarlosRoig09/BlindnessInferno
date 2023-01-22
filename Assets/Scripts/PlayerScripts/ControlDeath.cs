@@ -23,9 +23,12 @@ public class ControlDeath : MonoBehaviour
         life = Life.Alive;
         //Mido la camara
         _walk = gameObject.GetComponent<WalkingScript>();
+     
     }
     void Update()
     {
+    
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

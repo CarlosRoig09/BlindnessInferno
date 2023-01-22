@@ -21,22 +21,29 @@ public class ControlBossFaces : MonoBehaviour
         get => _currentLife;
     }
     private BossFase _currentFase;
+
+    public BossFase CurrentFase
+    {
+        get => _currentFase;
+    }
+ 
     private Collider2D _collider;
     [SerializeField]
     private BossEnemySO BossEnemySO;
     public delegate void EndFace();
     public event EndFace OnEndFace;
-    [SerializeField]
+
     private Transform _centerCamera;
-    [SerializeField]
+
     private Transform _rightCamera;
-    [SerializeField]
+
     private Transform _leftCamera;
     private GameObject _Arms;
     private Animator _anim;
     // Start is called before the first frame update
     void Start()
     {
+       
         _currentFase = BossFase.StartBossFase1;
         _Arms = GameObject.Find("Arms");
         _Arms.SetActive(false);
@@ -47,6 +54,9 @@ public class ControlBossFaces : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        _rightCamera = GameObject.Find("FirstGodPosition").GetComponent<Transform>();
+        _leftCamera = GameObject.Find("SecondGodPosition").GetComponent<Transform>();
+        _centerCamera = GameObject.Find("CenterCamera").GetComponent<Transform>();
         switch (_currentFase)
         {
             case BossFase.StartBossFase1:
@@ -76,7 +86,7 @@ public class ControlBossFaces : MonoBehaviour
                 ComproveIfFaseEnd(_currentLife);
                 break;
             case BossFase.Death:
-                Destroy(gameObject);
+                Destroy(gameObject, 5f);
                 break;
         }
     }

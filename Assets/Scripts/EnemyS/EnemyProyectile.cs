@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyProyectile : MonoBehaviour
+public class EnemyProyectile : Enemy
 {
     private Rigidbody2D _rb2D;
     public float Velocity;
@@ -10,6 +10,7 @@ public class EnemyProyectile : MonoBehaviour
     void Start()
     {
         _rb2D = gameObject.GetComponent<Rigidbody2D>();
+        Score = 1;
     }
 
     // Update is called once per frame

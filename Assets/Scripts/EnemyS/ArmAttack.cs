@@ -10,7 +10,7 @@ public class ArmAttack : MonoBehaviour, IEnemyWeapon
     public ArmPosition _aP;
     private float _speed;
     private ControlBossFaces _parentCBF;
-    [SerializeField]
+
     private Transform _firstGodPosition;
     [SerializeField]
     private LayerMask groundLayer;
@@ -42,7 +42,7 @@ public class ArmAttack : MonoBehaviour, IEnemyWeapon
                 }
             }
 
-            if (Physics2D.Raycast(transform.position, Vector2.down, 0.65f, groundLayer.value)||transform.position.y<=-7.59f)
+            if (Physics2D.Raycast(transform.position, Vector2.down, 0.65f, groundLayer.value)||transform.position.y<=-3.59f)
             {
                 _rb.velocity = new Vector3(0, 0);
                 _rb.gravityScale = 0;

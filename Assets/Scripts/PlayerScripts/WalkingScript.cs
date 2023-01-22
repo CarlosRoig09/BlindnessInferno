@@ -9,16 +9,16 @@ public class WalkingScript : MonoBehaviour
     //public float speed;
     public Rigidbody2D rb;
     public KeyCode jumpkey;
-    [SerializeField]
+
     private Transform _maxPosition;
     private float _initPos;
     [SerializeField]
     private float _acceleration;
     private bool _secondJump;
     public LayerMask groundLayer;
-    [SerializeField]
-    private Transform firstGodPosition;
-    [SerializeField]
+
+    private Transform _firstPlayerPosition;
+
     private Rigidbody2D _cameraRB2D;
     private Animator _anim;
     private bool _stopMomentum;
@@ -31,10 +31,14 @@ public class WalkingScript : MonoBehaviour
     private float _hitStop;
     private void Start()
     {
+        _cameraRB2D = GameObject.Find("MovingCamera").GetComponent<Rigidbody2D>();
+        _firstPlayerPosition = GameObject.Find("SecondGodPosition").GetComponent<Transform>();
+        _maxPosition= GameObject.Find("CenterCamera").GetComponent<Transform>();
         _anim = gameObject.GetComponent<Animator>();
         _secondJump = false;
-        _initPos = firstGodPosition.position.x;
+        _initPos = _firstPlayerPosition.position.x;
         _stopMomentum = false;
+       
     }
     /*private bool isGrounded;
     private float jumpWaitTimer;*/
