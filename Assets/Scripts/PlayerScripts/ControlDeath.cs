@@ -32,7 +32,7 @@ public class ControlDeath : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((collision.gameObject.CompareTag("Enemy")||collision.gameObject.CompareTag("EnemyBossHitPoint"))&&!_invencible)
+        if ((collision.gameObject.CompareTag("Enemy")||collision.gameObject.CompareTag("EnemyBossHitPoint")||collision.gameObject.CompareTag("EnemyProyectile") || collision.gameObject.CompareTag("BossArms")) &&!_invencible)
         {
             //PlayerLife--;
             SubstractLife();
